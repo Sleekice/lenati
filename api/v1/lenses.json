@@ -1,0 +1,135 @@
+[
+  {
+    "id": 1,
+    "name": "Whole body",
+    "group": "Anatomy",
+    "description": "Explore organism-scale structure and orientation.",
+    "confidence": "Anatomical frame"
+  },
+  {
+    "id": 2,
+    "name": "Regions",
+    "group": "Anatomy",
+    "description": "See head, neck, thorax, abdomen, pelvis and limbs.",
+    "confidence": "Anatomical frame"
+  },
+  {
+    "id": 3,
+    "name": "Skeletal",
+    "group": "Anatomy",
+    "description": "Compare individual bones and articulations.",
+    "confidence": "Anatomical frame"
+  },
+  {
+    "id": 4,
+    "name": "Soft tissue",
+    "group": "Anatomy",
+    "description": "Examine muscle, tendon, fascia and skin.",
+    "confidence": "Anatomical frame"
+  },
+  {
+    "id": 5,
+    "name": "Organ systems",
+    "group": "Anatomy",
+    "description": "Study the body by functional organ systems.",
+    "confidence": "Anatomical frame"
+  },
+  {
+    "id": 6,
+    "name": "Blood paths",
+    "group": "Processes",
+    "description": "Trace systemic and pulmonary circulation.",
+    "confidence": "Established anatomy / simplified route"
+  },
+  {
+    "id": 7,
+    "name": "Air paths",
+    "group": "Processes",
+    "description": "Trace respiratory passages and gas exchange.",
+    "confidence": "Established anatomy / simplified route"
+  },
+  {
+    "id": 8,
+    "name": "Food paths",
+    "group": "Processes",
+    "description": "Trace the alimentary canal and digestion.",
+    "confidence": "Established anatomy / simplified route"
+  },
+  {
+    "id": 9,
+    "name": "Neural paths",
+    "group": "Processes",
+    "description": "Follow signals through neural connections.",
+    "confidence": "Established anatomy / simplified route"
+  },
+  {
+    "id": 10,
+    "name": "Cause and effect",
+    "group": "Processes",
+    "description": "Examine how changes in one structure affect another.",
+    "confidence": "Educational modeling"
+  },
+  {
+    "id": 11,
+    "name": "Tissue layers",
+    "group": "Microscopic",
+    "description": "Inspect tissue organization and coverings.",
+    "confidence": "Anatomical frame"
+  },
+  {
+    "id": 12,
+    "name": "Cellular scale",
+    "group": "Microscopic",
+    "description": "See cellular organization and organelles.",
+    "confidence": "Reference scale"
+  },
+  {
+    "id": 13,
+    "name": "Molecular scale",
+    "group": "Microscopic",
+    "description": "Explore DNA, proteins and chemical structures.",
+    "confidence": "Reference structures"
+  },
+  {
+    "id": 14,
+    "name": "Development & age",
+    "group": "Microscopic",
+    "description": "Compare changes across life stages.",
+    "confidence": "Requires age-specific sources"
+  },
+  {
+    "id": 15,
+    "name": "Symmetry",
+    "group": "Patterns",
+    "description": "Compare bilateral and radial arrangements.",
+    "confidence": "Mathematical comparison"
+  },
+  {
+    "id": 16,
+    "name": "Branching",
+    "group": "Patterns",
+    "description": "Contrast vessels, bronchi and tree structures.",
+    "confidence": "Geometric analogy"
+  },
+  {
+    "id": 17,
+    "name": "Spirals & folds",
+    "group": "Patterns",
+    "description": "Examine coils, folds, phyllotaxis and curvature.",
+    "confidence": "Geometric analogy"
+  },
+  {
+    "id": 18,
+    "name": "Networks",
+    "group": "Patterns",
+    "description": "Explore connectivity and graph theory.",
+    "confidence": "Mathematical comparison"
+  },
+  {
+    "id": 19,
+    "name": "Fractal worlds",
+    "group": "Patterns",
+    "description": "Explore Mandelbrot, Julia and naturally branching systems without conflating them.",
+    "confidence": "Visual analogy"
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "id": "bones",
+    "name": "Bones and joints",
+    "description": "Individual bone identification and location.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "cards": [
+      [
+        "What are the three main parts of the sternum?",
+        "Manubrium, body and xiphoid process."
+      ],
+      [
+        "Which bone forms the lower jaw?",
+        "Mandible."
+      ],
+      [
+        "Which forearm bone is lateral in anatomical position?",
+        "Radius."
+      ],
+      [
+        "Which bone is the kneecap?",
+        "Patella."
+      ],
+      [
+        "How many cervical vertebrae are there?",
+        "Seven."
+      ]
+    ]
+  },
+  {
+    "id": "heart",
+    "name": "Heart and circulation",
+    "description": "Chambers, vessels and circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "cards": [
+      [
+        "Which chamber pumps blood into the aorta?",
+        "Left ventricle."
+      ],
+      [
+        "Which vessel returns oxygenated blood from the lungs?",
+        "Pulmonary veins."
+      ],
+      [
+        "Which valve separates the right atrium and ventricle?",
+        "Tricuspid valve."
+      ],
+      [
+        "What vessel leaves the right ventricle?",
+        "Pulmonary trunk."
+      ],
+      [
+        "Where does systemic venous blood first enter the heart?",
+        "Right atrium."
+      ]
+    ]
+  },
+  {
+    "id": "resp",
+    "name": "Respiration",
+    "description": "Airway passages and gas exchange.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-introduction",
+    "cards": [
+      [
+        "Where does most pulmonary gas exchange happen?",
+        "Alveoli."
+      ],
+      [
+        "Which airway divides into the two main bronchi?",
+        "Trachea."
+      ],
+      [
+        "Which muscle is the primary driver of quiet inspiration?",
+        "Diaphragm."
+      ]
+    ]
+  },
+  {
+    "id": "neuro",
+    "name": "Brain and nerves",
+    "description": "Neural structures and signals.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "cards": [
+      [
+        "What structure connects the brain to the spinal cord?",
+        "Brainstem."
+      ],
+      [
+        "What is a synapse?",
+        "A site of communication between neurons or target cells."
+      ],
+      [
+        "What structure carries visual information from retina to brain?",
+        "Optic nerve."
+      ]
+    ]
+  },
+  {
+    "id": "molecules",
+    "name": "Cells, DNA and histones",
+    "description": "Cellular scale and molecular organization.",
+    "source": "https://www.rcsb.org/structure/1KX5",
+    "cards": [
+      [
+        "What wraps around the histone octamer?",
+        "DNA."
+      ],
+      [
+        "What is the basic repeating unit of chromatin?",
+        "Nucleosome."
+      ],
+      [
+        "Where is most human genomic DNA located?",
+        "Cell nucleus."
+      ]
+    ]
+  }
+]

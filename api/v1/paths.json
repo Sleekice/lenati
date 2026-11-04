@@ -1,0 +1,174 @@
+[
+  {
+    "id": "blood",
+    "name": "Blood circulation",
+    "symbol": "♥",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "steps": [
+      [
+        "Right atrium",
+        "Systemic venous blood enters the right atrium."
+      ],
+      [
+        "Right ventricle",
+        "Blood passes through the tricuspid valve into the right ventricle."
+      ],
+      [
+        "Pulmonary arteries",
+        "The right ventricle pumps blood to the lungs."
+      ],
+      [
+        "Pulmonary capillaries",
+        "Blood exchanges oxygen and carbon dioxide with alveolar air."
+      ],
+      [
+        "Pulmonary veins",
+        "Oxygenated blood returns to the left atrium."
+      ],
+      [
+        "Left ventricle",
+        "Blood reaches the left ventricle through the mitral valve."
+      ],
+      [
+        "Aorta",
+        "The left ventricle ejects blood into systemic circulation."
+      ]
+    ]
+  },
+  {
+    "id": "air",
+    "name": "The breath journey",
+    "symbol": "❈",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-introduction",
+    "steps": [
+      [
+        "Nasal cavity",
+        "Air enters and is conditioned in the upper airway."
+      ],
+      [
+        "Pharynx",
+        "Air continues toward the larynx."
+      ],
+      [
+        "Larynx",
+        "Air passes between vocal folds into the trachea."
+      ],
+      [
+        "Trachea",
+        "Cartilage reinforces the airway."
+      ],
+      [
+        "Bronchi",
+        "Air branches toward the lungs."
+      ],
+      [
+        "Bronchioles",
+        "Small conducting airways lead toward respiratory zones."
+      ],
+      [
+        "Alveoli",
+        "Gas exchange occurs across the alveolar-capillary barrier."
+      ]
+    ]
+  },
+  {
+    "id": "food",
+    "name": "Digestive journey",
+    "symbol": "◒",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "steps": [
+      [
+        "Mouth",
+        "Mechanical processing and salivary digestion begin."
+      ],
+      [
+        "Pharynx",
+        "Swallowing moves the bolus toward the esophagus."
+      ],
+      [
+        "Esophagus",
+        "Peristalsis transports the bolus."
+      ],
+      [
+        "Stomach",
+        "Mixing and gastric secretion produce chyme."
+      ],
+      [
+        "Duodenum",
+        "Chyme meets bile and pancreatic secretions."
+      ],
+      [
+        "Small intestine",
+        "Most nutrient absorption occurs across specialized surfaces."
+      ],
+      [
+        "Colon",
+        "Water and electrolyte handling continues."
+      ]
+    ]
+  },
+  {
+    "id": "neural",
+    "name": "Neural signal",
+    "symbol": "⌁",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "steps": [
+      [
+        "Skin receptor",
+        "A stimulus activates a sensory receptor."
+      ],
+      [
+        "Sensory neuron",
+        "Electrical signals travel along an afferent pathway."
+      ],
+      [
+        "Spinal cord",
+        "Neural circuits relay or integrate sensory information."
+      ],
+      [
+        "Brain",
+        "Signals may reach brain networks supporting perception."
+      ],
+      [
+        "Motor pathways",
+        "Motor commands descend through connected neurons."
+      ],
+      [
+        "Muscle",
+        "Neuromuscular transmission can produce contraction."
+      ]
+    ]
+  },
+  {
+    "id": "molecular",
+    "name": "From cell to histone",
+    "symbol": "⚛",
+    "source": "https://www.rcsb.org/structure/1KX5",
+    "steps": [
+      [
+        "Tissue",
+        "Cells combine to form organized tissue."
+      ],
+      [
+        "Cell",
+        "A cell contains multiple organelles and structures."
+      ],
+      [
+        "Nucleus",
+        "Nuclear DNA is packaged as chromatin."
+      ],
+      [
+        "Chromatin",
+        "DNA associates with histone proteins."
+      ],
+      [
+        "Nucleosome",
+        "DNA wraps around a histone octamer."
+      ],
+      [
+        "DNA",
+        "Nucleotides encode genetic information."
+      ]
+    ]
+  }
+]

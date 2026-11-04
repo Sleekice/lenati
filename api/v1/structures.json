@@ -1,0 +1,1372 @@
+[
+  {
+    "id": "head",
+    "name": "Head",
+    "system": "Regions",
+    "depth": "region",
+    "description": "Region enclosing the brain and principal sensory organs.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "thorax",
+    "name": "Thorax",
+    "system": "Regions",
+    "depth": "region",
+    "description": "Chest cavity and wall containing heart, lungs, ribs and associated structures.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/1-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "abdomen",
+    "name": "Abdomen",
+    "system": "Regions",
+    "depth": "region",
+    "description": "Region containing much of the digestive tract and other abdominal organs.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "pelvis",
+    "name": "Pelvis",
+    "system": "Regions",
+    "depth": "region",
+    "description": "Bony ring and region supporting pelvic organs.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "upper-limb",
+    "name": "Upper limb",
+    "system": "Regions",
+    "depth": "region",
+    "description": "Shoulder, arm, forearm, wrist and hand.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "lower-limb",
+    "name": "Lower limb",
+    "system": "Regions",
+    "depth": "region",
+    "description": "Hip, thigh, leg, ankle and foot.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "skull",
+    "name": "Skull",
+    "system": "Skeletal",
+    "depth": "organ",
+    "description": "Bones forming the cranium and facial skeleton.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "frontal",
+    "name": "Frontal bone",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Bone forming the forehead and part of the orbital roof.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "parietal",
+    "name": "Parietal bone",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired bones forming much of the roof and sides of the cranium.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "temporal",
+    "name": "Temporal bone",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired cranial bones around the external ear.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "occipital",
+    "name": "Occipital bone",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Posterior skull bone surrounding the foramen magnum.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "mandible",
+    "name": "Mandible",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Lower jaw bone.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "maxilla",
+    "name": "Maxilla",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired upper jaw bones.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "clavicle",
+    "name": "Clavicle",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Collarbone joining sternum and scapula.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "scapula",
+    "name": "Scapula",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Shoulder blade.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "sternum",
+    "name": "Sternum",
+    "system": "Skeletal",
+    "depth": "organ",
+    "description": "Flat anterior midline thoracic bone; not an inflatable sac.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "manubrium",
+    "name": "Manubrium",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Superior section of the sternum.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "sternal-body",
+    "name": "Body of sternum",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Elongated middle portion of the sternum.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "xiphoid",
+    "name": "Xiphoid process",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Small inferior projection of the sternum.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rib-1",
+    "name": "Rib 1 (left and right)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired rib 1 attached posteriorly to the thoracic spine.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rib-2",
+    "name": "Rib 2 (left and right)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired rib 2 attached posteriorly to the thoracic spine.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rib-3",
+    "name": "Rib 3 (left and right)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired rib 3 attached posteriorly to the thoracic spine.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rib-4",
+    "name": "Rib 4 (left and right)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired rib 4 attached posteriorly to the thoracic spine.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rib-5",
+    "name": "Rib 5 (left and right)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired rib 5 attached posteriorly to the thoracic spine.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rib-6",
+    "name": "Rib 6 (left and right)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired rib 6 attached posteriorly to the thoracic spine.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rib-7",
+    "name": "Rib 7 (left and right)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired rib 7 attached posteriorly to the thoracic spine.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rib-8",
+    "name": "Rib 8 (left and right)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired rib 8 attached posteriorly to the thoracic spine.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rib-9",
+    "name": "Rib 9 (left and right)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired rib 9 attached posteriorly to the thoracic spine.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rib-10",
+    "name": "Rib 10 (left and right)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired rib 10 attached posteriorly to the thoracic spine.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rib-11",
+    "name": "Rib 11 (left and right)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired rib 11 attached posteriorly to the thoracic spine.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rib-12",
+    "name": "Rib 12 (left and right)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Paired rib 12 attached posteriorly to the thoracic spine.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "c1",
+    "name": "Cervical vertebra C1",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual cervical vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "c2",
+    "name": "Cervical vertebra C2",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual cervical vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "c3",
+    "name": "Cervical vertebra C3",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual cervical vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "c4",
+    "name": "Cervical vertebra C4",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual cervical vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "c5",
+    "name": "Cervical vertebra C5",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual cervical vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "c6",
+    "name": "Cervical vertebra C6",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual cervical vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "c7",
+    "name": "Cervical vertebra C7",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual cervical vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "t1",
+    "name": "Thoracic vertebra T1",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual thoracic vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "t2",
+    "name": "Thoracic vertebra T2",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual thoracic vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "t3",
+    "name": "Thoracic vertebra T3",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual thoracic vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "t4",
+    "name": "Thoracic vertebra T4",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual thoracic vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "t5",
+    "name": "Thoracic vertebra T5",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual thoracic vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "t6",
+    "name": "Thoracic vertebra T6",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual thoracic vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "t7",
+    "name": "Thoracic vertebra T7",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual thoracic vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "t8",
+    "name": "Thoracic vertebra T8",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual thoracic vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "t9",
+    "name": "Thoracic vertebra T9",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual thoracic vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "t10",
+    "name": "Thoracic vertebra T10",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual thoracic vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "t11",
+    "name": "Thoracic vertebra T11",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual thoracic vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "t12",
+    "name": "Thoracic vertebra T12",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual thoracic vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "l1",
+    "name": "Lumbar vertebra L1",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual lumbar vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "l2",
+    "name": "Lumbar vertebra L2",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual lumbar vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "l3",
+    "name": "Lumbar vertebra L3",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual lumbar vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "l4",
+    "name": "Lumbar vertebra L4",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual lumbar vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "l5",
+    "name": "Lumbar vertebra L5",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual lumbar vertebra.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "sacrum",
+    "name": "Sacrum",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Fused sacral vertebrae forming posterior pelvic wall.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "coccyx",
+    "name": "Coccyx",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Terminal fused vertebrae.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "humerus",
+    "name": "Humerus",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Upper-arm bone.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "radius",
+    "name": "Radius",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Lateral forearm bone in anatomical position.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "ulna",
+    "name": "Ulna",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Medial forearm bone in anatomical position.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "carpal-scaphoid",
+    "name": "Scaphoid (carpal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "One of eight carpal bones of the wrist.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "carpal-lunate",
+    "name": "Lunate (carpal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "One of eight carpal bones of the wrist.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "carpal-triquetrum",
+    "name": "Triquetrum (carpal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "One of eight carpal bones of the wrist.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "carpal-pisiform",
+    "name": "Pisiform (carpal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "One of eight carpal bones of the wrist.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "carpal-trapezium",
+    "name": "Trapezium (carpal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "One of eight carpal bones of the wrist.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "carpal-trapezoid",
+    "name": "Trapezoid (carpal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "One of eight carpal bones of the wrist.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "carpal-capitate",
+    "name": "Capitate (carpal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "One of eight carpal bones of the wrist.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "carpal-hamate",
+    "name": "Hamate (carpal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "One of eight carpal bones of the wrist.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "metacarpals",
+    "name": "Metacarpals I–V",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Five bones of the palm.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "hand-phalanges",
+    "name": "Hand phalanges",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Bones forming the digits of the hand.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "ilium",
+    "name": "Ilium",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Superior part of the hip bone.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "ischium",
+    "name": "Ischium",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Posteroinferior part of the hip bone.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "pubis",
+    "name": "Pubis",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Anterior part of the hip bone.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "femur",
+    "name": "Femur",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Thigh bone articulating at hip and knee.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "patella",
+    "name": "Patella",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Sesamoid bone of the knee.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "tibia",
+    "name": "Tibia",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Larger weight-bearing lower leg bone.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "fibula",
+    "name": "Fibula",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Slender lateral lower leg bone.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "tarsal-talus",
+    "name": "Talus (tarsal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual tarsal bone of the foot.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "tarsal-calcaneus",
+    "name": "Calcaneus (tarsal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual tarsal bone of the foot.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "tarsal-navicular",
+    "name": "Navicular (tarsal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual tarsal bone of the foot.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "tarsal-cuboid",
+    "name": "Cuboid (tarsal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual tarsal bone of the foot.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "tarsal-medial-cuneiform",
+    "name": "Medial cuneiform (tarsal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual tarsal bone of the foot.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "tarsal-intermediate-cuneiform",
+    "name": "Intermediate cuneiform (tarsal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual tarsal bone of the foot.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "tarsal-lateral-cuneiform",
+    "name": "Lateral cuneiform (tarsal)",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Individual tarsal bone of the foot.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "metatarsals",
+    "name": "Metatarsals I–V",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Five long bones of the forefoot.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "toe-phalanges",
+    "name": "Toe phalanges",
+    "system": "Skeletal",
+    "depth": "part",
+    "description": "Bones of the toes.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/6-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "heart",
+    "name": "Heart",
+    "system": "Cardiovascular",
+    "depth": "organ",
+    "description": "Four-chamber muscular pump that drives circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "right-atrium",
+    "name": "Right atrium",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "right-ventricle",
+    "name": "Right ventricle",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "left-atrium",
+    "name": "Left atrium",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "left-ventricle",
+    "name": "Left ventricle",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "aortic-valve",
+    "name": "Aortic valve",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "mitral-valve",
+    "name": "Mitral valve",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "tricuspid-valve",
+    "name": "Tricuspid valve",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "pulmonary-valve",
+    "name": "Pulmonary valve",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "aorta",
+    "name": "Aorta",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "superior-vena-cava",
+    "name": "Superior vena cava",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "inferior-vena-cava",
+    "name": "Inferior vena cava",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "pulmonary-artery",
+    "name": "Pulmonary artery",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "pulmonary-veins",
+    "name": "Pulmonary veins",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "coronary-arteries",
+    "name": "Coronary arteries",
+    "system": "Cardiovascular",
+    "depth": "part",
+    "description": "Component of systemic or pulmonary circulation.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/19-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "lungs",
+    "name": "Lungs",
+    "system": "Respiratory",
+    "depth": "organ",
+    "description": "Paired organs supporting gas exchange.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "trachea",
+    "name": "Trachea",
+    "system": "Respiratory",
+    "depth": "part",
+    "description": "Structure participating in breathing and gas exchange.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "right-main-bronchus",
+    "name": "Right main bronchus",
+    "system": "Respiratory",
+    "depth": "part",
+    "description": "Structure participating in breathing and gas exchange.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "left-main-bronchus",
+    "name": "Left main bronchus",
+    "system": "Respiratory",
+    "depth": "part",
+    "description": "Structure participating in breathing and gas exchange.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "bronchioles",
+    "name": "Bronchioles",
+    "system": "Respiratory",
+    "depth": "part",
+    "description": "Structure participating in breathing and gas exchange.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "alveoli",
+    "name": "Alveoli",
+    "system": "Respiratory",
+    "depth": "part",
+    "description": "Structure participating in breathing and gas exchange.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "diaphragm",
+    "name": "Diaphragm",
+    "system": "Respiratory",
+    "depth": "part",
+    "description": "Structure participating in breathing and gas exchange.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/22-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "digestive-tract",
+    "name": "Digestive tract",
+    "system": "Digestive",
+    "depth": "organ",
+    "description": "Continuous alimentary canal from mouth to anus.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "mouth",
+    "name": "Mouth",
+    "system": "Digestive",
+    "depth": "part",
+    "description": "Anatomical structure involved in digestion or related processes.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "esophagus",
+    "name": "Esophagus",
+    "system": "Digestive",
+    "depth": "part",
+    "description": "Anatomical structure involved in digestion or related processes.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "stomach",
+    "name": "Stomach",
+    "system": "Digestive",
+    "depth": "part",
+    "description": "Anatomical structure involved in digestion or related processes.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "duodenum",
+    "name": "Duodenum",
+    "system": "Digestive",
+    "depth": "part",
+    "description": "Anatomical structure involved in digestion or related processes.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "jejunum",
+    "name": "Jejunum",
+    "system": "Digestive",
+    "depth": "part",
+    "description": "Anatomical structure involved in digestion or related processes.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "ileum",
+    "name": "Ileum",
+    "system": "Digestive",
+    "depth": "part",
+    "description": "Anatomical structure involved in digestion or related processes.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "colon",
+    "name": "Colon",
+    "system": "Digestive",
+    "depth": "part",
+    "description": "Anatomical structure involved in digestion or related processes.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "rectum",
+    "name": "Rectum",
+    "system": "Digestive",
+    "depth": "part",
+    "description": "Anatomical structure involved in digestion or related processes.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "liver",
+    "name": "Liver",
+    "system": "Digestive",
+    "depth": "part",
+    "description": "Anatomical structure involved in digestion or related processes.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "pancreas",
+    "name": "Pancreas",
+    "system": "Digestive",
+    "depth": "part",
+    "description": "Anatomical structure involved in digestion or related processes.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "gallbladder",
+    "name": "Gallbladder",
+    "system": "Digestive",
+    "depth": "part",
+    "description": "Anatomical structure involved in digestion or related processes.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/23-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "brain",
+    "name": "Brain",
+    "system": "Nervous",
+    "depth": "organ",
+    "description": "Central organ of the nervous system.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "cerebral-cortex",
+    "name": "Cerebral cortex",
+    "system": "Nervous",
+    "depth": "part",
+    "description": "Neural structure involved in signal processing or transmission.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "cerebellum",
+    "name": "Cerebellum",
+    "system": "Nervous",
+    "depth": "part",
+    "description": "Neural structure involved in signal processing or transmission.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "brainstem",
+    "name": "Brainstem",
+    "system": "Nervous",
+    "depth": "part",
+    "description": "Neural structure involved in signal processing or transmission.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "hippocampus",
+    "name": "Hippocampus",
+    "system": "Nervous",
+    "depth": "part",
+    "description": "Neural structure involved in signal processing or transmission.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "thalamus",
+    "name": "Thalamus",
+    "system": "Nervous",
+    "depth": "part",
+    "description": "Neural structure involved in signal processing or transmission.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "spinal-cord",
+    "name": "Spinal cord",
+    "system": "Nervous",
+    "depth": "part",
+    "description": "Neural structure involved in signal processing or transmission.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "optic-nerve",
+    "name": "Optic nerve",
+    "system": "Nervous",
+    "depth": "part",
+    "description": "Neural structure involved in signal processing or transmission.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "retina",
+    "name": "Retina",
+    "system": "Nervous",
+    "depth": "part",
+    "description": "Neural structure involved in signal processing or transmission.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "neuron",
+    "name": "Neuron",
+    "system": "Nervous",
+    "depth": "part",
+    "description": "Neural structure involved in signal processing or transmission.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "synapse",
+    "name": "Synapse",
+    "system": "Nervous",
+    "depth": "part",
+    "description": "Neural structure involved in signal processing or transmission.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/12-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "cell",
+    "name": "Human cell",
+    "system": "Cellular",
+    "depth": "micro",
+    "description": "Basic unit of human tissue.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "nucleus",
+    "name": "Cell nucleus",
+    "system": "Cellular",
+    "depth": "micro",
+    "description": "Contains nuclear DNA packaged in chromatin.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "chromosome",
+    "name": "Chromosome",
+    "system": "Molecular",
+    "depth": "micro",
+    "description": "Chromatin organized into a chromosome.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "dna",
+    "name": "DNA double helix",
+    "system": "Molecular",
+    "depth": "micro",
+    "description": "Two-stranded nucleic acid carrying genetic information.",
+    "source": "https://openstax.org/books/anatomy-and-physiology-2e/pages/3-introduction",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "nucleosome",
+    "name": "Nucleosome",
+    "system": "Molecular",
+    "depth": "micro",
+    "description": "DNA wrapped around a histone octamer.",
+    "source": "https://www.rcsb.org/structure/1KX5",
+    "evidence": "established",
+    "mesh": "not-audited"
+  },
+  {
+    "id": "histone",
+    "name": "Histone proteins",
+    "system": "Molecular",
+    "depth": "micro",
+    "description": "Proteins that help package DNA into chromatin.",
+    "source": "https://www.rcsb.org/structure/1KX5",
+    "evidence": "established",
+    "mesh": "not-audited"
+  }
+]

@@ -1,0 +1,72 @@
+openapi: 3.0.3
+info:
+  title: Lenati Educational Catalog API
+  version: 1.0.0-prototype
+  description: Read-only JSON snapshots served by static hosting; no account or write endpoints.
+servers:
+  - url: ./
+paths:
+  /api/v1/structures.json:
+    get:
+      operationId: listStructures
+      summary: Return curated anatomy catalog
+      responses:
+        '200':
+          description: Structure list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Structure'
+  /api/v1/paths.json:
+    get:
+      operationId: listPaths
+      summary: Return anatomical pathway steps
+      responses:
+        '200':
+          description: Path list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+  /api/v1/lenses.json:
+    get:
+      operationId: listLenses
+      responses:
+        '200':
+          description: Nineteen viewing lenses
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+  /api/v1/decks.json:
+    get:
+      operationId: listDecks
+      responses:
+        '200':
+          description: Study bank
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+components:
+  schemas:
+    Structure:
+      type: object
+      required: [id, name, system, depth, description, source, evidence, mesh]
+      properties:
+        id: {type: string}
+        name: {type: string}
+        system: {type: string}
+        depth: {type: string, enum: [region, organ, part, micro]}
+        description: {type: string}
+        source: {type: string, format: uri}
+        evidence: {type: string}
+        mesh: {type: string}

@@ -1,0 +1,12 @@
+{
+  "name": "Lenati",
+  "version": "1.0.0-prototype",
+  "status": "read-only static educational snapshots",
+  "counts": {
+    "structures": 137,
+    "paths": 5,
+    "lenses": 19,
+    "decks": 5
+  },
+  "warning": "Not a clinical or diagnostic API; verify external asset licenses before public distribution."
+}
