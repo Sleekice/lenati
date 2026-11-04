@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "1.0.0",
+  "catalogVersion": "0.2.1",
+  "status": "planning",
+  "assets": [
+    {
+      "assetId": "thorax-ribs",
+      "name": "Ribs and costal cartilages",
+      "methods": [
+        1,
+        2,
+        4
+      ],
+      "representation": "procedural-preview",
+      "verified": false
+    },
+    {
+      "assetId": "heart",
+      "name": "Heart",
+      "methods": [
+        1,
+        2,
+        4
+      ],
+      "representation": "procedural-preview",
+      "verified": false
+    },
+    {
+      "assetId": "lungs-bronchi",
+      "name": "Lungs and bronchial tree",
+      "methods": [
+        1,
+        2,
+        3
+      ],
+      "representation": "procedural-preview",
+      "verified": false
+    },
+    {
+      "assetId": "cerebrum",
+      "name": "Cerebral hemispheres",
+      "methods": [
+        1,
+        2,
+        5
+      ],
+      "representation": "procedural-preview",
+      "verified": false
+    },
+    {
+      "assetId": "hippocampal-neuron",
+      "name": "Hippocampal neuron",
+      "methods": [
+        5,
+        4
+      ],
+      "representation": "planned",
+      "verified": false
+    },
+    {
+      "assetId": "nucleosome",
+      "name": "Histone/DNA nucleosome",
+      "methods": [
+        6
+      ],
+      "representation": "planned",
+      "verified": false
+    }
+  ]
+}
