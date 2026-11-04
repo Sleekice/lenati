@@ -88,7 +88,7 @@ select{width:100%;background:var(--glass-2);color:var(--bone);border:1px solid v
   body.in-tunnel.card-open .t-ctrl,body.in-tunnel.card-open .t-help,body.in-tunnel.card-open .t-top,body.in-tunnel.card-open #choices,body.card-open #study{left:calc((100% - 392px)/2)}
   body.in-tunnel.card-open .t-top{max-width:calc(100% - 640px)}
 }
-.eyebrow{display:flex;align-items:center;gap:8px;margin:0 0 8px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mist)}
+.eyebrow{padding-right:64px;display:flex;align-items:center;gap:8px;margin:0 0 8px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mist)}
 .dot{width:9px;height:9px;border-radius:50%;flex:none}
 #card h2{font-family:var(--f-display);font-weight:400;font-size:27px;line-height:1.12;margin:0;padding-right:64px;text-wrap:balance}
 .common{margin:4px 0 0;color:var(--lamp);font-size:14px}
@@ -160,7 +160,7 @@ body.in-tunnel .panel,body.in-tunnel .search,body.in-tunnel #crumbs{display:none
 .door-name{font-size:14.5px;font-weight:500}
 
 /* study */
-#study{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 20px);transform:translateX(-50%);z-index:22;width:min(440px,calc(100% - 32px));box-sizing:border-box;background:var(--glass-2);border:1px solid var(--lamp);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+#study{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 110px);transform:translateX(-50%);z-index:22;width:min(440px,calc(100% - 32px));box-sizing:border-box;background:var(--glass-2);border:1px solid var(--lamp);border-radius:12px;padding:16px 18px;display:flex;flex-direction:column;gap:10px}
 .q-kind{margin:0;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--lamp)}
 .q{margin:0;font-size:16px}
 .opts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
@@ -201,6 +201,34 @@ body.loaded .loading{display:none}
   .minimap{width:70px;height:134px}
   .t-top{max-width:calc(100% - 32px);top:calc(env(safe-area-inset-top,0px) + 64px)}
   .t-help{display:none}
+}
+
+/* scale descent */
+.descent{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 14px);z-index:18;display:flex;flex-direction:column;align-items:center;gap:6px;max-width:calc(100% - 260px);pointer-events:none}
+.descent>*{pointer-events:auto}
+.descent-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:center}
+.ladder{display:flex;gap:2px;background:var(--glass);border:1px solid var(--rule);border-radius:999px;padding:4px;backdrop-filter:blur(10px)}
+.rung{display:flex;flex-direction:column;align-items:center;gap:0;background:none;border:0;border-radius:999px;padding:4px 10px;color:var(--mist);opacity:.45;min-width:58px}
+.rung .rung-name{font-size:12px;font-weight:500}.rung .rung-size{font-family:var(--f-mono);font-size:9.5px;font-variant-numeric:tabular-nums}
+.rung.above{opacity:.85;cursor:pointer}.rung.above:hover{color:var(--lamp);opacity:1}
+.rung.here{opacity:1;background:var(--lamp);color:var(--lamp-ink)}
+.rung:disabled{cursor:default}
+#btn-deeper{max-width:260px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#btn-deeper:disabled{background:var(--glass-2);color:var(--mist);border-color:var(--rule)}
+.scalebar{display:flex;align-items:center;gap:8px;font-family:var(--f-mono);font-size:11px;color:var(--bone);background:var(--glass);border:1px solid var(--rule);border-radius:6px;padding:3px 9px}
+.scalebar .bar{display:block;height:6px;border:1.5px solid var(--bone);border-top:0;min-width:4px}
+body.in-micro .panel,body.in-micro #panel-toggle,body.in-micro .minimap .mm-cap{display:none}
+body.in-tunnel .descent{display:none}
+.lab.deeper{border-color:var(--cyan)}
+.lab.deeper::after{content:" ↓";color:var(--cyan)}
+.srcs{margin:4px 0 0;padding-left:18px;font-size:12.5px;color:var(--mist);line-height:1.5}
+.endnote{font-size:12px;color:var(--mist);align-self:center}
+@media (min-width:761px){ body.card-open .descent{left:calc((100% - 392px)/2);max-width:calc(100% - 640px)} }
+@media (max-width:760px){
+  .descent{max-width:calc(100% - 16px);bottom:calc(env(safe-area-inset-bottom,0px) + 70px)}
+  .ladder{overflow-x:auto;max-width:100%;border-radius:12px}
+  .rung{min-width:50px;padding:3px 6px}
+  body.card-open:not(.card-min) .descent{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -263,6 +291,17 @@ body.loaded .loading{display:none}
   <button class="btn ghost" id="t-exit">Exit to body</button>
 </div>
 <div id="choices" hidden></div>
+
+<!-- scale descent: where you are on the ladder from body to molecule -->
+<nav class="descent" aria-label="Scale">
+  <div class="descent-row">
+    <button class="btn" id="btn-up" hidden>↑ Up a level</button>
+    <div id="ladder" class="ladder"></div>
+    <button class="btn primary" id="btn-deeper" disabled><span>Select a part to zoom into</span></button>
+    <button class="btn ghost" id="btn-exit-micro" hidden>Back to body</button>
+  </div>
+  <div id="scalebar" class="scalebar" aria-live="polite"><span class="bar"></span><span class="len"></span></div>
+</nav>
 
 <div id="portal" aria-hidden="true"><svg viewBox="-60 -60 120 120"><circle r="15"/><circle cx="15" cy="0" r="15"/><circle cx="-15" cy="0" r="15"/><circle cx="7.5" cy="13" r="15"/><circle cx="-7.5" cy="13" r="15"/><circle cx="7.5" cy="-13" r="15"/><circle cx="-7.5" cy="-13" r="15"/><circle r="30"/></svg></div>
 

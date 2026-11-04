@@ -4,6 +4,20 @@ A 3D body you can orbit like a map, expand region by region down to single parts
 
 **Fidelity level:** measured source geometry, *unreviewed derivative*. The meshes come from scan-based BodyParts3D models but have been decimated and regrouped, and no anatomist has checked the labels, orientation or omissions yet (audit steps 6 and 7 in `docs/ASSET_AUDIT.md`). Not for diagnosis or exact proportions. It is a single adult male model.
 
+## Scale descent (body to histone)
+
+Every structure opens into the next smaller world that makes sense for it, and stops where its own detail stops. The ladder at the bottom shows the level (Body, Organ, Tissue, Cell, Organelle, Chromatin, Nucleosome, Molecule) with a live scale bar in real units.
+
+- Select a part and press **Zoom into ...** (or double-click it, or press E). Labels with an arrow can go deeper.
+- **Up a level**, Esc, a breadcrumb or an earlier rung on the ladder takes you back up.
+- 29 worlds, about 220 clickable components with cards and sources, in `src/micro.js`:
+  - tissues: heart muscle, alveoli, small intestine lining, cerebral cortex, compact bone, skeletal muscle, skin layers, olfactory epithelium
+  - cells: cardiomyocyte, type II pneumocyte, enterocyte, pyramidal neuron, osteocyte, muscle fibre, keratinocyte, olfactory receptor neuron
+  - organelles: nucleus, mitochondrion
+  - chromatin fibre, nucleosome, histones H3, H4, H2A and H2B (with named modification sites), DNA
+  - branch endings: haemoglobin (red blood cells), odour receptor (smell), ATP synthase (mitochondria), collagen and hydroxyapatite (bone, tendon, dermis)
+- These worlds are procedural models scaled from published measurements, not scans. Colours are chosen for clarity. Each card lists its sources.
+
 ## Controls
 
 - Drag to orbit, right-drag to pan, scroll to zoom.

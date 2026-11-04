@@ -242,10 +242,11 @@ let selSet=new Set(), hoverSet=new Set();
 const SEL_TINT=new THREE.Color(0xe7ad6c).convertSRGBToLinear();
 function subtree(nd){const s=new Set();if(nd.depth===0)return s;const st=[nd];while(st.length){const x=st.pop();s.add(x.id);x.kids.forEach(k=>st.push(k));}return s;}
 function select(nd,fly){
-  state.selected=nd; selSet=subtree(nd); if(fly) flyTo(nd);
+  state.selected=nd; selSet=nd.isMicro?new Set():subtree(nd); if(fly){ if(nd.isMicro) flyMicro(nd); else flyTo(nd); }
   try{ history.replaceState(null,'',nd.depth===0?location.pathname+location.search:'#'+nd.id);}catch(e){}
-  updateUI(); renderCard(nd); }
-function reveal(id){ const nd=NODES[id]; if(!nd) return;
+  updateUI(); renderCard(nd); if(typeof updateLadder==='function') updateLadder(); }
+function reveal(id){ if(MNODES[id]){ revealMicro(MNODES[id]); return; } const nd=NODES[id]; if(!nd) return;
+  if(state.mode==='micro'){ exitMicro(nd); return; }
   for(let a=nd.parent;a&&a.depth>0;a=a.parent) a.target=1;
   if(nd.parent&&nd.parent.depth>0) state.lastExpanded=nd.parent;
   refreshLineage(); if(state.mode==='tunnel') exitTunnel(true); select(nd,true); openCard(); }
@@ -256,6 +257,7 @@ function pick(ev){const r=canvas.getBoundingClientRect();
   mouse.set(((ev.clientX-r.left)/r.width)*2-1,-((ev.clientY-r.top)/r.height)*2+1);
   ray.setFromCamera(mouse,state.mode==='tunnel'?tcam:camera);
   if(state.mode==='tunnel'){const h=ray.intersectObjects(spotMeshes,false);return h.length?h[0].object.userData.spot:null;}
+  if(state.mode==='micro'){ if(!curW) return null; const h=ray.intersectObjects(curW.pick,false); lastHit=h.length?h[0].point.clone():null; return h.length?h[0].object.userData.node:null; }
   const cand=meshes.filter(m=>m.visible&&m.userData.node.mat.opacity>0.4);
   const h=ray.intersectObjects(cand,false); if(!h.length) return null;
   return resolvePick(h[0].object.userData.node);}
@@ -269,7 +271,7 @@ function resolvePick(leaf){ if(ev_exact) return leaf; const c=chainOf(leaf);
     if(a===state.selected&&i<c.length-1) continue;
     return a; }
   return leaf; }
-let ev_exact=false;
+let ev_exact=false, lastHit=null;
 
 // ---------- tunnel ----------
 const tscene=new THREE.Scene(); tscene.background=new THREE.Color(0x07060b);
@@ -348,12 +350,17 @@ const pathOf=nd=>{const p=[];for(let a=nd;a;a=a.parent)p.unshift(a);return p;};
 function updateUI(){
   const bc=$('#crumbs'); bc.innerHTML='';
   pathOf(state.selected).forEach((a,i,arr)=>{const b=document.createElement('button');b.className='crumb';b.textContent=a.depth===0?'Body':a.name;
-    if(i===arr.length-1)b.setAttribute('aria-current','true'); b.onclick=()=>{ if(a.depth===0) collapseAll(); else {retractBelow(a);select(a,true);} }; bc.appendChild(b);});
+    if(i===arr.length-1)b.setAttribute('aria-current','true'); b.onclick=()=>{ if(state.mode==='micro'){ crumbMicro(a); return; } if(a.depth===0) collapseAll(); else {retractBelow(a);select(a,true);} }; bc.appendChild(b);});
   $('#btn-collapse').disabled=!anyExpanded();
 }
 function retractBelow(a){a.kids.forEach(k=>retract(k));}
-function chip(id,label){const nd=NODES[id];if(!nd)return '';return `<button class="chip" data-go="${id}">${label||nd.name}</button>`;}
-function careFor(nd){for(let a=nd;a;a=a.parent){if(a.care)return {text:a.care,from:a===nd?null:a};}return null;}
+function crumbMicro(a){
+  if(!a.isMicro){ exitMicro(a); return; }
+  if(a.isWorld){ const i=mstack.lastIndexOf(a.world); if(i===mstack.length-1){ select(a,false); flyMicro(a); openCard(); return; }
+    if(i>=0){ mstack.length=i+1; const w=WORLDS[a.world]; zoomTransition(null,()=>showWorld(w,w.node.parent,{instant:true}),-1); } return; }
+  revealMicro(a); }
+function chip(id,label){const nd=NODES[id]||MNODES[id];if(!nd)return '';return `<button class="chip" data-go="${id}">${label||nd.name}</button>`;}
+function careFor(nd){ if(nd.isMicro&&!['tissue','cell'].includes(WORLDS[nd.world].level)) return null; for(let a=nd;a;a=a.parent){if(a.care)return {text:a.care,from:a===nd?null:a};}return null;}
 function renderCard(nd){
   const card=$('#card'); const sys=SYSTEMS[nd.sys];
   const where=pathOf(nd).map(a=>a.depth===0?'Body':a.name).join(' › ');
@@ -363,7 +370,7 @@ function renderCard(nd){
   const tEntry=TUNNEL_ENTRY[nd.id];
   card.innerHTML=`
    <div class="card-head">
-     <p class="eyebrow"><span class="dot" style="background:#${(sys.color).toString(16).padStart(6,'0')}"></span>${nd.depth===0?'Lenati atlas':(nd.sys==='skin'?'Body region':sys.name)}</p>
+     <p class="eyebrow"><span class="dot" style="background:#${(sys.color).toString(16).padStart(6,'0')}"></span>${nd.depth===0?'Lenati atlas':nd.isWorld?(LEVELS[LEVEL_IX[WORLDS[nd.world].level]][1]+' level · '+sys.name):(nd.sys==='skin'?'Body region':sys.name)}</p>
      <h2>${nd.name}</h2>${nd.common?`<p class="common">${nd.common}</p>`:''}
      <p class="where"><span class="lbl">You are here</span>${where}</p>
      <div class="card-tools"><button class="icon-btn" id="card-min" aria-label="Minimise card" title="Minimise">−</button><button class="icon-btn" id="card-close" aria-label="Close card" title="Close">✕</button></div>
@@ -371,17 +378,21 @@ function renderCard(nd){
    <div class="card-body">
      <details open><summary>What is it?</summary><p>${nd.what}</p></details>
      <details open><summary>What does it do?</summary><p>${nd.does}</p></details>
+     ${nd.size?`<details open><summary>Size</summary><p>${nd.size}</p></details>`:''}
      ${kids?`<details open><summary>Inside it <span class="count">${nd.kids.length}</span></summary><div class="chips">${kids}</div></details>`:''}
      ${conn?`<details open><summary>Connected to</summary><div class="chips">${conn}</div></details>`:''}
      ${care?`<details><summary>How to care for it</summary><p>${care.text}</p>${care.from?`<p class="note">From the ${care.from.name} card.</p>`:''}</details>`:''}
+     ${nd.isMicro&&nd.src?`<details><summary>Sources</summary><ul class="srcs">${nd.src.map(x=>`<li>${x}</li>`).join('')}</ul></details>`:''}
      ${hist.length?`<details><summary>How we learned about it</summary><ol class="timeline">${hist.map(h=>`<li><span class="yr">${h[0]}</span><span>${h[1]}</span></li>`).join('')}</ol></details>`:''}
    </div>
    <div class="card-actions">
-     ${nd.kids.length&&state.mode==='body'?(nd.target>0.5?`<button class="btn" data-act="retract">Retract</button>`:`<button class="btn primary" data-act="expand">Expand</button>`):''}
+     ${nd.micro&&WORLDS[nd.micro]?`<button class="btn primary" data-act="deeper">Zoom into ${WORLDS[nd.micro].name.toLowerCase()} ↓</button>`:''}
+     ${nd.isMicro&&!nd.isWorld&&!nd.micro?`<span class="endnote">This is as deep as this part goes.</span>`:''}
+     ${nd.kids.length&&state.mode==='body'?(nd.target>0.5?`<button class="btn" data-act="retract">Retract</button>`:`<button class="btn ${nd.micro?'':'primary'}" data-act="expand">Expand</button>`):''}
      ${tEntry&&state.mode==='body'?`<button class="btn" data-act="enter">Walk inside</button>`:''}
      ${state.mode==='body'&&nd.depth>0?`<button class="btn ghost" data-act="focus">Focus</button>`:''}
    </div>
-   <p class="note small">${nd.auto?`Name and class from the Foundational Model of Anatomy${nd.fma?' (FMA '+nd.fma+')':''}. A full card is coming. `:''}${nd.shapes&&nd.shapes.length?'Shown as a simplified shape; this structure is not in the scan-based model set. ':''}Study draft: check facts against your textbook.</p>`;
+   <p class="note small">${nd.isMicro?'Modelled from published measurements. Shapes are simplified and colours chosen for clarity, not true colour. ':''}${nd.auto?`Name and class from the Foundational Model of Anatomy${nd.fma?' (FMA '+nd.fma+')':''}. A full card is coming. `:''}${nd.shapes&&nd.shapes.length?'Shown as a simplified shape; this structure is not in the scan-based model set. ':''}Study draft: check facts against your textbook.</p>`;
   card.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>reveal(b.dataset.go));
   card.querySelectorAll('[data-act]').forEach(b=>b.onclick=()=>act(b.dataset.act,nd));
   $('#card-close').onclick=e=>{e.stopPropagation();closeCard();};
@@ -398,6 +409,7 @@ function act(a,nd){
   else if(a==='retract'){retract(nd);flyTo(nd);renderCard(nd);}
   else if(a==='enter'){const e=TUNNEL_ENTRY[nd.id];enterTunnel(e[0],e[1]);}
   else if(a==='focus'){flyTo(nd);}
+  else if(a==='deeper'){goDeeper(nd);}
   else if(a==='card'){renderCard(nd);openCard();}
   else if(a==='links'){pulse(nd);}
   closeFlower();
@@ -408,7 +420,7 @@ function pulse(nd){pulseSet=(nd.conn||[]).map(c=>NODES[c]).filter(Boolean);pulse
 const flower=$('#flower');
 function openFlower(nd,x,y){
   const items=[['card','Card',true],['expand','Expand',nd.kids.length&&nd.target<0.5],['retract','Retract',nd.target>0.5],
-    ['enter','Walk in',!!TUNNEL_ENTRY[nd.id]],['focus','Focus',true],['links','Links',!!(nd.conn&&nd.conn.length)],['close','Close',true]];
+    ['enter','Walk in',!!TUNNEL_ENTRY[nd.id]],['focus','Focus',true],['links','Links',!!(nd.conn&&nd.conn.length)],['deeper','Deeper',!!nd.micro]];
   const R=46; flower.innerHTML=`<p class="fl-name">${nd.name}</p>`;
   const svg=`<svg class="fl-svg" viewBox="-110 -110 220 220" aria-hidden="true">${[[0,0],...[0,1,2,3,4,5].map(i=>[Math.cos(i*Math.PI/3-Math.PI/2)*R,Math.sin(i*Math.PI/3-Math.PI/2)*R])].map(([cx,cy])=>`<circle cx="${cx}" cy="${cy}" r="${R}"/>`).join('')}<circle cx="0" cy="0" r="${R*2}" class="outer"/></svg>`;
   flower.insertAdjacentHTML('beforeend',svg);
@@ -458,12 +470,14 @@ canvas.addEventListener('pointermove',e=>{
 addEventListener('pointerup',e=>{ if(state.mode==='tunnel') tun.drag=null; ev_exact=e.altKey;
   if(down&&!dragged&&e.target===canvas){ const h=pick(e);
     if(state.mode==='tunnel'){ if(h){renderCard(h.node);openCard();} }
+    else if(state.mode==='micro'){ if(trans) {} else if(h){ select(h,false); openCard(); } }
     else if(h){ if(state.study&&state.study.kind==='find'){studyAnswer(h);} else { select(h,false); renderCard(h); openFlower(h,e.clientX,e.clientY);} }
     else closeFlower(); }
   down=null; });
-canvas.addEventListener('dblclick',e=>{ if(state.mode!=='body')return; const h=pick(e); if(h){ closeFlower(); if(h.kids.length){expand(h);select(h,true);openCard();} else {select(h,true);openCard();} }});
+canvas.addEventListener('dblclick',e=>{ if(state.mode==='micro'){ const h=pick(e); if(h&&h.micro) goDeeper(h,lastHit); else if(h) flyMicro(h); return; } if(state.mode!=='body')return; const h=pick(e); if(h){ closeFlower(); if(h.kids.length){expand(h);select(h,true);openCard();} else {select(h,true);openCard();} }});
 const tip=$('#tip');
 function setHover(nd,e){
+  if(state.mode==='micro'){ state.hover=nd; canvas.style.cursor=nd?'pointer':'grab'; if(nd){tip.hidden=false;tip.innerHTML=`<b>${nd.name}</b>${nd.micro?`<span>Double-click to zoom in</span>`:(nd.common?`<span>${nd.common}</span>`:'')}`;tip.style.left=e.clientX+'px';tip.style.top=e.clientY+'px';} else tip.hidden=true; return; }
   if(state.mode==='tunnel'){ canvas.style.cursor=nd?'pointer':'grab'; if(nd){tip.hidden=false;tip.textContent=nd.node.name;tip.style.left=e.clientX+'px';tip.style.top=e.clientY+'px';} else tip.hidden=true; return; }
   if(state.hover!==nd) hoverSet=nd?subtree(nd):new Set();
   state.hover=nd; canvas.style.cursor=moveMode?'move':(nd?'pointer':'grab');
@@ -474,6 +488,7 @@ addEventListener('keydown',e=>{ if(e.target.matches('input'))return; keys[e.key.
   if(state.mode==='tunnel'){ if(e.key==='Escape') exitTunnel(false);
     if(!$('#choices').hidden){const btns=[...document.querySelectorAll('#choices .door')]; if(btns.length&&(e.key==='ArrowLeft'||e.key==='a'))btns[0].click(); if(btns.length>1&&(e.key==='ArrowRight'||e.key==='d'))btns[1].click();}
     return; }
+  if(state.mode==='micro'){ if(e.key==='Escape'||e.key==='Backspace') goUp(); if(e.key.toLowerCase()==='e'&&state.selected.micro) goDeeper(state.selected); return; }
   if(e.key==='Escape'){ closeFlower(); const s=state.selected;
     if(s.target>0.5){retract(s);flyTo(s);renderCard(s);} else if(s.parent&&s.parent.depth>0){retract(s.parent);select(s.parent,true);} else collapseAll(); }
   if(e.key.toLowerCase()==='e'&&state.selected.kids.length){expand(state.selected);flyTo(state.selected);renderCard(state.selected);}
@@ -505,8 +520,9 @@ $('#views').querySelectorAll('button').forEach(b=>b.onclick=()=>{const v=b.datas
 const sIn=$('#search'), sRes=$('#search-results');
 sIn.addEventListener('input',()=>{const q=sIn.value.trim().toLowerCase(); sRes.innerHTML='';
   if(q.length<2){sRes.hidden=true;return;}
-  const hits=LIST.filter(nd=>nd.depth>0&&(nd.name.toLowerCase().includes(q)||(nd.common||'').toLowerCase().includes(q))).slice(0,8);
-  hits.forEach(nd=>{const b=document.createElement('button');b.className='res';b.innerHTML=`<b>${nd.name}</b><span>${nd.common||SYSTEMS[nd.sys].name}</span>`;
+  const match=nd=>nd.name.toLowerCase().includes(q)||(nd.common||'').toLowerCase().includes(q);
+  const hits=[...LIST.filter(nd=>nd.depth>0&&match(nd)).slice(0,6),...MLIST.filter(match).slice(0,4)].slice(0,9);
+  hits.forEach(nd=>{const b=document.createElement('button');b.className='res';b.innerHTML=`<b>${nd.name}</b><span>${nd.isMicro?(nd.isWorld?LEVELS[LEVEL_IX[WORLDS[nd.world].level]][1]+' level':WORLDS[nd.world].name):(nd.common||SYSTEMS[nd.sys].name)}</span>`;
     b.onclick=()=>{sRes.hidden=true;sIn.value='';reveal(nd.id);}; sRes.appendChild(b);});
   if(!hits.length) sRes.innerHTML='<p class="res-none">No match. Try a common name like kneecap or windpipe.</p>';
   sRes.hidden=false;});
@@ -546,7 +562,9 @@ const tmpV=new THREE.Vector3();
 function frame(){
   const dt=Math.min(clock.getDelta(),0.05); time+=dt; bgU.uTime.value=time;
   bgU.uInt.value+=(fractalTarget-bgU.uInt.value)*Math.min(1,dt*4);
-  if(state.mode==='body') stepBody(dt); else stepTunnel(dt);
+  stepTransition(dt);
+  if(state.mode==='body') stepBody(dt); else if(state.mode==='micro') stepMicro(dt); else stepTunnel(dt);
+  if(zU.uA.value>0.002){ zU.uRes=bgU.uRes; renderer.clearDepth(); renderer.render(zScene,bgCam); }
   requestAnimationFrame(frame);}
 function stepBody(dt){
   const k=RM?1:Math.min(1,dt*5.5);
@@ -598,6 +616,7 @@ function stepBody(dt){
   mmDot.setAttribute('cx',controls.target.x); mmDot.setAttribute('cy',-controls.target.y);
   const sc=state.selected.center.clone().add(state.selected.off); mmSel.setAttribute('cx',sc.x); mmSel.setAttribute('cy',-sc.y);
   mmSel.setAttribute('r',Math.max(0.025,Math.min(0.25,state.selected.radius))); mmSel.style.opacity=state.selected.depth?1:0;
+  updateScaleBar(1);
 }
 function stepTunnel(dt){
   let w=tun.walk; if(keys['w']||keys['arrowup'])w=1; if(keys['s']||keys['arrowdown'])w=-1;
@@ -623,15 +642,16 @@ function stepTunnel(dt){
   const bp=pos.clone().divideScalar(TK); mmDot.setAttribute('cx',bp.x); mmDot.setAttribute('cy',-bp.y); mmSel.style.opacity=0;
 }
 
+/*MICRO*/
 // ---------- boot ----------
 renderCard(BODY); updateUI();
 const loadEl=document.querySelector('.loading');
 loadModels(p=>{ loadEl.textContent='Loading the body · '+Math.round(p*100)+'%'; }).then(()=>{
   finishGeometry(); document.body.classList.add('loaded');
-  const h=decodeURIComponent(location.hash.slice(1)); if(h&&NODES[h]) setTimeout(()=>reveal(h),300);
+  const h=decodeURIComponent(location.hash.slice(1)); if(h&&(NODES[h]||MNODES[h])) setTimeout(()=>reveal(h),300);
 });
-addEventListener('hashchange',()=>{const id=location.hash.slice(1); if(NODES[id]&&state.selected.id!==id) reveal(id);});
+addEventListener('hashchange',()=>{const id=decodeURIComponent(location.hash.slice(1)); if((NODES[id]||MNODES[id])&&state.selected.id!==id) reveal(id);});
 document.body.classList.add('ready');
-window.__lenati={pick,resolvePick,overlapReport,NODES,LIST,meshes,state,expand,select,reveal,enterTunnel,exitTunnel,tun,passages,camera,controls};
+window.__lenati={buildWorld,WORLDS,MNODES,goDeeper,goUp,exitMicro,jumpToWorld,revealMicro,get curW(){return curW;},pick,resolvePick,overlapReport,NODES,LIST,meshes,state,expand,select,reveal,enterTunnel,exitTunnel,tun,passages,camera,controls};
 requestAnimationFrame(frame);
 })();
