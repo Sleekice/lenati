@@ -49,3 +49,6 @@ Early static prototype. Individual anatomy and vascular/cellular interior models
 - The broader encyclopedia starts with Biology, Physics, Chemistry, Mathematics, Computer Science, Earth/Space/History; other subjects are planned and not misrepresented as fully implemented.
 - The Fractal/Flower of Life/Mandelbrot entry is artistic and mathematical navigation; geometric resemblances are not proof of a biological mechanism.
 - Version: **0.2.0** (research and governance increment).
+
+## 3D body viewer pilot (`body/`)
+A scan-based 3D body viewer built on BodyParts3D release 3.0 meshes lives in `body/`. It supports orbit-style navigation, recursive expand and retract, moving parts by hand, layers, study questions and first-person tunnels. Provenance for all 934 source meshes is in `body/ASSET_INVENTORY.csv`; anatomical review is still pending (see `docs/ASSET_AUDIT.md`).

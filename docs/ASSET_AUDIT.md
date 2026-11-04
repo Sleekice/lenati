@@ -26,3 +26,14 @@ That identifies an intended upstream source, but **does not establish the precis
 
 ## Transparency
 Do not represent this procedural preview as a full anatomical dataset. Its parts are select-able educational placeholders, with the detail and positional accuracy limitations explicitly shown on screen. We can replace them with appropriately licensed, audited geometry in subsequent versions.
+
+## BodyParts3D pilot in `body/` (branch `body-viewer`)
+The 3D body viewer in `body/` uses meshes derived from BodyParts3D. Status against the steps above:
+
+1. **Source identified.** BodyParts3D release 3.0 (archive 20110915), 95% reduced OBJ set, as converted to STL in Kevin-Mattheus-Moerman/BodyParts3D at commit `f0eeb6e843380cfe6b83797cf8c3e1af74de5e61`. Licence file: CC BY-SA 2.1 Japan.
+2. **Inventory extracted.** `body/ASSET_INVENTORY.csv` lists all 934 source meshes with FMA IDs, names, source URL, and the Lenati node and output file each one ends up in.
+3. **Per-asset record.** Each row carries authors, licence and URL, attribution text, changes made, and SHA-256 checksums of the source STL and the published regional file.
+4. **Notices kept.** The attribution appears in the viewer panel, `body/README.md` and every inventory row; adaptations are disclosed.
+5. **Share-alike.** The derived files in `body/models/` are distributed under CC BY-SA 2.1 JP. The viewer code is separate and is not a derivative of the meshes.
+6. **Anatomical validation: pending.** Labels, orientation and omissions still need expert review. Until then the viewer shows "Study draft" on every card and the asset is `verified: false`.
+7. **Public build: pending.** Merge to `main` only after step 6 or with an explicit decision to publish as an unreviewed pilot.
