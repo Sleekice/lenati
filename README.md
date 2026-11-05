@@ -52,3 +52,37 @@ Early static prototype. Individual anatomy and vascular/cellular interior models
 
 ## 3D body viewer pilot (`body/`)
 A scan-based 3D body viewer built on BodyParts3D release 3.0 meshes lives in `body/`. It supports orbit-style navigation, recursive expand and retract, moving parts by hand, layers, study questions and first-person tunnels. Provenance for all 934 source meshes is in `body/ASSET_INVENTORY.csv`; anatomical review is still pending (see `docs/ASSET_AUDIT.md`).
+
+## Platform (Sprint 1): monorepo, database and API
+
+The platform described in the Lenati Platform Spec lives alongside the static demo. Nothing above was moved.
+
+```
+apps/web          Next.js 15 app (Vercel): home, /atlas, /api/v1
+packages/graph    Prisma schema, typed read functions, seed importer and validator
+packages/engine   3D atlas engine (stub; the prototype in body/ moves here in Sprint 2)
+packages/ui       shared React components (stub)
+packages/sdk-js   typed client for /api/v1
+packages/config   shared tsconfig and design tokens
+```
+
+Run it locally (Node 20+, pnpm 9, Postgres 16 or a Neon branch):
+
+```bash
+cp .env.example .env            # set DATABASE_URL and DIRECT_URL
+pnpm install                    # also generates the Prisma client
+pnpm db:push                    # create the tables
+pnpm db:seed                    # load the body tree and micro worlds as drafts (about 1,350 nodes)
+pnpm db:validate                # single tree, every deeper link resolves, heart reaches histone H3
+pnpm dev                        # http://localhost:3000
+```
+
+`/atlas` serves the `body/` prototype (copied into `apps/web/public/atlas` on dev and build). The API reads published content only; in development add `?drafts=1` to see the seeded drafts:
+
+- `GET /api/v1/halls`
+- `GET /api/v1/nodes/{id}` (sections, sources, links, children, breadcrumb)
+- `GET /api/v1/nodes/{id}/children?skip=0&take=50`
+- `GET /api/v1/search?q=heart`
+- `GET /api/health`
+
+CI (`.github/workflows/ci.yml`) typechecks, runs the unit tests, seeds a throwaway Postgres, validates the graph and builds the web app on every pull request.

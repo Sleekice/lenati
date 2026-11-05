@@ -1,0 +1,6695 @@
+{
+ "worlds": [
+  {
+   "id": "cardiac",
+   "level": "tissue",
+   "name": "Heart muscle tissue",
+   "common": "Myocardium",
+   "system": "cardio",
+   "unit": 0.00001,
+   "julia": [
+    -0.745,
+    0.113
+   ],
+   "camera": [
+    9,
+    7,
+    16
+   ],
+   "radius": 14,
+   "what": "Branching striated muscle cells joined end to end by intercalated discs, packed between dense capillaries.",
+   "does": "Contracts as a single unit, because electrical signals pass from cell to cell through gap junctions in the discs.",
+   "size": "Each cell about 100 µm long",
+   "sources": [
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)",
+    "Bergmann et al., Science 324:98 (2009)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "cardiac/myocyte",
+     "name": "Cardiomyocytes",
+     "common": "Heart muscle cells",
+     "system": "cardio",
+     "what": "Heart muscle cells about 100 µm long and 10–25 µm wide, with branched ends and one or two central nuclei.",
+     "does": "Shorten with every beat. Up to about a third of each cell is mitochondria, so the heart runs almost entirely on oxygen.",
+     "size": "100 × 10–25 µm",
+     "deeper": "cell-cardiomyocyte"
+    },
+    {
+     "id": "cardiac/disc",
+     "name": "Intercalated discs",
+     "common": null,
+     "system": "cardio",
+     "what": "Step-shaped junctions where neighbouring cells meet end to end.",
+     "does": "Hold cells together with desmosomes and pass electrical current through gap junctions (connexin 43), so the wave of contraction spreads.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cardiac/nuclei",
+     "name": "Nuclei",
+     "common": null,
+     "system": "cardio",
+     "what": "One or two oval nuclei in the centre of each cell.",
+     "does": "Hold the DNA. Adult heart muscle cells rarely divide: roughly 1% are renewed a year in young adults, falling with age.",
+     "size": null,
+     "deeper": "nucleus"
+    },
+    {
+     "id": "cardiac/cap",
+     "name": "Capillaries",
+     "common": null,
+     "system": "cardio",
+     "what": "Vessels 5–10 µm across, roughly one alongside every muscle cell.",
+     "does": "Deliver oxygen. At rest the heart already extracts about 70–75% of the oxygen in its blood, so it can only get more by raising flow.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cardiac/rbc",
+     "name": "Red blood cells",
+     "common": "Erythrocytes",
+     "system": "cardio",
+     "what": "Biconcave discs about 7.5 µm across with no nucleus, packed with haemoglobin.",
+     "does": "Carry oxygen, squeezing through capillaries in single file. The flow shown here is schematic.",
+     "size": "7.5 × 2 µm",
+     "deeper": "hemoglobin"
+    },
+    {
+     "id": "cardiac/endo",
+     "name": "Endomysium",
+     "common": null,
+     "system": "cardio",
+     "what": "A fine sheath of collagen around each muscle cell.",
+     "does": "Keeps cells aligned and carries the capillaries. It thickens and stiffens with fibrosis.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cardiac/fibro",
+     "name": "Fibroblasts",
+     "common": null,
+     "system": "cardio",
+     "what": "Spindle-shaped cells between the muscle cells.",
+     "does": "Make and remodel the collagen framework, and form the scar after a heart attack.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "alveoli",
+   "level": "tissue",
+   "name": "Alveoli",
+   "common": "Air sacs",
+   "system": "resp",
+   "unit": 0.00002,
+   "julia": [
+    -0.4,
+    0.6
+   ],
+   "camera": [
+    6,
+    9,
+    20
+   ],
+   "radius": 16,
+   "what": "The gas-exchange zone: thin-walled air sacs clustered around alveolar ducts, each wrapped in a net of capillaries.",
+   "does": "About 480 million alveoli give roughly 70 m² of surface for oxygen to enter the blood and carbon dioxide to leave.",
+   "size": "Each alveolus about 200 µm across",
+   "sources": [
+    "West, Respiratory Physiology: The Essentials, 11th ed. (2021)",
+    "Ochs et al., Am J Respir Crit Care Med 169:120 (2004)",
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "alveoli/wall",
+     "name": "Alveolar wall",
+     "common": "Type I cells",
+     "system": "resp",
+     "what": "Cup-shaped air spaces lined mostly by very flat type I cells, which cover about 95% of the surface.",
+     "does": "Form the air–blood barrier, as thin as 0.2–0.6 µm, so gases cross by diffusion.",
+     "size": "about 200 µm across",
+     "deeper": null
+    },
+    {
+     "id": "alveoli/duct",
+     "name": "Alveolar duct",
+     "common": null,
+     "system": "resp",
+     "what": "The air passage the alveoli open from, continuing on from a respiratory bronchiole.",
+     "does": "Brings air in. Its rim is ringed by elastic fibres and a little smooth muscle.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "alveoli/t2",
+     "name": "Type II cells",
+     "common": "Type II pneumocytes",
+     "system": "resp",
+     "what": "Rounded cells about 10 µm across tucked into alveolar corners. They cover only about 5% of the surface.",
+     "does": "Make surfactant, which lowers surface tension so alveoli do not collapse, and divide to replace damaged type I cells.",
+     "size": "about 10 µm",
+     "deeper": "cell-pneumocyte"
+    },
+    {
+     "id": "alveoli/mac",
+     "name": "Alveolar macrophages",
+     "common": "Dust cells",
+     "system": "resp",
+     "what": "Wandering immune cells that crawl over the inner surface.",
+     "does": "Engulf dust, microbes and debris, then leave by the airways or the lymph.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "alveoli/cap",
+     "name": "Capillary network",
+     "common": null,
+     "system": "resp",
+     "what": "A dense sheet of capillaries spread over every alveolus.",
+     "does": "At rest each red cell spends about 0.75 s here and is fully loaded with oxygen in about the first third of that time.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "alveoli/elastic",
+     "name": "Elastic fibres",
+     "common": null,
+     "system": "resp",
+     "what": "Elastin fibres in the walls and around the mouths of the alveoli.",
+     "does": "Stretch as you breathe in and recoil to push air out. Their destruction causes emphysema.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "villi",
+   "level": "tissue",
+   "name": "Small intestine lining",
+   "common": "Villi and crypts",
+   "system": "digest",
+   "unit": 0.00005,
+   "julia": [
+    0.285,
+    0.01
+   ],
+   "camera": [
+    32,
+    22,
+    38
+   ],
+   "radius": 22,
+   "what": "The mucosa: finger-like villi 0.5–1 mm tall, with crypts between them, resting on a thin muscle layer.",
+   "does": "Folds, villi and microvilli together give an absorptive surface of about 30 m², roughly half a badminton court.",
+   "size": "Villi 0.5–1 mm tall",
+   "sources": [
+    "Helander & Fändriks, Scand J Gastroenterol 49:681 (2014)",
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "villi/villus",
+     "name": "Villi and enterocytes",
+     "common": "Absorptive lining",
+     "system": "digest",
+     "what": "Each villus is covered in tall absorptive cells (enterocytes) topped with a brush border of microvilli.",
+     "does": "Take up sugars, amino acids, fats, vitamins and water. The whole lining is replaced every 3–5 days.",
+     "size": null,
+     "deeper": "cell-enterocyte"
+    },
+    {
+     "id": "villi/goblet",
+     "name": "Goblet cells",
+     "common": null,
+     "system": "digest",
+     "what": "Cup-shaped cells scattered among the enterocytes.",
+     "does": "Release mucus that lubricates and shields the lining.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "villi/lacteal",
+     "name": "Lacteals",
+     "common": null,
+     "system": "digest",
+     "what": "A blind-ended lymph vessel in the core of each villus.",
+     "does": "Absorb fats packed as chylomicrons, which reach the blood through the thoracic duct.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "villi/cap",
+     "name": "Capillary loops",
+     "common": null,
+     "system": "digest",
+     "what": "An arteriole and venule joined by a capillary net inside each villus.",
+     "does": "Carry absorbed sugars and amino acids to the portal vein and on to the liver.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "villi/crypt",
+     "name": "Crypts of Lieberkühn",
+     "common": "Intestinal glands",
+     "system": "digest",
+     "what": "Pits opening between the villi.",
+     "does": "Stem cells at their base make every lining cell; Paneth cells there release antimicrobial proteins.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "villi/mm",
+     "name": "Muscularis mucosae",
+     "common": null,
+     "system": "digest",
+     "what": "A thin sheet of smooth muscle under the mucosa.",
+     "does": "Ripples the lining to stir contents next to the absorbing surface.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "villi/sub",
+     "name": "Submucosa",
+     "common": null,
+     "system": "digest",
+     "what": "Loose connective tissue carrying larger vessels, lymphatics and the submucosal nerve plexus.",
+     "does": "Supplies the mucosa and controls local secretion.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "cortex",
+   "level": "tissue",
+   "name": "Cerebral cortex tissue",
+   "common": "Grey matter",
+   "system": "nerve",
+   "unit": 0.00002,
+   "julia": [
+    -0.70176,
+    -0.3842
+   ],
+   "camera": [
+    14,
+    8,
+    36
+   ],
+   "radius": 18,
+   "what": "Grey matter 2–4 mm thick, arranged in six layers of neurons, glial cells and capillaries.",
+   "does": "Processes sensation, movement, language and thought. The human cerebral cortex holds about 16 billion neurons.",
+   "size": null,
+   "sources": [
+    "Azevedo et al., J Comp Neurol 513:532 (2009), doi:10.1002/cne.21974",
+    "Kandel et al., Principles of Neural Science, 6th ed. (2021)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "cortex/neuron",
+     "name": "Pyramidal neurons",
+     "common": null,
+     "system": "nerve",
+     "what": "The main excitatory neurons of the cortex, with a triangular cell body from about 10 µm to over 50 µm.",
+     "does": "Add up thousands of inputs and send a single output along their axon, using glutamate.",
+     "size": null,
+     "deeper": "cell-neuron"
+    },
+    {
+     "id": "cortex/dend",
+     "name": "Dendrites and spines",
+     "common": null,
+     "system": "nerve",
+     "what": "Branching input fibres covered in tiny spines; one pyramidal neuron can carry about 10,000 of them.",
+     "does": "Each spine usually holds one excitatory synapse, and spines grow, shrink and appear as you learn.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cortex/axon",
+     "name": "Axon and myelin",
+     "common": null,
+     "system": "nerve",
+     "what": "A single output fibre wrapped in segments of myelin, with gaps called nodes of Ranvier.",
+     "does": "Myelin lets the impulse jump from node to node, reaching up to about 100 m/s in the largest fibres.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cortex/astro",
+     "name": "Astrocytes",
+     "common": null,
+     "system": "nerve",
+     "what": "Star-shaped glial cells whose end-feet wrap blood vessels and synapses.",
+     "does": "Recycle neurotransmitter, mop up potassium and help maintain the blood–brain barrier.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cortex/oligo",
+     "name": "Oligodendrocytes",
+     "common": null,
+     "system": "nerve",
+     "what": "Glial cells that each myelinate segments of up to about 50 axons.",
+     "does": "Make the myelin of the brain and spinal cord. Their loss causes the damage in multiple sclerosis.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cortex/micro",
+     "name": "Microglia",
+     "common": null,
+     "system": "nerve",
+     "what": "Small branched immune cells resident in the brain.",
+     "does": "Constantly survey the tissue, clear debris and prune unused synapses.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cortex/cap",
+     "name": "Brain capillaries",
+     "common": null,
+     "system": "nerve",
+     "what": "Capillaries sealed by tight junctions, together running for hundreds of kilometres.",
+     "does": "Form the blood–brain barrier, which keeps most blood-borne molecules and microbes out.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cortex/syn",
+     "name": "Synapses",
+     "common": null,
+     "system": "nerve",
+     "what": "Junctions where an axon terminal meets another neuron across a gap about 20 nm wide.",
+     "does": "Convert an electrical signal into a chemical one and back. The neocortex has roughly 150 trillion of them.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "bone",
+   "level": "tissue",
+   "name": "Compact bone tissue",
+   "common": "Cortical bone",
+   "system": "bone",
+   "unit": 0.00005,
+   "julia": [
+    -0.835,
+    -0.2321
+   ],
+   "camera": [
+    30,
+    26,
+    36
+   ],
+   "radius": 22,
+   "what": "Dense outer bone built from cylindrical units called osteons, each about 0.2 mm across, running along the length of the bone.",
+   "does": "Bears load. The mineral (hydroxyapatite) resists squashing while collagen resists bending; about two thirds of bone's dry weight is mineral.",
+   "size": null,
+   "sources": [
+    "Buenzli & Sims, Bone 75:144 (2015)",
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "bone/osteon",
+     "name": "Osteons",
+     "common": "Haversian systems",
+     "system": "bone",
+     "what": "Columns of 4–20 concentric lamellae around a central canal, about 0.2 mm wide.",
+     "does": "Carry blood and nerves along the bone. They are rebuilt constantly; the adult skeleton renews about 10% of itself each year.",
+     "size": "about 200 µm wide",
+     "deeper": null
+    },
+    {
+     "id": "bone/lam",
+     "name": "Lamellae",
+     "common": null,
+     "system": "bone",
+     "what": "Layers of mineralised collagen 3–7 µm thick whose fibres change direction from one layer to the next.",
+     "does": "Like plywood, the alternating fibre angle resists twisting and stops cracks spreading.",
+     "size": null,
+     "deeper": "collagen"
+    },
+    {
+     "id": "bone/canal",
+     "name": "Central canals",
+     "common": "Haversian canals",
+     "system": "bone",
+     "what": "Channels about 50 µm across holding small blood vessels and nerves.",
+     "does": "Supply the bone cells buried in the mineral.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "bone/ocy",
+     "name": "Osteocytes",
+     "common": "Bone cells",
+     "system": "bone",
+     "what": "Former bone-forming cells sealed into small cavities (lacunae) in the mineral. There are about 42 billion in the human skeleton.",
+     "does": "Sense strain and signal where bone should be added or removed.",
+     "size": null,
+     "deeper": "cell-osteocyte"
+    },
+    {
+     "id": "bone/cana",
+     "name": "Canaliculi",
+     "common": null,
+     "system": "bone",
+     "what": "Channels about 0.2–0.5 µm wide connecting the lacunae to each other and to the central canal.",
+     "does": "Let osteocytes touch through long processes and let nutrients seep through solid bone.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "bone/volk",
+     "name": "Volkmann canals",
+     "common": "Perforating canals",
+     "system": "bone",
+     "what": "Channels running across the bone, at right angles to the osteons.",
+     "does": "Join the central canals to each other and to vessels on the bone surface.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "skmuscle",
+   "level": "tissue",
+   "name": "Skeletal muscle tissue",
+   "common": "Muscle fibres",
+   "system": "muscle",
+   "unit": 0.00002,
+   "julia": [
+    0.355,
+    0.355
+   ],
+   "camera": [
+    26,
+    16,
+    32
+   ],
+   "radius": 20,
+   "what": "Long, multinucleate fibres bundled into fascicles, each layer wrapped in its own connective tissue.",
+   "does": "Moves the skeleton under voluntary control. Skeletal muscle makes up roughly a third to two fifths of adult body mass.",
+   "size": null,
+   "sources": [
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)",
+    "Frontera & Ochala, Calcif Tissue Int 96:183 (2015)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "skmuscle/fibre",
+     "name": "Muscle fibres",
+     "common": "Muscle cells",
+     "system": "muscle",
+     "what": "Single cells 10–100 µm wide and up to many centimetres long, formed when precursor cells fuse.",
+     "does": "Contract when their motor neuron fires. The stripes are repeating sarcomeres about 2–2.5 µm long.",
+     "size": null,
+     "deeper": "cell-myofiber"
+    },
+    {
+     "id": "skmuscle/nuc",
+     "name": "Nuclei",
+     "common": null,
+     "system": "muscle",
+     "what": "Hundreds of nuclei per fibre, pressed flat against the edge just under the membrane.",
+     "does": "Each looks after its own stretch of the fibre.",
+     "size": null,
+     "deeper": "nucleus"
+    },
+    {
+     "id": "skmuscle/peri",
+     "name": "Perimysium",
+     "common": null,
+     "system": "muscle",
+     "what": "Connective tissue wrapping each bundle (fascicle) of fibres.",
+     "does": "Carries larger vessels and nerves and passes force to the tendon.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skmuscle/cap",
+     "name": "Capillaries",
+     "common": null,
+     "system": "muscle",
+     "what": "Several capillaries running alongside every fibre.",
+     "does": "Supply oxygen; endurance training increases their number.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skmuscle/nmj",
+     "name": "Motor nerve and end plate",
+     "common": "Neuromuscular junction",
+     "system": "muscle",
+     "what": "A motor axon ending on the fibre at a specialised synapse.",
+     "does": "Releases acetylcholine to trigger contraction. One motor neuron and all the fibres it controls form a motor unit.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skmuscle/sat",
+     "name": "Satellite cells",
+     "common": "Muscle stem cells",
+     "system": "muscle",
+     "what": "Small flattened cells tucked between a fibre and its outer coat.",
+     "does": "Wake after injury or exercise to repair and enlarge fibres.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "skin",
+   "level": "tissue",
+   "name": "Skin layers",
+   "common": "Epidermis, dermis, hypodermis",
+   "system": "skin",
+   "unit": 0.0001,
+   "julia": [
+    -0.162,
+    1.04
+   ],
+   "camera": [
+    30,
+    16,
+    34
+   ],
+   "radius": 20,
+   "what": "The epidermis on top, the dermis beneath it, then the fatty hypodermis. The epidermis is about 0.1 mm thick on most of the body and up to 1.5 mm on the soles.",
+   "does": "Blocks water loss, microbes and UV light, controls temperature and senses touch, pain and heat.",
+   "size": null,
+   "sources": [
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)",
+    "Kandel et al., Principles of Neural Science, 6th ed. (2021)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "skin/epi",
+     "name": "Epidermis",
+     "common": "Keratinocytes",
+     "system": "skin",
+     "what": "Stacked layers of keratinocytes: basal, spiny, granular and the dead outer layer.",
+     "does": "Cells born at the base rise and die over about four weeks, becoming the outer barrier.",
+     "size": null,
+     "deeper": "cell-keratinocyte"
+    },
+    {
+     "id": "skin/corn",
+     "name": "Stratum corneum",
+     "common": "Dead outer layer",
+     "system": "skin",
+     "what": "15–20 layers of flattened dead cells full of keratin, sealed with lipids.",
+     "does": "The main waterproof barrier. About 40,000 of these cells flake off every minute.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skin/mel",
+     "name": "Melanocytes",
+     "common": "Pigment cells",
+     "system": "skin",
+     "what": "Pigment cells in the basal layer, roughly one for every 4–10 basal cells.",
+     "does": "Pass melanin granules to keratinocytes. Skin colour depends mainly on how much and which kind of melanin they make, not on how many melanocytes there are.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skin/pap",
+     "name": "Dermal papillae",
+     "common": null,
+     "system": "skin",
+     "what": "Fingers of dermis pushing up into the epidermis.",
+     "does": "Lock the layers together and bring capillaries close to the surface. On the fingertips they form fingerprint ridges.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skin/derm",
+     "name": "Dermis",
+     "common": null,
+     "system": "skin",
+     "what": "Dense connective tissue of collagen and elastin, 1–4 mm thick.",
+     "does": "Gives skin its strength and stretch and holds the vessels, nerves, glands and follicles.",
+     "size": null,
+     "deeper": "collagen"
+    },
+    {
+     "id": "skin/hair",
+     "name": "Hair follicle and hair",
+     "common": null,
+     "system": "skin",
+     "what": "A tube of epithelium reaching into the dermis, with a bulb at its base wrapped around a papilla of dermis.",
+     "does": "Grows hair in cycles. Scalp hair grows about 1 cm a month.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skin/seb",
+     "name": "Sebaceous gland",
+     "common": "Oil gland",
+     "system": "skin",
+     "what": "A lobed gland opening into the hair follicle.",
+     "does": "Releases sebum, an oily film that keeps hair and skin supple.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skin/arr",
+     "name": "Arrector pili",
+     "common": null,
+     "system": "skin",
+     "what": "A tiny band of smooth muscle from the follicle to the upper dermis.",
+     "does": "Raises the hair and makes goosebumps when you are cold or frightened.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skin/sweat",
+     "name": "Sweat gland",
+     "common": "Eccrine gland",
+     "system": "skin",
+     "what": "A coiled tube deep in the dermis with a spiral duct up to a pore. There are 2–4 million over the body.",
+     "does": "Cools the body by evaporation, releasing over a litre an hour during hard exercise in heat.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skin/vess",
+     "name": "Blood vessels",
+     "common": null,
+     "system": "skin",
+     "what": "Two flat networks, one deep in the dermis and one under the papillae, joined by vertical vessels.",
+     "does": "Supply the skin and shed heat when they widen, which is why you flush when hot.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skin/meiss",
+     "name": "Meissner corpuscles",
+     "common": null,
+     "system": "skin",
+     "what": "Small encapsulated nerve endings in the dermal papillae, densest in fingertips and lips.",
+     "does": "Sense light touch and slow vibration.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skin/pac",
+     "name": "Pacinian corpuscles",
+     "common": null,
+     "system": "skin",
+     "what": "Onion-like nerve endings about 1 mm long deep in the dermis and hypodermis.",
+     "does": "Sense deep pressure and fast vibration, best at around 250 Hz.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "skin/fat",
+     "name": "Hypodermis",
+     "common": "Subcutaneous fat",
+     "system": "skin",
+     "what": "Lobules of fat cells divided by thin connective tissue walls.",
+     "does": "Insulates, cushions and stores energy.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "olfactory",
+   "level": "tissue",
+   "name": "Olfactory epithelium",
+   "common": "Smell lining",
+   "system": "nerve",
+   "unit": 0.00001,
+   "julia": [
+    0.3,
+    0.5
+   ],
+   "camera": [
+    16,
+    10,
+    26
+   ],
+   "radius": 14,
+   "what": "A patch of lining about 5 cm² in total, high in the roof of each nasal cavity, holding the nerve cells of smell.",
+   "does": "Catches odour molecules dissolved in its mucus. Humans have around 400 working odour-receptor genes, which together can tell apart a very large number of smells.",
+   "size": null,
+   "sources": [
+    "Buck & Axel, Cell 65:175 (1991)",
+    "Kandel et al., Principles of Neural Science, 6th ed. (2021)"
+   ],
+   "history": [
+    [
+     "1991",
+     "Linda Buck and Richard Axel discover the odour-receptor gene family (Nobel Prize 2004)."
+    ]
+   ],
+   "parts": [
+    {
+     "id": "olfactory/orn",
+     "name": "Olfactory receptor neurons",
+     "common": "Smell neurons",
+     "system": "nerve",
+     "what": "Nerve cells whose tips reach the surface. Each one makes just one type of odour receptor.",
+     "does": "Fire when an odour binds their receptors. They are among the few neurons replaced throughout life, roughly every 1–2 months.",
+     "size": null,
+     "deeper": "cell-olfactory"
+    },
+    {
+     "id": "olfactory/cilia",
+     "name": "Olfactory cilia",
+     "common": null,
+     "system": "nerve",
+     "what": "Long non-moving hairs spreading from each neuron's tip into the mucus.",
+     "does": "Carry the odour receptors, giving each neuron a large surface to catch molecules.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "olfactory/sus",
+     "name": "Supporting cells",
+     "common": "Sustentacular cells",
+     "system": "nerve",
+     "what": "Tall cells between the neurons.",
+     "does": "Insulate the neurons and break down odour molecules and toxins.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "olfactory/basal",
+     "name": "Basal cells",
+     "common": null,
+     "system": "nerve",
+     "what": "Stem cells along the base of the lining.",
+     "does": "Divide to replace smell neurons and supporting cells.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "olfactory/bowman",
+     "name": "Bowman's glands",
+     "common": null,
+     "system": "nerve",
+     "what": "Glands under the lining whose ducts open at the surface.",
+     "does": "Make the mucus that odour molecules must dissolve in.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "olfactory/nerve",
+     "name": "Olfactory nerve bundles",
+     "common": "Cranial nerve I",
+     "system": "nerve",
+     "what": "Axons gathered into bundles that pass up through the holes of the cribriform plate.",
+     "does": "Carry smell straight to the olfactory bulb, with no stop in the thalamus.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "olfactory/mucus",
+     "name": "Mucus layer",
+     "common": null,
+     "system": "nerve",
+     "what": "A thin watery layer covering the surface.",
+     "does": "Dissolves odour molecules and holds odour-binding proteins.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "cell-cardiomyocyte",
+   "level": "cell",
+   "name": "Cardiomyocyte",
+   "common": "Heart muscle cell",
+   "system": "cardio",
+   "unit": 0.000001,
+   "julia": [
+    -0.75,
+    0.11
+   ],
+   "camera": [
+    10,
+    8,
+    18
+   ],
+   "radius": 14,
+   "what": "A heart muscle cell packed with contractile myofibrils and mitochondria, with a central nucleus.",
+   "does": "Contracts about once a second for a lifetime, roughly 3 billion beats, without ever resting.",
+   "size": "about 100 × 20 µm (shown shortened)",
+   "sources": [
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "cell-cardiomyocyte/membrane",
+     "name": "Plasma membrane",
+     "common": null,
+     "system": "cardio",
+     "what": "A lipid bilayer about 7–10 nm thick, packed with proteins and cholesterol.",
+     "does": "Decides what enters and leaves, and carries the receptors and channels the cell uses to sense and signal.",
+     "size": "7–10 nm thick",
+     "deeper": null
+    },
+    {
+     "id": "cell-cardiomyocyte/nucleus",
+     "name": "Nucleus",
+     "common": null,
+     "system": "cardio",
+     "what": "The largest organelle, wrapped in a double membrane and holding the cell's 46 chromosomes.",
+     "does": "Stores the DNA and controls which genes are read.",
+     "size": "about 6 µm across",
+     "deeper": "nucleus"
+    },
+    {
+     "id": "cell-cardiomyocyte/mito",
+     "name": "Mitochondria",
+     "common": null,
+     "system": "cardio",
+     "what": "Bean-shaped organelles 0.5–1 µm wide with a folded inner membrane and their own small genome.",
+     "does": "Make most of the cell's ATP by burning fuel with oxygen.",
+     "size": "0.5–1 µm wide, 1–2 µm long",
+     "deeper": "mitochondrion"
+    },
+    {
+     "id": "cell-cardiomyocyte/rer",
+     "name": "Rough endoplasmic reticulum",
+     "common": "Rough ER",
+     "system": "cardio",
+     "what": "Flattened membrane sacs studded with ribosomes, continuous with the outer nuclear membrane.",
+     "does": "Builds and folds proteins destined for membranes or for secretion.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-cardiomyocyte/golgi",
+     "name": "Golgi apparatus",
+     "common": null,
+     "system": "cardio",
+     "what": "A stack of 4–8 flattened sacs (cisternae) beside the nucleus.",
+     "does": "Trims, tags and sorts proteins and lipids, then ships them out in vesicles.",
+     "size": "about 1–3 µm across",
+     "deeper": null
+    },
+    {
+     "id": "cell-cardiomyocyte/ribo",
+     "name": "Ribosomes",
+     "common": null,
+     "system": "cardio",
+     "what": "Particles of RNA and protein about 25–30 nm across, free in the cytoplasm or bound to the ER.",
+     "does": "Read messenger RNA and join amino acids into proteins, a few per second.",
+     "size": "25–30 nm",
+     "deeper": null
+    },
+    {
+     "id": "cell-cardiomyocyte/lyso",
+     "name": "Lysosomes",
+     "common": null,
+     "system": "cardio",
+     "what": "Small vesicles kept acidic (about pH 4.5–5) and filled with around 60 digestive enzymes.",
+     "does": "Break down worn-out parts, engulfed material and large molecules for recycling.",
+     "size": "0.1–1 µm",
+     "deeper": null
+    },
+    {
+     "id": "cell-cardiomyocyte/cyto",
+     "name": "Microtubules",
+     "common": "Cytoskeleton",
+     "system": "cardio",
+     "what": "Hollow protein tubes 25 nm wide radiating from the centrosome, working with actin and intermediate filaments.",
+     "does": "Give the cell its shape and act as tracks for motor proteins carrying cargo.",
+     "size": "25 nm wide",
+     "deeper": null
+    },
+    {
+     "id": "cell-cardiomyocyte/centro",
+     "name": "Centrosome",
+     "common": null,
+     "system": "cardio",
+     "what": "A pair of centrioles at right angles, surrounded by protein matrix, next to the nucleus.",
+     "does": "Organises microtubules, and builds the spindle when the cell divides.",
+     "size": "centrioles about 0.5 µm long",
+     "deeper": null
+    },
+    {
+     "id": "cell-cardiomyocyte/myofib",
+     "name": "Myofibrils",
+     "common": null,
+     "system": "cardio",
+     "what": "Bundles of actin and myosin filaments arranged in repeating sarcomeres about 2 µm long.",
+     "does": "Slide past one another when calcium rises, shortening the whole cell.",
+     "size": "about 1 µm wide",
+     "deeper": null
+    },
+    {
+     "id": "cell-cardiomyocyte/ttub",
+     "name": "T-tubules",
+     "common": "Transverse tubules",
+     "system": "cardio",
+     "what": "Fingers of the cell membrane reaching inward at each Z line.",
+     "does": "Carry the electrical signal deep into the cell so calcium is released everywhere at once.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-cardiomyocyte/sr",
+     "name": "Sarcoplasmic reticulum",
+     "common": null,
+     "system": "cardio",
+     "what": "A network of membrane tubes wrapped around the myofibrils.",
+     "does": "Stores calcium, releases it through ryanodine receptors at each beat, then pumps it back so the cell relaxes.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "cell-pneumocyte",
+   "level": "cell",
+   "name": "Type II pneumocyte",
+   "common": "Surfactant cell",
+   "system": "resp",
+   "unit": 0.000001,
+   "julia": [
+    -0.4,
+    0.6
+   ],
+   "camera": [
+    10,
+    8,
+    18
+   ],
+   "radius": 14,
+   "what": "A rounded cell in the corner of an alveolus, crowned with microvilli and full of layered surfactant granules.",
+   "does": "Makes and recycles surfactant, and acts as a stem cell for the alveolar lining.",
+   "size": "about 10 µm across",
+   "sources": [
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "cell-pneumocyte/membrane",
+     "name": "Plasma membrane",
+     "common": null,
+     "system": "resp",
+     "what": "A lipid bilayer about 7–10 nm thick, packed with proteins and cholesterol.",
+     "does": "Decides what enters and leaves, and carries the receptors and channels the cell uses to sense and signal.",
+     "size": "7–10 nm thick",
+     "deeper": null
+    },
+    {
+     "id": "cell-pneumocyte/nucleus",
+     "name": "Nucleus",
+     "common": null,
+     "system": "resp",
+     "what": "The largest organelle, wrapped in a double membrane and holding the cell's 46 chromosomes.",
+     "does": "Stores the DNA and controls which genes are read.",
+     "size": "about 6 µm across",
+     "deeper": "nucleus"
+    },
+    {
+     "id": "cell-pneumocyte/mito",
+     "name": "Mitochondria",
+     "common": null,
+     "system": "resp",
+     "what": "Bean-shaped organelles 0.5–1 µm wide with a folded inner membrane and their own small genome.",
+     "does": "Make most of the cell's ATP by burning fuel with oxygen.",
+     "size": "0.5–1 µm wide, 1–2 µm long",
+     "deeper": "mitochondrion"
+    },
+    {
+     "id": "cell-pneumocyte/rer",
+     "name": "Rough endoplasmic reticulum",
+     "common": "Rough ER",
+     "system": "resp",
+     "what": "Flattened membrane sacs studded with ribosomes, continuous with the outer nuclear membrane.",
+     "does": "Builds and folds proteins destined for membranes or for secretion.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-pneumocyte/golgi",
+     "name": "Golgi apparatus",
+     "common": null,
+     "system": "resp",
+     "what": "A stack of 4–8 flattened sacs (cisternae) beside the nucleus.",
+     "does": "Trims, tags and sorts proteins and lipids, then ships them out in vesicles.",
+     "size": "about 1–3 µm across",
+     "deeper": null
+    },
+    {
+     "id": "cell-pneumocyte/ribo",
+     "name": "Ribosomes",
+     "common": null,
+     "system": "resp",
+     "what": "Particles of RNA and protein about 25–30 nm across, free in the cytoplasm or bound to the ER.",
+     "does": "Read messenger RNA and join amino acids into proteins, a few per second.",
+     "size": "25–30 nm",
+     "deeper": null
+    },
+    {
+     "id": "cell-pneumocyte/lyso",
+     "name": "Lysosomes",
+     "common": null,
+     "system": "resp",
+     "what": "Small vesicles kept acidic (about pH 4.5–5) and filled with around 60 digestive enzymes.",
+     "does": "Break down worn-out parts, engulfed material and large molecules for recycling.",
+     "size": "0.1–1 µm",
+     "deeper": null
+    },
+    {
+     "id": "cell-pneumocyte/cyto",
+     "name": "Microtubules",
+     "common": "Cytoskeleton",
+     "system": "resp",
+     "what": "Hollow protein tubes 25 nm wide radiating from the centrosome, working with actin and intermediate filaments.",
+     "does": "Give the cell its shape and act as tracks for motor proteins carrying cargo.",
+     "size": "25 nm wide",
+     "deeper": null
+    },
+    {
+     "id": "cell-pneumocyte/centro",
+     "name": "Centrosome",
+     "common": null,
+     "system": "resp",
+     "what": "A pair of centrioles at right angles, surrounded by protein matrix, next to the nucleus.",
+     "does": "Organises microtubules, and builds the spindle when the cell divides.",
+     "size": "centrioles about 0.5 µm long",
+     "deeper": null
+    },
+    {
+     "id": "cell-pneumocyte/lam",
+     "name": "Lamellar bodies",
+     "common": null,
+     "system": "resp",
+     "what": "Granules about 1 µm across made of tightly stacked membrane layers.",
+     "does": "Store surfactant, a mix of phospholipids (mostly dipalmitoyl-phosphatidylcholine) and proteins, then release it onto the alveolar surface.",
+     "size": "about 1 µm",
+     "deeper": null
+    },
+    {
+     "id": "cell-pneumocyte/mv",
+     "name": "Microvilli",
+     "common": null,
+     "system": "resp",
+     "what": "Short finger-like projections on the cell surface facing the air.",
+     "does": "Increase surface area for taking surfactant back in.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "cell-enterocyte",
+   "level": "cell",
+   "name": "Enterocyte",
+   "common": "Absorptive intestinal cell",
+   "system": "digest",
+   "unit": 0.000001,
+   "julia": [
+    0.285,
+    0.01
+   ],
+   "camera": [
+    10,
+    8,
+    18
+   ],
+   "radius": 14,
+   "what": "A tall column-shaped cell with a dense brush border of microvilli on top and the nucleus near its base.",
+   "does": "Absorbs nutrients from the gut into the blood and lymph. Each one lives only about 3–5 days.",
+   "size": "about 20 × 5 µm",
+   "sources": [
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "cell-enterocyte/membrane",
+     "name": "Plasma membrane",
+     "common": null,
+     "system": "digest",
+     "what": "A lipid bilayer about 7–10 nm thick, packed with proteins and cholesterol.",
+     "does": "Decides what enters and leaves, and carries the receptors and channels the cell uses to sense and signal.",
+     "size": "7–10 nm thick",
+     "deeper": null
+    },
+    {
+     "id": "cell-enterocyte/nucleus",
+     "name": "Nucleus",
+     "common": null,
+     "system": "digest",
+     "what": "The largest organelle, wrapped in a double membrane and holding the cell's 46 chromosomes.",
+     "does": "Stores the DNA and controls which genes are read.",
+     "size": "about 6 µm across",
+     "deeper": "nucleus"
+    },
+    {
+     "id": "cell-enterocyte/mito",
+     "name": "Mitochondria",
+     "common": null,
+     "system": "digest",
+     "what": "Bean-shaped organelles 0.5–1 µm wide with a folded inner membrane and their own small genome.",
+     "does": "Make most of the cell's ATP by burning fuel with oxygen.",
+     "size": "0.5–1 µm wide, 1–2 µm long",
+     "deeper": "mitochondrion"
+    },
+    {
+     "id": "cell-enterocyte/rer",
+     "name": "Rough endoplasmic reticulum",
+     "common": "Rough ER",
+     "system": "digest",
+     "what": "Flattened membrane sacs studded with ribosomes, continuous with the outer nuclear membrane.",
+     "does": "Builds and folds proteins destined for membranes or for secretion.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-enterocyte/golgi",
+     "name": "Golgi apparatus",
+     "common": null,
+     "system": "digest",
+     "what": "A stack of 4–8 flattened sacs (cisternae) beside the nucleus.",
+     "does": "Trims, tags and sorts proteins and lipids, then ships them out in vesicles.",
+     "size": "about 1–3 µm across",
+     "deeper": null
+    },
+    {
+     "id": "cell-enterocyte/ribo",
+     "name": "Ribosomes",
+     "common": null,
+     "system": "digest",
+     "what": "Particles of RNA and protein about 25–30 nm across, free in the cytoplasm or bound to the ER.",
+     "does": "Read messenger RNA and join amino acids into proteins, a few per second.",
+     "size": "25–30 nm",
+     "deeper": null
+    },
+    {
+     "id": "cell-enterocyte/lyso",
+     "name": "Lysosomes",
+     "common": null,
+     "system": "digest",
+     "what": "Small vesicles kept acidic (about pH 4.5–5) and filled with around 60 digestive enzymes.",
+     "does": "Break down worn-out parts, engulfed material and large molecules for recycling.",
+     "size": "0.1–1 µm",
+     "deeper": null
+    },
+    {
+     "id": "cell-enterocyte/cyto",
+     "name": "Microtubules",
+     "common": "Cytoskeleton",
+     "system": "digest",
+     "what": "Hollow protein tubes 25 nm wide radiating from the centrosome, working with actin and intermediate filaments.",
+     "does": "Give the cell its shape and act as tracks for motor proteins carrying cargo.",
+     "size": "25 nm wide",
+     "deeper": null
+    },
+    {
+     "id": "cell-enterocyte/centro",
+     "name": "Centrosome",
+     "common": null,
+     "system": "digest",
+     "what": "A pair of centrioles at right angles, surrounded by protein matrix, next to the nucleus.",
+     "does": "Organises microtubules, and builds the spindle when the cell divides.",
+     "size": "centrioles about 0.5 µm long",
+     "deeper": null
+    },
+    {
+     "id": "cell-enterocyte/bb",
+     "name": "Brush border",
+     "common": "Microvilli",
+     "system": "digest",
+     "what": "Thousands of microvilli about 1 µm tall packed on the top surface.",
+     "does": "Multiply the absorbing area and carry digestive enzymes such as lactase and sucrase-isomaltase.",
+     "size": "about 1 × 0.1 µm each",
+     "deeper": null
+    },
+    {
+     "id": "cell-enterocyte/tj",
+     "name": "Tight junctions",
+     "common": null,
+     "system": "digest",
+     "what": "A sealing band where neighbouring cells meet just below the brush border.",
+     "does": "Stop gut contents leaking between cells, so absorption has to go through them.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-enterocyte/chylo",
+     "name": "Chylomicrons",
+     "common": null,
+     "system": "digest",
+     "what": "Fat droplets packaged with protein in the Golgi.",
+     "does": "Carry absorbed fats out of the cell into the lacteal.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "cell-neuron",
+   "level": "cell",
+   "name": "Pyramidal neuron",
+   "common": "Cortical nerve cell",
+   "system": "nerve",
+   "unit": 0.000001,
+   "julia": [
+    -0.70176,
+    -0.3842
+   ],
+   "camera": [
+    12,
+    6,
+    20
+   ],
+   "radius": 16,
+   "what": "The cell body of a cortical neuron, with its large nucleus, prominent nucleolus and the stumps of its dendrites and axon.",
+   "does": "Keeps a nerve cell alive and supplied: most proteins for dendrites and axon up to a metre long are made here.",
+   "size": "cell body about 20 µm",
+   "sources": [
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "cell-neuron/membrane",
+     "name": "Plasma membrane",
+     "common": null,
+     "system": "nerve",
+     "what": "A lipid bilayer about 7–10 nm thick, packed with proteins and cholesterol.",
+     "does": "Decides what enters and leaves, and carries the receptors and channels the cell uses to sense and signal.",
+     "size": "7–10 nm thick",
+     "deeper": null
+    },
+    {
+     "id": "cell-neuron/nucleus",
+     "name": "Nucleus",
+     "common": null,
+     "system": "nerve",
+     "what": "A large round nucleus with a prominent nucleolus, a sign of heavy protein production. Neurons stop dividing, so this nucleus must last a lifetime.",
+     "does": "Stores the DNA and controls which genes are read.",
+     "size": "about 6 µm across",
+     "deeper": "nucleus"
+    },
+    {
+     "id": "cell-neuron/mito",
+     "name": "Mitochondria",
+     "common": null,
+     "system": "nerve",
+     "what": "Bean-shaped organelles 0.5–1 µm wide with a folded inner membrane and their own small genome.",
+     "does": "Make most of the cell's ATP by burning fuel with oxygen.",
+     "size": "0.5–1 µm wide, 1–2 µm long",
+     "deeper": "mitochondrion"
+    },
+    {
+     "id": "cell-neuron/golgi",
+     "name": "Golgi apparatus",
+     "common": null,
+     "system": "nerve",
+     "what": "A stack of 4–8 flattened sacs (cisternae) beside the nucleus.",
+     "does": "Trims, tags and sorts proteins and lipids, then ships them out in vesicles.",
+     "size": "about 1–3 µm across",
+     "deeper": null
+    },
+    {
+     "id": "cell-neuron/ribo",
+     "name": "Ribosomes",
+     "common": null,
+     "system": "nerve",
+     "what": "Particles of RNA and protein about 25–30 nm across, free in the cytoplasm or bound to the ER.",
+     "does": "Read messenger RNA and join amino acids into proteins, a few per second.",
+     "size": "25–30 nm",
+     "deeper": null
+    },
+    {
+     "id": "cell-neuron/lyso",
+     "name": "Lysosomes",
+     "common": null,
+     "system": "nerve",
+     "what": "Small vesicles kept acidic (about pH 4.5–5) and filled with around 60 digestive enzymes.",
+     "does": "Break down worn-out parts, engulfed material and large molecules for recycling.",
+     "size": "0.1–1 µm",
+     "deeper": null
+    },
+    {
+     "id": "cell-neuron/cyto",
+     "name": "Microtubules",
+     "common": "Cytoskeleton",
+     "system": "nerve",
+     "what": "Hollow protein tubes 25 nm wide radiating from the centrosome, working with actin and intermediate filaments.",
+     "does": "Give the cell its shape and act as tracks for motor proteins carrying cargo.",
+     "size": "25 nm wide",
+     "deeper": null
+    },
+    {
+     "id": "cell-neuron/centro",
+     "name": "Centrosome",
+     "common": null,
+     "system": "nerve",
+     "what": "A pair of centrioles at right angles, surrounded by protein matrix, next to the nucleus.",
+     "does": "Organises microtubules, and builds the spindle when the cell divides.",
+     "size": "centrioles about 0.5 µm long",
+     "deeper": null
+    },
+    {
+     "id": "cell-neuron/nissl",
+     "name": "Nissl bodies",
+     "common": null,
+     "system": "nerve",
+     "what": "Dense stacks of rough ER and ribosomes that stain dark blue in the microscope.",
+     "does": "Make the proteins the neuron ships down its long dendrites and axon.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-neuron/dstump",
+     "name": "Dendrite trunks",
+     "common": null,
+     "system": "nerve",
+     "what": "The thick starts of the apical and basal dendrites.",
+     "does": "Carry incoming signals from thousands of synapses toward the cell body.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-neuron/hill",
+     "name": "Axon hillock and initial segment",
+     "common": null,
+     "system": "nerve",
+     "what": "The cone where the axon leaves the cell body, crowded with sodium channels.",
+     "does": "Where the action potential is usually triggered once inputs add up past threshold.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-neuron/bout",
+     "name": "Synaptic boutons",
+     "common": null,
+     "system": "nerve",
+     "what": "Axon terminals from other neurons ending on the cell body.",
+     "does": "Many release GABA, so inputs on the cell body are often inhibitory and strongly control firing.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "cell-osteocyte",
+   "level": "cell",
+   "name": "Osteocyte",
+   "common": "Bone cell",
+   "system": "bone",
+   "unit": 0.000001,
+   "julia": [
+    -0.835,
+    -0.2321
+   ],
+   "camera": [
+    10,
+    8,
+    18
+   ],
+   "radius": 14,
+   "what": "A bone cell sealed in its lacuna, reaching out through dozens of thin processes.",
+   "does": "Senses fluid flow and strain in the bone and directs remodelling through signals such as sclerostin and RANKL. Osteocytes can live for decades.",
+   "size": "cell body about 10 × 5 µm",
+   "sources": [
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "cell-osteocyte/membrane",
+     "name": "Plasma membrane",
+     "common": null,
+     "system": "bone",
+     "what": "A lipid bilayer about 7–10 nm thick, packed with proteins and cholesterol.",
+     "does": "Decides what enters and leaves, and carries the receptors and channels the cell uses to sense and signal.",
+     "size": "7–10 nm thick",
+     "deeper": null
+    },
+    {
+     "id": "cell-osteocyte/nucleus",
+     "name": "Nucleus",
+     "common": null,
+     "system": "bone",
+     "what": "The largest organelle, wrapped in a double membrane and holding the cell's 46 chromosomes.",
+     "does": "Stores the DNA and controls which genes are read.",
+     "size": "about 6 µm across",
+     "deeper": "nucleus"
+    },
+    {
+     "id": "cell-osteocyte/mito",
+     "name": "Mitochondria",
+     "common": null,
+     "system": "bone",
+     "what": "Bean-shaped organelles 0.5–1 µm wide with a folded inner membrane and their own small genome.",
+     "does": "Make most of the cell's ATP by burning fuel with oxygen.",
+     "size": "0.5–1 µm wide, 1–2 µm long",
+     "deeper": "mitochondrion"
+    },
+    {
+     "id": "cell-osteocyte/rer",
+     "name": "Rough endoplasmic reticulum",
+     "common": "Rough ER",
+     "system": "bone",
+     "what": "Flattened membrane sacs studded with ribosomes, continuous with the outer nuclear membrane.",
+     "does": "Builds and folds proteins destined for membranes or for secretion.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-osteocyte/golgi",
+     "name": "Golgi apparatus",
+     "common": null,
+     "system": "bone",
+     "what": "A stack of 4–8 flattened sacs (cisternae) beside the nucleus.",
+     "does": "Trims, tags and sorts proteins and lipids, then ships them out in vesicles.",
+     "size": "about 1–3 µm across",
+     "deeper": null
+    },
+    {
+     "id": "cell-osteocyte/ribo",
+     "name": "Ribosomes",
+     "common": null,
+     "system": "bone",
+     "what": "Particles of RNA and protein about 25–30 nm across, free in the cytoplasm or bound to the ER.",
+     "does": "Read messenger RNA and join amino acids into proteins, a few per second.",
+     "size": "25–30 nm",
+     "deeper": null
+    },
+    {
+     "id": "cell-osteocyte/lyso",
+     "name": "Lysosomes",
+     "common": null,
+     "system": "bone",
+     "what": "Small vesicles kept acidic (about pH 4.5–5) and filled with around 60 digestive enzymes.",
+     "does": "Break down worn-out parts, engulfed material and large molecules for recycling.",
+     "size": "0.1–1 µm",
+     "deeper": null
+    },
+    {
+     "id": "cell-osteocyte/cyto",
+     "name": "Microtubules",
+     "common": "Cytoskeleton",
+     "system": "bone",
+     "what": "Hollow protein tubes 25 nm wide radiating from the centrosome, working with actin and intermediate filaments.",
+     "does": "Give the cell its shape and act as tracks for motor proteins carrying cargo.",
+     "size": "25 nm wide",
+     "deeper": null
+    },
+    {
+     "id": "cell-osteocyte/centro",
+     "name": "Centrosome",
+     "common": null,
+     "system": "bone",
+     "what": "A pair of centrioles at right angles, surrounded by protein matrix, next to the nucleus.",
+     "does": "Organises microtubules, and builds the spindle when the cell divides.",
+     "size": "centrioles about 0.5 µm long",
+     "deeper": null
+    },
+    {
+     "id": "cell-osteocyte/proc",
+     "name": "Dendritic processes",
+     "common": null,
+     "system": "bone",
+     "what": "Dozens of thin processes running through canaliculi to neighbouring cells and the bone surface.",
+     "does": "Form a network that senses load and passes signals and nutrients.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-osteocyte/lac",
+     "name": "Lacuna",
+     "common": null,
+     "system": "bone",
+     "what": "The small cavity in the mineralised matrix that holds the cell.",
+     "does": "Lets fluid flow around the cell; that flow is how bone senses load.",
+     "size": null,
+     "deeper": "collagen"
+    }
+   ]
+  },
+  {
+   "id": "cell-myofiber",
+   "level": "cell",
+   "name": "Skeletal muscle fibre",
+   "common": "Muscle cell",
+   "system": "muscle",
+   "unit": 0.000001,
+   "julia": [
+    0.355,
+    0.355
+   ],
+   "camera": [
+    10,
+    8,
+    18
+   ],
+   "radius": 14,
+   "what": "A short stretch of one muscle fibre: myofibrils, mitochondria, and nuclei pressed against the edge.",
+   "does": "Turns a nerve signal into force. A fibre can shorten by about a third of its length.",
+   "size": "10–100 µm wide (a 30 µm stretch shown)",
+   "sources": [
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "cell-myofiber/membrane",
+     "name": "Plasma membrane",
+     "common": null,
+     "system": "muscle",
+     "what": "A lipid bilayer about 7–10 nm thick, packed with proteins and cholesterol.",
+     "does": "Decides what enters and leaves, and carries the receptors and channels the cell uses to sense and signal.",
+     "size": "7–10 nm thick",
+     "deeper": null
+    },
+    {
+     "id": "cell-myofiber/nucleus",
+     "name": "Nucleus",
+     "common": null,
+     "system": "muscle",
+     "what": "One of hundreds of nuclei in this single cell, sitting just under the membrane.",
+     "does": "Stores the DNA and controls which genes are read.",
+     "size": "about 6 µm across",
+     "deeper": "nucleus"
+    },
+    {
+     "id": "cell-myofiber/mito",
+     "name": "Mitochondria",
+     "common": null,
+     "system": "muscle",
+     "what": "Bean-shaped organelles 0.5–1 µm wide with a folded inner membrane and their own small genome.",
+     "does": "Make most of the cell's ATP by burning fuel with oxygen.",
+     "size": "0.5–1 µm wide, 1–2 µm long",
+     "deeper": "mitochondrion"
+    },
+    {
+     "id": "cell-myofiber/ribo",
+     "name": "Ribosomes",
+     "common": null,
+     "system": "muscle",
+     "what": "Particles of RNA and protein about 25–30 nm across, free in the cytoplasm or bound to the ER.",
+     "does": "Read messenger RNA and join amino acids into proteins, a few per second.",
+     "size": "25–30 nm",
+     "deeper": null
+    },
+    {
+     "id": "cell-myofiber/lyso",
+     "name": "Lysosomes",
+     "common": null,
+     "system": "muscle",
+     "what": "Small vesicles kept acidic (about pH 4.5–5) and filled with around 60 digestive enzymes.",
+     "does": "Break down worn-out parts, engulfed material and large molecules for recycling.",
+     "size": "0.1–1 µm",
+     "deeper": null
+    },
+    {
+     "id": "cell-myofiber/cyto",
+     "name": "Microtubules",
+     "common": "Cytoskeleton",
+     "system": "muscle",
+     "what": "Hollow protein tubes 25 nm wide radiating from the centrosome, working with actin and intermediate filaments.",
+     "does": "Give the cell its shape and act as tracks for motor proteins carrying cargo.",
+     "size": "25 nm wide",
+     "deeper": null
+    },
+    {
+     "id": "cell-myofiber/centro",
+     "name": "Centrosome",
+     "common": null,
+     "system": "muscle",
+     "what": "A pair of centrioles at right angles, surrounded by protein matrix, next to the nucleus.",
+     "does": "Organises microtubules, and builds the spindle when the cell divides.",
+     "size": "centrioles about 0.5 µm long",
+     "deeper": null
+    },
+    {
+     "id": "cell-myofiber/myofib",
+     "name": "Myofibrils",
+     "common": null,
+     "system": "muscle",
+     "what": "Bundles of actin and myosin in sarcomeres about 2–2.5 µm long, lined up across the fibre.",
+     "does": "Slide to shorten the fibre when calcium is released.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-myofiber/ttub",
+     "name": "Triads",
+     "common": "T-tubules and terminal cisternae",
+     "system": "muscle",
+     "what": "A T-tubule flanked by two sacs of sarcoplasmic reticulum, at each junction of the A and I bands.",
+     "does": "Link the electrical signal to calcium release in a few milliseconds.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-myofiber/sr",
+     "name": "Sarcoplasmic reticulum",
+     "common": null,
+     "system": "muscle",
+     "what": "A sleeve of membrane around each myofibril.",
+     "does": "Stores calcium and pumps it back after each contraction.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "cell-keratinocyte",
+   "level": "cell",
+   "name": "Keratinocyte",
+   "common": "Skin cell",
+   "system": "skin",
+   "unit": 0.000001,
+   "julia": [
+    -0.162,
+    1.04
+   ],
+   "camera": [
+    10,
+    8,
+    18
+   ],
+   "radius": 14,
+   "what": "A cell of the spiny layer of the epidermis, laced with keratin filaments and riveted to its neighbours.",
+   "does": "Builds the skin barrier. As it rises it fills with keratin, flattens and dies to become part of the outer layer.",
+   "size": "about 10–15 µm",
+   "sources": [
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "cell-keratinocyte/membrane",
+     "name": "Plasma membrane",
+     "common": null,
+     "system": "skin",
+     "what": "A lipid bilayer about 7–10 nm thick, packed with proteins and cholesterol.",
+     "does": "Decides what enters and leaves, and carries the receptors and channels the cell uses to sense and signal.",
+     "size": "7–10 nm thick",
+     "deeper": null
+    },
+    {
+     "id": "cell-keratinocyte/nucleus",
+     "name": "Nucleus",
+     "common": null,
+     "system": "skin",
+     "what": "The largest organelle, wrapped in a double membrane and holding the cell's 46 chromosomes.",
+     "does": "Stores the DNA and controls which genes are read.",
+     "size": "about 6 µm across",
+     "deeper": "nucleus"
+    },
+    {
+     "id": "cell-keratinocyte/mito",
+     "name": "Mitochondria",
+     "common": null,
+     "system": "skin",
+     "what": "Bean-shaped organelles 0.5–1 µm wide with a folded inner membrane and their own small genome.",
+     "does": "Make most of the cell's ATP by burning fuel with oxygen.",
+     "size": "0.5–1 µm wide, 1–2 µm long",
+     "deeper": "mitochondrion"
+    },
+    {
+     "id": "cell-keratinocyte/rer",
+     "name": "Rough endoplasmic reticulum",
+     "common": "Rough ER",
+     "system": "skin",
+     "what": "Flattened membrane sacs studded with ribosomes, continuous with the outer nuclear membrane.",
+     "does": "Builds and folds proteins destined for membranes or for secretion.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-keratinocyte/golgi",
+     "name": "Golgi apparatus",
+     "common": null,
+     "system": "skin",
+     "what": "A stack of 4–8 flattened sacs (cisternae) beside the nucleus.",
+     "does": "Trims, tags and sorts proteins and lipids, then ships them out in vesicles.",
+     "size": "about 1–3 µm across",
+     "deeper": null
+    },
+    {
+     "id": "cell-keratinocyte/ribo",
+     "name": "Ribosomes",
+     "common": null,
+     "system": "skin",
+     "what": "Particles of RNA and protein about 25–30 nm across, free in the cytoplasm or bound to the ER.",
+     "does": "Read messenger RNA and join amino acids into proteins, a few per second.",
+     "size": "25–30 nm",
+     "deeper": null
+    },
+    {
+     "id": "cell-keratinocyte/lyso",
+     "name": "Lysosomes",
+     "common": null,
+     "system": "skin",
+     "what": "Small vesicles kept acidic (about pH 4.5–5) and filled with around 60 digestive enzymes.",
+     "does": "Break down worn-out parts, engulfed material and large molecules for recycling.",
+     "size": "0.1–1 µm",
+     "deeper": null
+    },
+    {
+     "id": "cell-keratinocyte/cyto",
+     "name": "Microtubules",
+     "common": "Cytoskeleton",
+     "system": "skin",
+     "what": "Hollow protein tubes 25 nm wide radiating from the centrosome, working with actin and intermediate filaments.",
+     "does": "Give the cell its shape and act as tracks for motor proteins carrying cargo.",
+     "size": "25 nm wide",
+     "deeper": null
+    },
+    {
+     "id": "cell-keratinocyte/centro",
+     "name": "Centrosome",
+     "common": null,
+     "system": "skin",
+     "what": "A pair of centrioles at right angles, surrounded by protein matrix, next to the nucleus.",
+     "does": "Organises microtubules, and builds the spindle when the cell divides.",
+     "size": "centrioles about 0.5 µm long",
+     "deeper": null
+    },
+    {
+     "id": "cell-keratinocyte/ker",
+     "name": "Keratin filaments",
+     "common": null,
+     "system": "skin",
+     "what": "Intermediate filaments about 10 nm thick running in bundles across the cell.",
+     "does": "Give the cell its toughness. Mutations in keratin genes cause blistering diseases such as epidermolysis bullosa simplex.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-keratinocyte/desmo",
+     "name": "Desmosomes",
+     "common": null,
+     "system": "skin",
+     "what": "Spot welds on the cell surface where keratin bundles from neighbouring cells anchor.",
+     "does": "Resist shearing. In pemphigus, antibodies attack them and the skin blisters.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-keratinocyte/melcap",
+     "name": "Melanin cap",
+     "common": "Supranuclear cap",
+     "system": "skin",
+     "what": "Melanin granules clustered over the top of the nucleus like an umbrella.",
+     "does": "Shield the DNA from ultraviolet light.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "cell-olfactory",
+   "level": "cell",
+   "name": "Olfactory receptor neuron",
+   "common": "Smell neuron",
+   "system": "nerve",
+   "unit": 0.000001,
+   "julia": [
+    0.3,
+    0.5
+   ],
+   "camera": [
+    8,
+    4,
+    22
+   ],
+   "radius": 16,
+   "what": "A bipolar nerve cell: a slender dendrite up to the surface ending in a knob of cilia, and an axon down to the brain.",
+   "does": "Each neuron expresses just one of about 400 odour receptor types, and all neurons with the same receptor send their axons to the same spot in the olfactory bulb.",
+   "size": "cell body about 5–8 µm",
+   "sources": [
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Ross & Pawlina, Histology: A Text and Atlas, 8th ed. (2020)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "cell-olfactory/membrane",
+     "name": "Plasma membrane",
+     "common": null,
+     "system": "nerve",
+     "what": "A lipid bilayer about 7–10 nm thick, packed with proteins and cholesterol.",
+     "does": "Decides what enters and leaves, and carries the receptors and channels the cell uses to sense and signal.",
+     "size": "7–10 nm thick",
+     "deeper": null
+    },
+    {
+     "id": "cell-olfactory/nucleus",
+     "name": "Nucleus",
+     "common": null,
+     "system": "nerve",
+     "what": "The largest organelle, wrapped in a double membrane and holding the cell's 46 chromosomes.",
+     "does": "Stores the DNA and controls which genes are read.",
+     "size": "about 6 µm across",
+     "deeper": "nucleus"
+    },
+    {
+     "id": "cell-olfactory/mito",
+     "name": "Mitochondria",
+     "common": null,
+     "system": "nerve",
+     "what": "Bean-shaped organelles 0.5–1 µm wide with a folded inner membrane and their own small genome.",
+     "does": "Make most of the cell's ATP by burning fuel with oxygen.",
+     "size": "0.5–1 µm wide, 1–2 µm long",
+     "deeper": "mitochondrion"
+    },
+    {
+     "id": "cell-olfactory/rer",
+     "name": "Rough endoplasmic reticulum",
+     "common": "Rough ER",
+     "system": "nerve",
+     "what": "Flattened membrane sacs studded with ribosomes, continuous with the outer nuclear membrane.",
+     "does": "Builds and folds proteins destined for membranes or for secretion.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-olfactory/golgi",
+     "name": "Golgi apparatus",
+     "common": null,
+     "system": "nerve",
+     "what": "A stack of 4–8 flattened sacs (cisternae) beside the nucleus.",
+     "does": "Trims, tags and sorts proteins and lipids, then ships them out in vesicles.",
+     "size": "about 1–3 µm across",
+     "deeper": null
+    },
+    {
+     "id": "cell-olfactory/ribo",
+     "name": "Ribosomes",
+     "common": null,
+     "system": "nerve",
+     "what": "Particles of RNA and protein about 25–30 nm across, free in the cytoplasm or bound to the ER.",
+     "does": "Read messenger RNA and join amino acids into proteins, a few per second.",
+     "size": "25–30 nm",
+     "deeper": null
+    },
+    {
+     "id": "cell-olfactory/lyso",
+     "name": "Lysosomes",
+     "common": null,
+     "system": "nerve",
+     "what": "Small vesicles kept acidic (about pH 4.5–5) and filled with around 60 digestive enzymes.",
+     "does": "Break down worn-out parts, engulfed material and large molecules for recycling.",
+     "size": "0.1–1 µm",
+     "deeper": null
+    },
+    {
+     "id": "cell-olfactory/cyto",
+     "name": "Microtubules",
+     "common": "Cytoskeleton",
+     "system": "nerve",
+     "what": "Hollow protein tubes 25 nm wide radiating from the centrosome, working with actin and intermediate filaments.",
+     "does": "Give the cell its shape and act as tracks for motor proteins carrying cargo.",
+     "size": "25 nm wide",
+     "deeper": null
+    },
+    {
+     "id": "cell-olfactory/centro",
+     "name": "Centrosome",
+     "common": null,
+     "system": "nerve",
+     "what": "A pair of centrioles at right angles, surrounded by protein matrix, next to the nucleus.",
+     "does": "Organises microtubules, and builds the spindle when the cell divides.",
+     "size": "centrioles about 0.5 µm long",
+     "deeper": null
+    },
+    {
+     "id": "cell-olfactory/knob",
+     "name": "Dendritic knob",
+     "common": null,
+     "system": "nerve",
+     "what": "The swollen tip of the dendrite at the surface of the lining.",
+     "does": "Anchors the cilia that hold the receptors.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "cell-olfactory/cilia",
+     "name": "Cilia",
+     "common": null,
+     "system": "nerve",
+     "what": "Long hair-like extensions spreading through the mucus.",
+     "does": "Carry the odour receptors and the signalling machinery that turns binding into an electrical signal.",
+     "size": null,
+     "deeper": "odorant-receptor"
+    },
+    {
+     "id": "cell-olfactory/axon",
+     "name": "Axon",
+     "common": null,
+     "system": "nerve",
+     "what": "A thin unmyelinated axon running up through the cribriform plate.",
+     "does": "Carries the signal to a glomerulus in the olfactory bulb.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "nucleus",
+   "level": "organelle",
+   "name": "Nucleus",
+   "common": null,
+   "system": "cell",
+   "unit": 1e-7,
+   "julia": [
+    -0.54,
+    0.54
+   ],
+   "camera": [
+    44,
+    30,
+    76
+   ],
+   "radius": 40,
+   "what": "A sphere about 6 µm across, wrapped in a double membrane, holding about 2 metres of DNA in 46 chromosomes.",
+   "does": "Stores the genome and decides which genes are read at any moment.",
+   "size": "about 6 µm across",
+   "sources": [
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)"
+   ],
+   "history": [
+    [
+     "1831",
+     "Robert Brown names the nucleus in orchid cells."
+    ],
+    [
+     "1882",
+     "Walther Flemming describes chromatin and chromosomes in dividing cells."
+    ]
+   ],
+   "parts": [
+    {
+     "id": "nucleus/outer",
+     "name": "Outer nuclear membrane",
+     "common": null,
+     "system": "cell",
+     "what": "The outer layer of the envelope, continuous with the rough ER and dotted with ribosomes.",
+     "does": "Joins the nucleus to the cell's protein-making network.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "nucleus/inner",
+     "name": "Inner membrane and lamina",
+     "common": "Nuclear lamina",
+     "system": "cell",
+     "what": "The inner layer of the envelope, lined by a meshwork of lamin filaments.",
+     "does": "Gives the nucleus its shape and anchors silent chromatin. Lamin A mutations cause progeria, a premature-ageing disease.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "nucleus/pores",
+     "name": "Nuclear pores",
+     "common": null,
+     "system": "cell",
+     "what": "Large protein channels about 120 nm across, built from about 30 kinds of nucleoporin. A typical nucleus has a few thousand.",
+     "does": "Let small molecules pass freely and actively carry proteins in and RNA out.",
+     "size": "about 120 nm across",
+     "deeper": null
+    },
+    {
+     "id": "nucleus/nucleolus",
+     "name": "Nucleolus",
+     "common": null,
+     "system": "cell",
+     "what": "A dense region with no membrane, about 1–3 µm across, formed around the ribosomal RNA genes.",
+     "does": "Makes ribosomal RNA and assembles ribosome subunits.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "nucleus/hetero",
+     "name": "Heterochromatin",
+     "common": "Packed chromatin",
+     "system": "cell",
+     "what": "Tightly packed, mostly silent chromatin, gathered at the nuclear edge and around the nucleolus.",
+     "does": "Keeps repeats and unused genes switched off.",
+     "size": null,
+     "deeper": "chromatin"
+    },
+    {
+     "id": "nucleus/eu",
+     "name": "Euchromatin",
+     "common": "Open chromatin",
+     "system": "cell",
+     "what": "Looser chromatin filling the interior.",
+     "does": "Holds the active genes being read.",
+     "size": null,
+     "deeper": "chromatin"
+    },
+    {
+     "id": "nucleus/terr",
+     "name": "Chromosome territories",
+     "common": null,
+     "system": "cell",
+     "what": "Between divisions each chromosome occupies its own region rather than tangling with the others.",
+     "does": "Gene-rich chromosomes tend to sit toward the centre and gene-poor ones near the edge.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "mitochondrion",
+   "level": "organelle",
+   "name": "Mitochondrion",
+   "common": "Power plant of the cell",
+   "system": "cell",
+   "unit": 1e-8,
+   "julia": [
+    -0.8,
+    0.156
+   ],
+   "camera": [
+    80,
+    55,
+    160
+   ],
+   "radius": 90,
+   "what": "An organelle about 0.5–1 µm wide with two membranes: a smooth outer one and an inner one folded into cristae.",
+   "does": "Burns fuel with oxygen to pump protons, then uses that gradient to make ATP. The body turns over roughly its own weight in ATP every day.",
+   "size": "about 0.5–1 × 1–2 µm",
+   "sources": [
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Mitchell, Nature 191:144 (1961)"
+   ],
+   "history": [
+    [
+     "1898",
+     "Carl Benda names the mitochondrion."
+    ],
+    [
+     "1961",
+     "Peter Mitchell proposes the chemiosmotic theory (Nobel Prize 1978)."
+    ],
+    [
+     "1981",
+     "The complete human mitochondrial genome is sequenced (the Cambridge reference sequence)."
+    ]
+   ],
+   "parts": [
+    {
+     "id": "mitochondrion/outer",
+     "name": "Outer membrane",
+     "common": null,
+     "system": "cell",
+     "what": "A smooth membrane full of porin channels.",
+     "does": "Lets small molecules up to about 5 kDa pass freely.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "mitochondrion/cristae",
+     "name": "Inner membrane and cristae",
+     "common": null,
+     "system": "cell",
+     "what": "A heavily folded inner membrane carrying the electron transport chain.",
+     "does": "Pumps protons out to build a voltage of about 150–180 mV across itself.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "mitochondrion/atp",
+     "name": "ATP synthase",
+     "common": null,
+     "system": "cell",
+     "what": "A rotary motor protein about 10 nm across with its head facing the matrix.",
+     "does": "Turns as protons flow back through it, making about three ATP per full turn.",
+     "size": null,
+     "deeper": "atp-synthase"
+    },
+    {
+     "id": "mitochondrion/matrix",
+     "name": "Matrix",
+     "common": null,
+     "system": "cell",
+     "what": "The dense interior holding enzymes, ribosomes and DNA.",
+     "does": "Runs the citric acid cycle and fatty acid breakdown.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "mitochondrion/mtdna",
+     "name": "Mitochondrial DNA",
+     "common": "mtDNA",
+     "system": "cell",
+     "what": "Small circles of DNA, 16,569 base pairs with 37 genes, several copies per mitochondrion.",
+     "does": "Codes 13 proteins of the respiratory chain plus its own RNAs. It is inherited from the mother.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "mitochondrion/mribo",
+     "name": "Mitochondrial ribosomes",
+     "common": null,
+     "system": "cell",
+     "what": "Ribosomes inside the matrix, distinct from those in the cytoplasm.",
+     "does": "Make the 13 proteins coded by mtDNA.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "chromatin",
+   "level": "chromatin",
+   "name": "Chromatin fibre",
+   "common": "Beads on a string",
+   "system": "molecule",
+   "unit": 1e-9,
+   "julia": [
+    -0.123,
+    0.745
+   ],
+   "camera": [
+    0,
+    22,
+    80
+   ],
+   "radius": 70,
+   "what": "DNA wrapped around histone spools (nucleosomes) about every 200 base pairs. Open stretches on the left, tightly packed chromatin on the right.",
+   "does": "Packs 2 metres of DNA into the nucleus while controlling which genes can be reached. Whether a regular 30 nm fibre exists in living cells is still debated; most chromatin looks irregular.",
+   "size": null,
+   "sources": [
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Olins & Olins, Nat Rev Mol Cell Biol 4:809 (2003)"
+   ],
+   "history": [
+    [
+     "1974",
+     "Roger Kornberg proposes the nucleosome as the repeating unit of chromatin; Ada and Donald Olins see the \"beads on a string\" in the electron microscope."
+    ]
+   ],
+   "parts": [
+    {
+     "id": "chromatin/nuc",
+     "name": "Nucleosomes",
+     "common": null,
+     "system": "molecule",
+     "what": "Spools of 147 base pairs of DNA wrapped around eight histone proteins. A human cell has about 30 million of them.",
+     "does": "The first level of DNA packing. Their spacing and chemical marks decide which genes can be read.",
+     "size": "11 nm wide",
+     "deeper": "nucleosome"
+    },
+    {
+     "id": "chromatin/linker",
+     "name": "Linker DNA",
+     "common": null,
+     "system": "molecule",
+     "what": "Stretches of about 20–80 base pairs joining one nucleosome to the next.",
+     "does": "Gives the fibre flexibility and is where many regulatory proteins bind.",
+     "size": null,
+     "deeper": "dna"
+    },
+    {
+     "id": "chromatin/h1",
+     "name": "Linker histone H1",
+     "common": null,
+     "system": "molecule",
+     "what": "A histone that binds where DNA enters and leaves the nucleosome.",
+     "does": "Locks the DNA in place and helps fold the fibre more tightly.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "chromatin/compact",
+     "name": "Compacted chromatin",
+     "common": "Heterochromatin",
+     "system": "molecule",
+     "what": "Nucleosomes stacked closely in a zigzag.",
+     "does": "Typical of silent regions; the transcription machinery has trouble reaching the DNA.",
+     "size": null,
+     "deeper": "nucleosome"
+    },
+    {
+     "id": "chromatin/pol2",
+     "name": "RNA polymerase II",
+     "common": null,
+     "system": "molecule",
+     "what": "A 12-subunit enzyme of about 550 kDa, shown copying an open gene with its RNA trailing behind.",
+     "does": "Transcribes genes into messenger RNA at roughly 2–4 kilobases per minute.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "nucleosome",
+   "level": "nucleosome",
+   "name": "Nucleosome",
+   "common": "Nucleosome core particle",
+   "system": "molecule",
+   "unit": 1e-9,
+   "julia": [
+    -0.391,
+    -0.587
+   ],
+   "camera": [
+    8,
+    6,
+    22
+   ],
+   "radius": 18,
+   "what": "147 base pairs of DNA wrapped 1.65 times, in a left-handed coil, around an octamer of eight histones: two each of H2A, H2B, H3 and H4.",
+   "does": "Packs DNA about sevenfold and is the main place genes are switched on or off by chemical marks on the histones.",
+   "size": "about 11 nm wide and 5.5 nm high",
+   "sources": [
+    "Luger et al., Nature 389:251 (1997), doi:10.1038/38444",
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)"
+   ],
+   "history": [
+    [
+     "1974",
+     "Roger Kornberg proposes the nucleosome model."
+    ],
+    [
+     "1984",
+     "Richmond, Klug and colleagues produce the first low-resolution crystal structure."
+    ],
+    [
+     "1997",
+     "Karolin Luger, Timothy Richmond and colleagues solve the structure at 2.8 Å."
+    ]
+   ],
+   "parts": [
+    {
+     "id": "nucleosome/h3",
+     "name": "Histone H3 (×2)",
+     "common": null,
+     "system": "molecule",
+     "what": "Two copies of H3, 135 amino acids each, at the centre of the octamer, paired with H4.",
+     "does": "Its tail carries many of the best-known gene-control marks.",
+     "size": "about 15 kDa",
+     "deeper": "histone-h3"
+    },
+    {
+     "id": "nucleosome/h4",
+     "name": "Histone H4 (×2)",
+     "common": null,
+     "system": "molecule",
+     "what": "Two copies of H4, 102 amino acids each, one of the most conserved proteins known.",
+     "does": "With H3 forms the central tetramer; its tail decides how tightly neighbouring nucleosomes stack.",
+     "size": "about 11 kDa",
+     "deeper": "histone-h4"
+    },
+    {
+     "id": "nucleosome/h2a",
+     "name": "Histone H2A (×2)",
+     "common": null,
+     "system": "molecule",
+     "what": "Two copies of H2A, about 129 amino acids, each paired with H2B on the faces of the disc.",
+     "does": "Variants such as H2A.Z and H2A.X change how the nucleosome behaves; H2A.X is marked at DNA breaks.",
+     "size": "about 14 kDa",
+     "deeper": "histone-h2a"
+    },
+    {
+     "id": "nucleosome/h2b",
+     "name": "Histone H2B (×2)",
+     "common": null,
+     "system": "molecule",
+     "what": "Two copies of H2B, about 125 amino acids, paired with H2A.",
+     "does": "Forms part of the acidic patch that many proteins grab onto; marked during gene transcription.",
+     "size": "about 14 kDa",
+     "deeper": "histone-h2b"
+    },
+    {
+     "id": "nucleosome/dna",
+     "name": "Wrapped DNA",
+     "common": null,
+     "system": "molecule",
+     "what": "147 base pairs in 1.65 left-handed turns with a radius of about 4.2 nm.",
+     "does": "Touches the histones about every 10 base pairs, wherever its minor groove faces inward.",
+     "size": null,
+     "deeper": "dna"
+    },
+    {
+     "id": "nucleosome/tails",
+     "name": "Histone tails",
+     "common": null,
+     "system": "molecule",
+     "what": "Flexible, unfolded ends of the histones, mostly the N-terminal ends, poking out between the DNA coils.",
+     "does": "Carry chemical marks (acetyl, methyl, phosphate, ubiquitin) that other proteins read to open or close chromatin.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "histone-h3",
+   "level": "molecule",
+   "name": "Histone H3",
+   "common": "135 amino acids, about 15 kDa",
+   "system": "molecule",
+   "unit": 5e-10,
+   "julia": [
+    -0.75,
+    0.05
+   ],
+   "camera": [
+    6,
+    4,
+    24
+   ],
+   "radius": 18,
+   "what": "The fold and tail of histone H3. The tail (residues 1–40 or so) is where most studied marks sit.",
+   "does": "Its marks form a code read by other proteins: the same lysine can mean \"on\" or \"off\" depending on the mark.",
+   "size": "135 amino acids, about 15 kDa",
+   "sources": [
+    "Luger et al., Nature 389:251 (1997), doi:10.1038/38444",
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Bannister & Kouzarides, Cell Res 21:381 (2011)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "histone-h3/fold",
+     "name": "Histone fold",
+     "common": null,
+     "system": "molecule",
+     "what": "Three alpha helices (α1, a long α2, α3) joined by two loops. Every core histone shares this fold.",
+     "does": "Two folds lock together in a \"handshake\" to form each histone pair (H3 with H4, H2A with H2B).",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h3/loops",
+     "name": "Loops L1 and L2",
+     "common": null,
+     "system": "molecule",
+     "what": "Short loops between the helices.",
+     "does": "Where the two partners' loops meet, they grip the DNA minor groove.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h3/tail",
+     "name": "H3 tail",
+     "common": null,
+     "system": "molecule",
+     "what": "The flexible N-terminal tail, about 40 amino acids, rich in lysine and arginine.",
+     "does": "Its positive charges grab DNA and neighbouring nucleosomes; chemical marks on it change those contacts and recruit reader proteins.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h3/partner",
+     "name": "Histone H4 (partner)",
+     "common": null,
+     "system": "molecule",
+     "what": "The histone that pairs with H3 through the handshake motif.",
+     "does": "Shown faintly to show how the pair interlocks.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h3/m-K4",
+     "name": "H3K4me3",
+     "common": "Trimethylation of lysine 4",
+     "system": "molecule",
+     "what": "Three methyl groups on lysine 4, added by SET1/MLL (COMPASS) enzymes.",
+     "does": "Marks the start (promoter) of active genes and recruits the transcription machinery.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h3/m-K9",
+     "name": "H3K9me3",
+     "common": "Trimethylation of lysine 9",
+     "system": "molecule",
+     "what": "Three methyl groups on lysine 9, added by SUV39H1/2 and SETDB1.",
+     "does": "A hallmark of permanently silent heterochromatin, such as around centromeres; read by HP1, which compacts chromatin.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h3/m-S10",
+     "name": "H3S10ph",
+     "common": "Phosphorylation of serine 10",
+     "system": "molecule",
+     "what": "A phosphate on serine 10, added by Aurora B kinase.",
+     "does": "Rises sharply as chromosomes condense in mitosis.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h3/m-K27",
+     "name": "H3K27me3",
+     "common": "Trimethylation of lysine 27",
+     "system": "molecule",
+     "what": "Three methyl groups on lysine 27, added by the Polycomb complex PRC2 (EZH2).",
+     "does": "Keeps developmental genes switched off in cells that do not need them.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h3/m-K36",
+     "name": "H3K36me3",
+     "common": "Trimethylation of lysine 36",
+     "system": "molecule",
+     "what": "Three methyl groups on lysine 36, added by SETD2 as RNA polymerase II passes.",
+     "does": "Covers the bodies of genes being read and blocks transcription starting in the wrong place.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "histone-h4",
+   "level": "molecule",
+   "name": "Histone H4",
+   "common": "102 amino acids, about 11 kDa",
+   "system": "molecule",
+   "unit": 5e-10,
+   "julia": [
+    -0.75,
+    0.15
+   ],
+   "camera": [
+    6,
+    4,
+    24
+   ],
+   "radius": 18,
+   "what": "The fold and tail of histone H4, almost identical in peas and cows.",
+   "does": "Its tail reaches over to the acidic patch on the neighbouring nucleosome, helping chromatin fold.",
+   "size": "102 amino acids, about 11 kDa",
+   "sources": [
+    "Luger et al., Nature 389:251 (1997), doi:10.1038/38444",
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Bannister & Kouzarides, Cell Res 21:381 (2011)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "histone-h4/fold",
+     "name": "Histone fold",
+     "common": null,
+     "system": "molecule",
+     "what": "Three alpha helices (α1, a long α2, α3) joined by two loops. Every core histone shares this fold.",
+     "does": "Two folds lock together in a \"handshake\" to form each histone pair (H3 with H4, H2A with H2B).",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h4/loops",
+     "name": "Loops L1 and L2",
+     "common": null,
+     "system": "molecule",
+     "what": "Short loops between the helices.",
+     "does": "Where the two partners' loops meet, they grip the DNA minor groove.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h4/tail",
+     "name": "H4 tail",
+     "common": null,
+     "system": "molecule",
+     "what": "The flexible N-terminal tail, about 24 amino acids, rich in lysine and arginine.",
+     "does": "Its positive charges grab DNA and neighbouring nucleosomes; chemical marks on it change those contacts and recruit reader proteins.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h4/partner",
+     "name": "Histone H3 (partner)",
+     "common": null,
+     "system": "molecule",
+     "what": "The histone that pairs with H4 through the handshake motif.",
+     "does": "Shown faintly to show how the pair interlocks.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h4/m-K5",
+     "name": "H4K5ac",
+     "common": "Acetylation of lysine 5",
+     "system": "molecule",
+     "what": "An acetyl group on lysine 5, added together with K12 acetylation by HAT1 to newly made H4.",
+     "does": "Tags new histones as they are loaded onto freshly copied DNA.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h4/m-K12",
+     "name": "H4K12ac",
+     "common": "Acetylation of lysine 12",
+     "system": "molecule",
+     "what": "An acetyl group on lysine 12 of new H4.",
+     "does": "Removed again a few hours after the histone is loaded onto chromatin.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h4/m-K16",
+     "name": "H4K16ac",
+     "common": "Acetylation of lysine 16",
+     "system": "molecule",
+     "what": "An acetyl group on lysine 16, added by MOF (KAT8).",
+     "does": "Stops the H4 tail gripping the next nucleosome, loosening the fibre.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h4/m-K20",
+     "name": "H4K20me3",
+     "common": "Trimethylation of lysine 20",
+     "system": "molecule",
+     "what": "Three methyl groups on lysine 20, added by SUV4-20H enzymes.",
+     "does": "Found in silent heterochromatin.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "histone-h2a",
+   "level": "molecule",
+   "name": "Histone H2A",
+   "common": "129 amino acids, about 14 kDa",
+   "system": "molecule",
+   "unit": 5e-10,
+   "julia": [
+    -0.7,
+    0.3
+   ],
+   "camera": [
+    6,
+    4,
+    24
+   ],
+   "radius": 18,
+   "what": "The fold of histone H2A and its C-terminal tail, which lies near where DNA enters the nucleosome.",
+   "does": "With H2B forms the acidic patch. The variant H2A.X is phosphorylated at serine 139 (γH2AX) within minutes of a DNA break.",
+   "size": "129 amino acids, about 14 kDa",
+   "sources": [
+    "Luger et al., Nature 389:251 (1997), doi:10.1038/38444",
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Bannister & Kouzarides, Cell Res 21:381 (2011)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "histone-h2a/fold",
+     "name": "Histone fold",
+     "common": null,
+     "system": "molecule",
+     "what": "Three alpha helices (α1, a long α2, α3) joined by two loops. Every core histone shares this fold.",
+     "does": "Two folds lock together in a \"handshake\" to form each histone pair (H3 with H4, H2A with H2B).",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h2a/loops",
+     "name": "Loops L1 and L2",
+     "common": null,
+     "system": "molecule",
+     "what": "Short loops between the helices.",
+     "does": "Where the two partners' loops meet, they grip the DNA minor groove.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h2a/tail",
+     "name": "H2A tail",
+     "common": null,
+     "system": "molecule",
+     "what": "The flexible C-terminal tail, about 14 amino acids, rich in lysine and arginine.",
+     "does": "Its positive charges grab DNA and neighbouring nucleosomes; chemical marks on it change those contacts and recruit reader proteins.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h2a/partner",
+     "name": "Histone H2B (partner)",
+     "common": null,
+     "system": "molecule",
+     "what": "The histone that pairs with H2A through the handshake motif.",
+     "does": "Shown faintly to show how the pair interlocks.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h2a/m-K119",
+     "name": "H2AK119ub",
+     "common": "Ubiquitination of lysine 119",
+     "system": "molecule",
+     "what": "A single ubiquitin (a 76-amino-acid protein) on lysine 119, added by PRC1 (RING1B).",
+     "does": "Works with H3K27me3 to keep Polycomb target genes silent.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "histone-h2b",
+   "level": "molecule",
+   "name": "Histone H2B",
+   "common": "125 amino acids, about 14 kDa",
+   "system": "molecule",
+   "unit": 5e-10,
+   "julia": [
+    -0.68,
+    0.36
+   ],
+   "camera": [
+    6,
+    4,
+    24
+   ],
+   "radius": 18,
+   "what": "The fold of histone H2B and its C-terminal region near lysine 120.",
+   "does": "Pairs with H2A; its ubiquitination is one of the clearest links between chromatin and active transcription.",
+   "size": "125 amino acids, about 14 kDa",
+   "sources": [
+    "Luger et al., Nature 389:251 (1997), doi:10.1038/38444",
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)",
+    "Bannister & Kouzarides, Cell Res 21:381 (2011)"
+   ],
+   "history": [],
+   "parts": [
+    {
+     "id": "histone-h2b/fold",
+     "name": "Histone fold",
+     "common": null,
+     "system": "molecule",
+     "what": "Three alpha helices (α1, a long α2, α3) joined by two loops. Every core histone shares this fold.",
+     "does": "Two folds lock together in a \"handshake\" to form each histone pair (H3 with H4, H2A with H2B).",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h2b/loops",
+     "name": "Loops L1 and L2",
+     "common": null,
+     "system": "molecule",
+     "what": "Short loops between the helices.",
+     "does": "Where the two partners' loops meet, they grip the DNA minor groove.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h2b/tail",
+     "name": "H2B tail",
+     "common": null,
+     "system": "molecule",
+     "what": "The flexible C-terminal tail, about 10 amino acids, rich in lysine and arginine.",
+     "does": "Its positive charges grab DNA and neighbouring nucleosomes; chemical marks on it change those contacts and recruit reader proteins.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h2b/partner",
+     "name": "Histone H2A (partner)",
+     "common": null,
+     "system": "molecule",
+     "what": "The histone that pairs with H2B through the handshake motif.",
+     "does": "Shown faintly to show how the pair interlocks.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "histone-h2b/m-K120",
+     "name": "H2BK120ub",
+     "common": "Ubiquitination of lysine 120",
+     "system": "molecule",
+     "what": "A single ubiquitin on lysine 120, added by RNF20/RNF40.",
+     "does": "Accompanies RNA polymerase II through genes and is needed for H3K79 methylation by DOT1L.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "dna",
+   "level": "molecule",
+   "name": "DNA double helix",
+   "common": "B-DNA",
+   "system": "molecule",
+   "unit": 1e-10,
+   "julia": [
+    0.37,
+    0.1
+   ],
+   "camera": [
+    0,
+    0,
+    70
+   ],
+   "radius": 60,
+   "what": "Two antiparallel strands coiled into a right-handed helix 2 nm wide, with 10.5 base pairs per turn, 0.34 nm apart.",
+   "does": "Stores genetic information in the order of its four bases. A human cell holds about 6.4 billion base pairs.",
+   "size": "2 nm wide, 3.4 nm per turn",
+   "sources": [
+    "Watson & Crick, Nature 171:737 (1953)",
+    "Franklin & Gosling, Nature 171:740 (1953)",
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)"
+   ],
+   "history": [
+    [
+     "1869",
+     "Friedrich Miescher isolates \"nuclein\" from white blood cells."
+    ],
+    [
+     "1952",
+     "Rosalind Franklin and Raymond Gosling record Photo 51."
+    ],
+    [
+     "1953",
+     "Watson and Crick publish the double helix, built on Franklin's and Wilkins's X-ray data."
+    ]
+   ],
+   "parts": [
+    {
+     "id": "dna/bb",
+     "name": "Sugar-phosphate backbone",
+     "common": null,
+     "system": "molecule",
+     "what": "Alternating deoxyribose sugars and phosphate groups linked by phosphodiester bonds; the two strands run in opposite directions.",
+     "does": "Its negative phosphates are what positively charged histones and many proteins hold on to.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "dna/A",
+     "name": "Adenine (A)",
+     "common": null,
+     "system": "molecule",
+     "what": "A purine base, the larger kind of base with two rings.",
+     "does": "Pairs with thymine through two hydrogen bonds.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "dna/T",
+     "name": "Thymine (T)",
+     "common": null,
+     "system": "molecule",
+     "what": "A pyrimidine base with one ring. RNA uses uracil in its place.",
+     "does": "Pairs with adenine.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "dna/G",
+     "name": "Guanine (G)",
+     "common": null,
+     "system": "molecule",
+     "what": "A purine base.",
+     "does": "Pairs with cytosine through three hydrogen bonds, so G–C pairs hold more tightly.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "dna/Cy",
+     "name": "Cytosine (C)",
+     "common": null,
+     "system": "molecule",
+     "what": "A pyrimidine base, often methylated when followed by G (CpG).",
+     "does": "Pairs with guanine. 5-methylcytosine at promoters helps silence genes.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "dna/hb",
+     "name": "Hydrogen bonds",
+     "common": null,
+     "system": "molecule",
+     "what": "Weak bonds between the paired bases across the middle of the helix.",
+     "does": "Hold the strands together but let them unzip for copying and reading.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "dna/major",
+     "name": "Major groove",
+     "common": null,
+     "system": "molecule",
+     "what": "The wider groove, about 2.2 nm across.",
+     "does": "Where most sequence-reading proteins, such as transcription factors, recognise their sites.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "dna/minor",
+     "name": "Minor groove",
+     "common": null,
+     "system": "molecule",
+     "what": "The narrower groove, about 1.2 nm across.",
+     "does": "Faces the histone core every 10 base pairs in a nucleosome.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "hemoglobin",
+   "level": "molecule",
+   "name": "Haemoglobin",
+   "common": "Oxygen-carrying protein",
+   "system": "molecule",
+   "unit": 5e-10,
+   "julia": [
+    -0.8,
+    0.156
+   ],
+   "camera": [
+    12,
+    9,
+    34
+   ],
+   "radius": 20,
+   "what": "A protein of four chains, two alpha and two beta, each holding an iron-containing haem group. A red blood cell carries about 270 million of them.",
+   "does": "Each molecule binds up to four oxygen molecules. Binding one makes the next easier (cooperativity), which gives the S-shaped oxygen curve.",
+   "size": "about 64.5 kDa, 6.5 nm across",
+   "sources": [
+    "Perutz et al., Nature 185:416 (1960)",
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)"
+   ],
+   "history": [
+    [
+     "1959",
+     "Max Perutz solves the structure of haemoglobin by X-ray crystallography (Nobel Prize 1962)."
+    ]
+   ],
+   "parts": [
+    {
+     "id": "hemoglobin/alpha",
+     "name": "Alpha chains (×2)",
+     "common": null,
+     "system": "molecule",
+     "what": "Two chains of 141 amino acids each.",
+     "does": "Hold two of the four haem groups.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "hemoglobin/beta",
+     "name": "Beta chains (×2)",
+     "common": null,
+     "system": "molecule",
+     "what": "Two chains of 146 amino acids each. A single change at position 6 (glutamate to valine) causes sickle cell disease.",
+     "does": "Hold the other two haem groups and bind 2,3-BPG, which helps release oxygen to tissues.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "hemoglobin/heme",
+     "name": "Haem groups",
+     "common": "Heme",
+     "system": "molecule",
+     "what": "A flat porphyrin ring with an iron atom at its centre, tucked into a pocket of each chain.",
+     "does": "The iron binds oxygen. Carbon monoxide binds about 200 times more tightly, which is why it is poisonous.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "hemoglobin/o2",
+     "name": "Oxygen",
+     "common": "O₂",
+     "system": "molecule",
+     "what": "Oxygen molecules bound to the haem iron.",
+     "does": "Picked up in the lungs and released in tissues where oxygen is low and acidity is high.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "odorant-receptor",
+   "level": "molecule",
+   "name": "Odour receptor",
+   "common": "Olfactory receptor protein",
+   "system": "molecule",
+   "unit": 5e-10,
+   "julia": [
+    0.3,
+    0.5
+   ],
+   "camera": [
+    12,
+    8,
+    42
+   ],
+   "radius": 22,
+   "what": "A G-protein-coupled receptor: one protein chain crossing the cilium membrane seven times, with a pocket for odour molecules between its helices.",
+   "does": "When an odour fits the pocket, the receptor changes shape and switches on the G protein Golf, which raises cAMP and opens ion channels. This is the end of the smell branch: the next step down is single atoms.",
+   "size": "about 310 amino acids",
+   "sources": [
+    "Buck & Axel, Cell 65:175 (1991)",
+    "Billesbølle et al., Nature 615:742 (2023)"
+   ],
+   "history": [
+    [
+     "1991",
+     "Buck and Axel discover the odour receptor genes."
+    ],
+    [
+     "2023",
+     "The first structure of a human odour receptor (OR51E2) bound to its odour is solved by cryo-electron microscopy."
+    ]
+   ],
+   "parts": [
+    {
+     "id": "odorant-receptor/tm",
+     "name": "Seven transmembrane helices",
+     "common": null,
+     "system": "molecule",
+     "what": "Seven alpha helices, each about 20–25 amino acids, crossing the membrane in a ring.",
+     "does": "Shift relative to each other when an odour binds, passing the signal inside.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "odorant-receptor/pocket",
+     "name": "Odour-binding pocket",
+     "common": null,
+     "system": "molecule",
+     "what": "A cavity between the helices on the outer side.",
+     "does": "Each receptor fits a range of odours, and each odour activates a set of receptors; the brain reads the combination.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "odorant-receptor/odor",
+     "name": "Odour molecule",
+     "common": null,
+     "system": "molecule",
+     "what": "A small volatile molecule, shown here as a generic ligand.",
+     "does": "Binding it switches the receptor on.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "odorant-receptor/gprot",
+     "name": "G protein (Golf)",
+     "common": null,
+     "system": "molecule",
+     "what": "A three-part protein on the inner face of the membrane.",
+     "does": "Activated by the receptor; turns on adenylyl cyclase III to make cAMP.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "odorant-receptor/mem",
+     "name": "Cilium membrane",
+     "common": null,
+     "system": "molecule",
+     "what": "The lipid bilayer of the olfactory cilium.",
+     "does": "Holds the receptor and the downstream channels.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "atp-synthase",
+   "level": "molecule",
+   "name": "ATP synthase",
+   "common": "Complex V",
+   "system": "molecule",
+   "unit": 5e-10,
+   "julia": [
+    -0.8,
+    0.156
+   ],
+   "camera": [
+    10,
+    4,
+    34
+   ],
+   "radius": 24,
+   "what": "A rotary motor of about 30 protein subunits: a ring (Fo) in the membrane and a head (F1) in the matrix, joined by a central stalk.",
+   "does": "Protons flowing through the ring spin it and the stalk; the turning stalk squeezes the three catalytic sites in the head, each making ATP from ADP and phosphate.",
+   "size": "about 600 kDa, head about 10 nm wide",
+   "sources": [
+    "Abrahams et al., Nature 370:621 (1994)",
+    "Noji et al., Nature 386:299 (1997)"
+   ],
+   "history": [
+    [
+     "1994",
+     "John Walker's group solves the structure of the F1 head (Nobel Prize 1997, shared with Paul Boyer)."
+    ],
+    [
+     "1997",
+     "Noji and colleagues film the head rotating under a microscope."
+    ]
+   ],
+   "parts": [
+    {
+     "id": "atp-synthase/f1",
+     "name": "F1 head",
+     "common": "α3β3",
+     "system": "molecule",
+     "what": "Three alpha and three beta subunits arranged like orange segments.",
+     "does": "The three beta subunits take turns binding ADP, making ATP and releasing it.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "atp-synthase/stalk",
+     "name": "Central stalk",
+     "common": "γ subunit",
+     "system": "molecule",
+     "what": "An off-centre shaft running up into the head.",
+     "does": "Rotates about 100 times a second at full speed, deforming each beta subunit in turn.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "atp-synthase/ring",
+     "name": "c-ring",
+     "common": "Fo rotor",
+     "system": "molecule",
+     "what": "A ring of 8 c-subunits in the inner membrane in animals.",
+     "does": "Each proton passing through turns it one step; 8 protons make one full turn and three ATP.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "atp-synthase/stator",
+     "name": "Peripheral stalk",
+     "common": "Stator",
+     "system": "molecule",
+     "what": "A side arm holding the head still.",
+     "does": "Stops the head spinning with the rotor, so the rotation does work.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "atp-synthase/mem",
+     "name": "Inner membrane",
+     "common": null,
+     "system": "molecule",
+     "what": "The cristae membrane the motor sits in.",
+     "does": "Holds the proton gradient that drives the motor.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  },
+  {
+   "id": "collagen",
+   "level": "molecule",
+   "name": "Collagen",
+   "common": "Type I collagen",
+   "system": "molecule",
+   "unit": 1e-9,
+   "julia": [
+    -0.835,
+    -0.2321
+   ],
+   "camera": [
+    0,
+    6,
+    46
+   ],
+   "radius": 36,
+   "what": "The most abundant protein in the body: three chains twisted into a rope-like triple helix about 1.5 nm wide and 300 nm long, packed into banded fibrils.",
+   "does": "Gives bone, skin, tendon and dermis their tensile strength. In bone, crystals of hydroxyapatite fill the gaps between molecules. This is the end of the connective-tissue branch.",
+   "size": "1.5 × 300 nm per molecule",
+   "sources": [
+    "Shoulders & Raines, Annu Rev Biochem 78:929 (2009)",
+    "Alberts et al., Molecular Biology of the Cell, 7th ed. (2022)"
+   ],
+   "history": [
+    [
+     "1954",
+     "G. N. Ramachandran and Gopinath Kartha propose the triple-helix structure."
+    ]
+   ],
+   "parts": [
+    {
+     "id": "collagen/triple",
+     "name": "Triple helix",
+     "common": "Tropocollagen",
+     "system": "molecule",
+     "what": "Three chains, each with the repeating pattern glycine-X-Y (often proline and hydroxyproline), wound around each other.",
+     "does": "Glycine every third position is small enough to fit in the centre. Faulty collagen I causes brittle bone disease (osteogenesis imperfecta).",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "collagen/fibril",
+     "name": "Collagen fibril",
+     "common": null,
+     "system": "molecule",
+     "what": "Molecules staggered side by side, giving a band pattern every 67 nm.",
+     "does": "Bundles into fibres that resist stretching.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "collagen/gap",
+     "name": "Gap zones",
+     "common": null,
+     "system": "molecule",
+     "what": "Regular gaps between the ends of molecules in a fibril.",
+     "does": "In bone, this is where the first hydroxyapatite mineral crystals form.",
+     "size": null,
+     "deeper": null
+    },
+    {
+     "id": "collagen/hap",
+     "name": "Hydroxyapatite",
+     "common": "Bone mineral",
+     "system": "molecule",
+     "what": "Plate-like calcium phosphate crystals, Ca₁₀(PO₄)₆(OH)₂, a few nanometres thick.",
+     "does": "Makes bone hard and stores about 99% of the body's calcium.",
+     "size": null,
+     "deeper": null
+    }
+   ]
+  }
+ ],
+ "entries": [
+  {
+   "node": "head",
+   "world": "skin"
+  },
+  {
+   "node": "skull",
+   "world": "bone"
+  },
+  {
+   "node": "fma52734",
+   "world": "bone"
+  },
+  {
+   "node": "fma52735",
+   "world": "bone"
+  },
+  {
+   "node": "fma52736",
+   "world": "bone"
+  },
+  {
+   "node": "fma52738",
+   "world": "bone"
+  },
+  {
+   "node": "fma52739",
+   "world": "bone"
+  },
+  {
+   "node": "fma52740",
+   "world": "bone"
+  },
+  {
+   "node": "fma52788",
+   "world": "bone"
+  },
+  {
+   "node": "fma52789",
+   "world": "bone"
+  },
+  {
+   "node": "fma52892",
+   "world": "bone"
+  },
+  {
+   "node": "fma52893",
+   "world": "bone"
+  },
+  {
+   "node": "fma53645",
+   "world": "bone"
+  },
+  {
+   "node": "fma53646",
+   "world": "bone"
+  },
+  {
+   "node": "fma53649",
+   "world": "bone"
+  },
+  {
+   "node": "fma53650",
+   "world": "bone"
+  },
+  {
+   "node": "fma53655",
+   "world": "bone"
+  },
+  {
+   "node": "fma53656",
+   "world": "bone"
+  },
+  {
+   "node": "fma9710",
+   "world": "bone"
+  },
+  {
+   "node": "mandible",
+   "world": "bone"
+  },
+  {
+   "node": "brain",
+   "world": "cortex"
+  },
+  {
+   "node": "frontal-lobe",
+   "world": "cortex"
+  },
+  {
+   "node": "fma51",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72653",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72654",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72655",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72656",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72661",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72662",
+   "world": "cortex"
+  },
+  {
+   "node": "parietal-lobe",
+   "world": "cortex"
+  },
+  {
+   "node": "fma49",
+   "world": "cortex"
+  },
+  {
+   "node": "fma50",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72665",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72666",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72667",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72668",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72669",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72670",
+   "world": "cortex"
+  },
+  {
+   "node": "temporal-lobe-left",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72686",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72688",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72690",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72801",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72805",
+   "world": "cortex"
+  },
+  {
+   "node": "temporal-lobe-right",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72685",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72687",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72689",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72800",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72804",
+   "world": "cortex"
+  },
+  {
+   "node": "occipital-lobe",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72975",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72976",
+   "world": "cortex"
+  },
+  {
+   "node": "cerebellum",
+   "world": "cortex"
+  },
+  {
+   "node": "brainstem",
+   "world": "cortex"
+  },
+  {
+   "node": "fma61993",
+   "world": "cortex"
+  },
+  {
+   "node": "fma62004",
+   "world": "cortex"
+  },
+  {
+   "node": "fma62394",
+   "world": "cortex"
+  },
+  {
+   "node": "fma67943",
+   "world": "cortex"
+  },
+  {
+   "node": "fma73422",
+   "world": "cortex"
+  },
+  {
+   "node": "fma73423",
+   "world": "cortex"
+  },
+  {
+   "node": "fma73434",
+   "world": "cortex"
+  },
+  {
+   "node": "fma73435",
+   "world": "cortex"
+  },
+  {
+   "node": "fma73461",
+   "world": "cortex"
+  },
+  {
+   "node": "fma73462",
+   "world": "cortex"
+  },
+  {
+   "node": "fma73463",
+   "world": "cortex"
+  },
+  {
+   "node": "fma73464",
+   "world": "cortex"
+  },
+  {
+   "node": "fma83740",
+   "world": "cortex"
+  },
+  {
+   "node": "limbic-system",
+   "world": "cortex"
+  },
+  {
+   "node": "fma61970",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72705",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72706",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72713",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72714",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72717",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72718",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72832",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72833",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72924",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72925",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72939",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72940",
+   "world": "cortex"
+  },
+  {
+   "node": "fma74877",
+   "world": "cortex"
+  },
+  {
+   "node": "insula-lobes",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72701",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72702",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72977",
+   "world": "cortex"
+  },
+  {
+   "node": "fma72978",
+   "world": "cortex"
+  },
+  {
+   "node": "nasal-cavity",
+   "world": "olfactory"
+  },
+  {
+   "node": "fma53647",
+   "world": "olfactory"
+  },
+  {
+   "node": "fma53648",
+   "world": "olfactory"
+  },
+  {
+   "node": "fma54737",
+   "world": "olfactory"
+  },
+  {
+   "node": "fma54738",
+   "world": "olfactory"
+  },
+  {
+   "node": "fma71704",
+   "world": "olfactory"
+  },
+  {
+   "node": "fma59763",
+   "world": "skin"
+  },
+  {
+   "node": "fma59764",
+   "world": "skin"
+  },
+  {
+   "node": "fma59815",
+   "world": "skin"
+  },
+  {
+   "node": "face-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45739",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45740",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46759",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46760",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46761",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46762",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46782",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46783",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46785",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46786",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46796",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46797",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46803",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46804",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46806",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46807",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46812",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46813",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46814",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46815",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46817",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46818",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46823",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46824",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46826",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46827",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46829",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46830",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46835",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46836",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46839",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46840",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46841",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma55606",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma55607",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma55608",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma55609",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma55610",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma55611",
+   "world": "skmuscle"
+  },
+  {
+   "node": "chewing-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma49001",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma49002",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma49004",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma49005",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma49007",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma49008",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma49012",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma49013",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma49022",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma49023",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma49024",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma49025",
+   "world": "skmuscle"
+  },
+  {
+   "node": "scalp-hair",
+   "world": "skin"
+  },
+  {
+   "node": "fma70751",
+   "world": "skin"
+  },
+  {
+   "node": "fma71098",
+   "world": "skin"
+  },
+  {
+   "node": "galea",
+   "world": "collagen"
+  },
+  {
+   "node": "head-ligaments",
+   "world": "collagen"
+  },
+  {
+   "node": "fma258850",
+   "world": "collagen"
+  },
+  {
+   "node": "fma264840",
+   "world": "collagen"
+  },
+  {
+   "node": "fma46304",
+   "world": "collagen"
+  },
+  {
+   "node": "fma46305",
+   "world": "collagen"
+  },
+  {
+   "node": "fma46306",
+   "world": "collagen"
+  },
+  {
+   "node": "fma46307",
+   "world": "collagen"
+  },
+  {
+   "node": "head-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45826",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45827",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46309",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46310",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46313",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46314",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46317",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46318",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46321",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46322",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46326",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46327",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46763",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46764",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma52749",
+   "world": "bone"
+  },
+  {
+   "node": "neck",
+   "world": "skin"
+  },
+  {
+   "node": "cervical-spine",
+   "world": "bone"
+  },
+  {
+   "node": "fma12519",
+   "world": "bone"
+  },
+  {
+   "node": "fma12520",
+   "world": "bone"
+  },
+  {
+   "node": "fma12521",
+   "world": "bone"
+  },
+  {
+   "node": "fma12522",
+   "world": "bone"
+  },
+  {
+   "node": "fma12523",
+   "world": "bone"
+  },
+  {
+   "node": "fma12524",
+   "world": "bone"
+  },
+  {
+   "node": "fma12525",
+   "world": "bone"
+  },
+  {
+   "node": "fma13896",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13897",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13898",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13899",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13900",
+   "world": "collagen"
+  },
+  {
+   "node": "fma25058",
+   "world": "collagen"
+  },
+  {
+   "node": "neck-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13346",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13347",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13348",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13349",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13350",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13351",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13352",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13353",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13383",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13384",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13388",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13389",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13390",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13391",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13392",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13393",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13408",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13409",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22726",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22727",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22728",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22729",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22744",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22745",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22754",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22756",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22757",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22758",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22781",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22782",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22874",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22875",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22876",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22877",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32530",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32531",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32532",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32533",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32534",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32535",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32536",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32537",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma33584",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma33585",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma33586",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma33587",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46285",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46286",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma71308",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma71309",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma71442",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma71443",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma81752",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma81753",
+   "world": "skmuscle"
+  },
+  {
+   "node": "thorax",
+   "world": "skin"
+  },
+  {
+   "node": "rib-cage",
+   "world": "bone"
+  },
+  {
+   "node": "fma24",
+   "world": "collagen"
+  },
+  {
+   "node": "fma28",
+   "world": "collagen"
+  },
+  {
+   "node": "fma7857",
+   "world": "bone"
+  },
+  {
+   "node": "fma7875",
+   "world": "collagen"
+  },
+  {
+   "node": "fma7882",
+   "world": "bone"
+  },
+  {
+   "node": "fma7886",
+   "world": "collagen"
+  },
+  {
+   "node": "fma7909",
+   "world": "bone"
+  },
+  {
+   "node": "fma7913",
+   "world": "collagen"
+  },
+  {
+   "node": "fma7957",
+   "world": "bone"
+  },
+  {
+   "node": "fma7976",
+   "world": "collagen"
+  },
+  {
+   "node": "fma7987",
+   "world": "bone"
+  },
+  {
+   "node": "fma8005",
+   "world": "collagen"
+  },
+  {
+   "node": "fma8012",
+   "world": "bone"
+  },
+  {
+   "node": "fma8031",
+   "world": "collagen"
+  },
+  {
+   "node": "fma8039",
+   "world": "bone"
+  },
+  {
+   "node": "fma8058",
+   "world": "collagen"
+  },
+  {
+   "node": "fma8066",
+   "world": "bone"
+  },
+  {
+   "node": "fma8070",
+   "world": "collagen"
+  },
+  {
+   "node": "fma8093",
+   "world": "bone"
+  },
+  {
+   "node": "fma8112",
+   "world": "collagen"
+  },
+  {
+   "node": "fma8148",
+   "world": "bone"
+  },
+  {
+   "node": "fma8167",
+   "world": "collagen"
+  },
+  {
+   "node": "fma8175",
+   "world": "bone"
+  },
+  {
+   "node": "fma8194",
+   "world": "collagen"
+  },
+  {
+   "node": "fma8202",
+   "world": "bone"
+  },
+  {
+   "node": "fma8221",
+   "world": "collagen"
+  },
+  {
+   "node": "fma8229",
+   "world": "bone"
+  },
+  {
+   "node": "fma8248",
+   "world": "collagen"
+  },
+  {
+   "node": "fma8256",
+   "world": "bone"
+  },
+  {
+   "node": "fma8275",
+   "world": "collagen"
+  },
+  {
+   "node": "fma8283",
+   "world": "bone"
+  },
+  {
+   "node": "fma8310",
+   "world": "bone"
+  },
+  {
+   "node": "fma8364",
+   "world": "bone"
+  },
+  {
+   "node": "fma8391",
+   "world": "bone"
+  },
+  {
+   "node": "fma8445",
+   "world": "bone"
+  },
+  {
+   "node": "fma8472",
+   "world": "bone"
+  },
+  {
+   "node": "fma8531",
+   "world": "bone"
+  },
+  {
+   "node": "fma8532",
+   "world": "bone"
+  },
+  {
+   "node": "fma8533",
+   "world": "bone"
+  },
+  {
+   "node": "fma8534",
+   "world": "bone"
+  },
+  {
+   "node": "sternum",
+   "world": "bone"
+  },
+  {
+   "node": "fma7486",
+   "world": "bone"
+  },
+  {
+   "node": "fma7487",
+   "world": "bone"
+  },
+  {
+   "node": "fma7488",
+   "world": "bone"
+  },
+  {
+   "node": "heart",
+   "world": "cardiac"
+  },
+  {
+   "node": "heart-wall",
+   "world": "cardiac"
+  },
+  {
+   "node": "papillary-muscles",
+   "world": "cardiac"
+  },
+  {
+   "node": "lung-left",
+   "world": "alveoli"
+  },
+  {
+   "node": "lung-left-upper",
+   "world": "alveoli"
+  },
+  {
+   "node": "lung-left-lower",
+   "world": "alveoli"
+  },
+  {
+   "node": "lung-right",
+   "world": "alveoli"
+  },
+  {
+   "node": "lung-right-upper",
+   "world": "alveoli"
+  },
+  {
+   "node": "lung-right-middle",
+   "world": "alveoli"
+  },
+  {
+   "node": "lung-right-lower",
+   "world": "alveoli"
+  },
+  {
+   "node": "diaphragm",
+   "world": "skmuscle"
+  },
+  {
+   "node": "thoracic-spine",
+   "world": "bone"
+  },
+  {
+   "node": "fma10014",
+   "world": "bone"
+  },
+  {
+   "node": "fma10037",
+   "world": "bone"
+  },
+  {
+   "node": "fma10059",
+   "world": "bone"
+  },
+  {
+   "node": "fma10081",
+   "world": "bone"
+  },
+  {
+   "node": "fma10458",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13495",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13500",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13501",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13502",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13503",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13504",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13505",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13506",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13507",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13508",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13509",
+   "world": "collagen"
+  },
+  {
+   "node": "fma9165",
+   "world": "bone"
+  },
+  {
+   "node": "fma9187",
+   "world": "bone"
+  },
+  {
+   "node": "fma9209",
+   "world": "bone"
+  },
+  {
+   "node": "fma9248",
+   "world": "bone"
+  },
+  {
+   "node": "fma9922",
+   "world": "bone"
+  },
+  {
+   "node": "fma9945",
+   "world": "bone"
+  },
+  {
+   "node": "fma9968",
+   "world": "bone"
+  },
+  {
+   "node": "fma9991",
+   "world": "bone"
+  },
+  {
+   "node": "bronchi",
+   "world": "alveoli"
+  },
+  {
+   "node": "intercostals",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma9756",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma9757",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma9758",
+   "world": "skmuscle"
+  },
+  {
+   "node": "thorax-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13375",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13376",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13381",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13382",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13398",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13399",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13403",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13404",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13411",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13412",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22742",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22743",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22779",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22780",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22872",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22873",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma23083",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32551",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32552",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma33581",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma33583",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma34690",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma34691",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45874",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45875",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma74075",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma74076",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma74077",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma74078",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma79979",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma79980",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma9761",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma9762",
+   "world": "skmuscle"
+  },
+  {
+   "node": "abdomen",
+   "world": "skin"
+  },
+  {
+   "node": "duodenum",
+   "world": "villi"
+  },
+  {
+   "node": "small-intestine",
+   "world": "villi"
+  },
+  {
+   "node": "jejunum",
+   "world": "villi"
+  },
+  {
+   "node": "ileum",
+   "world": "villi"
+  },
+  {
+   "node": "lumbar-spine",
+   "world": "bone"
+  },
+  {
+   "node": "fma13072",
+   "world": "bone"
+  },
+  {
+   "node": "fma13073",
+   "world": "bone"
+  },
+  {
+   "node": "fma13074",
+   "world": "bone"
+  },
+  {
+   "node": "fma13075",
+   "world": "bone"
+  },
+  {
+   "node": "fma13076",
+   "world": "bone"
+  },
+  {
+   "node": "fma16033",
+   "world": "collagen"
+  },
+  {
+   "node": "fma16034",
+   "world": "collagen"
+  },
+  {
+   "node": "fma16035",
+   "world": "collagen"
+  },
+  {
+   "node": "fma16036",
+   "world": "collagen"
+  },
+  {
+   "node": "fma16037",
+   "world": "collagen"
+  },
+  {
+   "node": "abdominal-wall",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma11336",
+   "world": "collagen"
+  },
+  {
+   "node": "fma13336",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13337",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13377",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13378",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13892",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13893",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22344",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22345",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22346",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22347",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46018",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46019",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46121",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46122",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46283",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46284",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46287",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46288",
+   "world": "skmuscle"
+  },
+  {
+   "node": "abdomen-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13358",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13359",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13405",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma13406",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22348",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22349",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22740",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22741",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22751",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22753",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22878",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22879",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma23089",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma23090",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma71307",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma71444",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma76775",
+   "world": "skmuscle"
+  },
+  {
+   "node": "pelvis",
+   "world": "skin"
+  },
+  {
+   "node": "hip-bone-left",
+   "world": "bone"
+  },
+  {
+   "node": "hip-bone-right",
+   "world": "bone"
+  },
+  {
+   "node": "sacrum",
+   "world": "bone"
+  },
+  {
+   "node": "pelvic-floor",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma21930",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45854",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45855",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45856",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45857",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45858",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45859",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46442",
+   "world": "collagen"
+  },
+  {
+   "node": "fma46443",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46444",
+   "world": "skmuscle"
+  },
+  {
+   "node": "gluteal-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22324",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22325",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22326",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22327",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22328",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22329",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22330",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22331",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22332",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22333",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22334",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22335",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22336",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22337",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22338",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22339",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22340",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22341",
+   "world": "skmuscle"
+  },
+  {
+   "node": "pubic-hair",
+   "world": "skin"
+  },
+  {
+   "node": "fma21964",
+   "world": "collagen"
+  },
+  {
+   "node": "fma21965",
+   "world": "collagen"
+  },
+  {
+   "node": "pelvis-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22322",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22323",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22342",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22343",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22425",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22426",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45097",
+   "world": "bone"
+  },
+  {
+   "node": "fma45098",
+   "world": "bone"
+  },
+  {
+   "node": "shoulder-left",
+   "world": "skin"
+  },
+  {
+   "node": "clavicle-left",
+   "world": "bone"
+  },
+  {
+   "node": "scapula-left",
+   "world": "bone"
+  },
+  {
+   "node": "fma13396",
+   "world": "bone"
+  },
+  {
+   "node": "fma13415",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32541",
+   "world": "skmuscle"
+  },
+  {
+   "node": "deltoid-left",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma34681",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma34683",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma34685",
+   "world": "skmuscle"
+  },
+  {
+   "node": "rotator-cuff-left",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32545",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32548",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32554",
+   "world": "skmuscle"
+  },
+  {
+   "node": "upper-arm-left",
+   "world": "skin"
+  },
+  {
+   "node": "humerus-left",
+   "world": "bone"
+  },
+  {
+   "node": "biceps-left",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37685",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37687",
+   "world": "skmuscle"
+  },
+  {
+   "node": "triceps-left",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37696",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37698",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37700",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37666",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37669",
+   "world": "skmuscle"
+  },
+  {
+   "node": "elbow-left",
+   "world": "skin"
+  },
+  {
+   "node": "forearm-left",
+   "world": "skin"
+  },
+  {
+   "node": "radius-left",
+   "world": "bone"
+  },
+  {
+   "node": "ulna-left",
+   "world": "bone"
+  },
+  {
+   "node": "forearm-flexors-left",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38455",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38461",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38464",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38480",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38484",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38561",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38563",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38618",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38620",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38639",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38641",
+   "world": "skmuscle"
+  },
+  {
+   "node": "forearm-extensors-left",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma44",
+   "world": "bone"
+  },
+  {
+   "node": "fma46",
+   "world": "bone"
+  },
+  {
+   "node": "fma22549",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37706",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38487",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38496",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38499",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38502",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38505",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38514",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38517",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38520",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38523",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38526",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma51143",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma23708",
+   "world": "collagen"
+  },
+  {
+   "node": "hand-left",
+   "world": "skin"
+  },
+  {
+   "node": "carpals-left",
+   "world": "bone"
+  },
+  {
+   "node": "fma24436",
+   "world": "bone"
+  },
+  {
+   "node": "fma24438",
+   "world": "bone"
+  },
+  {
+   "node": "fma24440",
+   "world": "bone"
+  },
+  {
+   "node": "fma24442",
+   "world": "bone"
+  },
+  {
+   "node": "fma24444",
+   "world": "bone"
+  },
+  {
+   "node": "fma24445",
+   "world": "bone"
+  },
+  {
+   "node": "fma24447",
+   "world": "bone"
+  },
+  {
+   "node": "fma24449",
+   "world": "bone"
+  },
+  {
+   "node": "metacarpals-left",
+   "world": "bone"
+  },
+  {
+   "node": "fma24467",
+   "world": "bone"
+  },
+  {
+   "node": "fma24469",
+   "world": "bone"
+  },
+  {
+   "node": "fma24471",
+   "world": "bone"
+  },
+  {
+   "node": "fma24473",
+   "world": "bone"
+  },
+  {
+   "node": "fingers-left",
+   "world": "bone"
+  },
+  {
+   "node": "fma23938",
+   "world": "bone"
+  },
+  {
+   "node": "fma23940",
+   "world": "bone"
+  },
+  {
+   "node": "fma23942",
+   "world": "bone"
+  },
+  {
+   "node": "fma23944",
+   "world": "bone"
+  },
+  {
+   "node": "fma23953",
+   "world": "bone"
+  },
+  {
+   "node": "fma23955",
+   "world": "bone"
+  },
+  {
+   "node": "fma23957",
+   "world": "bone"
+  },
+  {
+   "node": "fma23959",
+   "world": "bone"
+  },
+  {
+   "node": "fma66791",
+   "world": "bone"
+  },
+  {
+   "node": "fma71908",
+   "world": "bone"
+  },
+  {
+   "node": "fma71915",
+   "world": "bone"
+  },
+  {
+   "node": "fma71916",
+   "world": "bone"
+  },
+  {
+   "node": "thumb-left",
+   "world": "bone"
+  },
+  {
+   "node": "fma23951",
+   "world": "bone"
+  },
+  {
+   "node": "fma24465",
+   "world": "bone"
+  },
+  {
+   "node": "fma65470",
+   "world": "bone"
+  },
+  {
+   "node": "hand-left-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37387",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37391",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37397",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37399",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37401",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma42399",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma42403",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma42405",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46111",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46124",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma65199",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma40121",
+   "world": "collagen"
+  },
+  {
+   "node": "shoulder-right",
+   "world": "skin"
+  },
+  {
+   "node": "clavicle-right",
+   "world": "bone"
+  },
+  {
+   "node": "scapula-right",
+   "world": "bone"
+  },
+  {
+   "node": "fma13395",
+   "world": "bone"
+  },
+  {
+   "node": "fma13414",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32540",
+   "world": "skmuscle"
+  },
+  {
+   "node": "deltoid-right",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma34680",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma34682",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma34684",
+   "world": "skmuscle"
+  },
+  {
+   "node": "rotator-cuff-right",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32544",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32547",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma32553",
+   "world": "skmuscle"
+  },
+  {
+   "node": "upper-arm-right",
+   "world": "skin"
+  },
+  {
+   "node": "humerus-right",
+   "world": "bone"
+  },
+  {
+   "node": "biceps-right",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37684",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37686",
+   "world": "skmuscle"
+  },
+  {
+   "node": "triceps-right",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37695",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37697",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37699",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37665",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37668",
+   "world": "skmuscle"
+  },
+  {
+   "node": "elbow-right",
+   "world": "skin"
+  },
+  {
+   "node": "forearm-right",
+   "world": "skin"
+  },
+  {
+   "node": "radius-right",
+   "world": "bone"
+  },
+  {
+   "node": "ulna-right",
+   "world": "bone"
+  },
+  {
+   "node": "forearm-flexors-right",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38454",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38460",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38463",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38479",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38482",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38560",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38562",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38617",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38619",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38638",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38640",
+   "world": "skmuscle"
+  },
+  {
+   "node": "forearm-extensors-right",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45",
+   "world": "bone"
+  },
+  {
+   "node": "fma47",
+   "world": "bone"
+  },
+  {
+   "node": "fma22548",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37705",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38486",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38495",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38498",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38501",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38504",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38513",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38516",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38519",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38522",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38525",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma51142",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma23707",
+   "world": "collagen"
+  },
+  {
+   "node": "hand-right",
+   "world": "skin"
+  },
+  {
+   "node": "carpals-right",
+   "world": "bone"
+  },
+  {
+   "node": "fma23725",
+   "world": "bone"
+  },
+  {
+   "node": "fma24435",
+   "world": "bone"
+  },
+  {
+   "node": "fma24437",
+   "world": "bone"
+  },
+  {
+   "node": "fma24439",
+   "world": "bone"
+  },
+  {
+   "node": "fma24441",
+   "world": "bone"
+  },
+  {
+   "node": "fma24443",
+   "world": "bone"
+  },
+  {
+   "node": "fma24446",
+   "world": "bone"
+  },
+  {
+   "node": "fma24448",
+   "world": "bone"
+  },
+  {
+   "node": "metacarpals-right",
+   "world": "bone"
+  },
+  {
+   "node": "fma24466",
+   "world": "bone"
+  },
+  {
+   "node": "fma24468",
+   "world": "bone"
+  },
+  {
+   "node": "fma24470",
+   "world": "bone"
+  },
+  {
+   "node": "fma24472",
+   "world": "bone"
+  },
+  {
+   "node": "fingers-right",
+   "world": "bone"
+  },
+  {
+   "node": "fma24451",
+   "world": "bone"
+  },
+  {
+   "node": "fma24452",
+   "world": "bone"
+  },
+  {
+   "node": "fma24453",
+   "world": "bone"
+  },
+  {
+   "node": "fma24454",
+   "world": "bone"
+  },
+  {
+   "node": "fma24455",
+   "world": "bone"
+  },
+  {
+   "node": "fma24456",
+   "world": "bone"
+  },
+  {
+   "node": "fma24457",
+   "world": "bone"
+  },
+  {
+   "node": "fma24458",
+   "world": "bone"
+  },
+  {
+   "node": "fma24460",
+   "world": "bone"
+  },
+  {
+   "node": "fma24461",
+   "world": "bone"
+  },
+  {
+   "node": "fma24462",
+   "world": "bone"
+  },
+  {
+   "node": "fma24463",
+   "world": "bone"
+  },
+  {
+   "node": "thumb-right",
+   "world": "bone"
+  },
+  {
+   "node": "fma24450",
+   "world": "bone"
+  },
+  {
+   "node": "fma24459",
+   "world": "bone"
+  },
+  {
+   "node": "fma24464",
+   "world": "bone"
+  },
+  {
+   "node": "hand-right-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37386",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37390",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37396",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37398",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37400",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma42398",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma42402",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma42404",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46110",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46123",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma65198",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma40120",
+   "world": "collagen"
+  },
+  {
+   "node": "thigh-left",
+   "world": "skin"
+  },
+  {
+   "node": "femur-left",
+   "world": "bone"
+  },
+  {
+   "node": "quadriceps-left",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38929",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38931",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38933",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38935",
+   "world": "skmuscle"
+  },
+  {
+   "node": "hamstrings-left",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22359",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22449",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45889",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45892",
+   "world": "skmuscle"
+  },
+  {
+   "node": "adductors-left",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22451",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22454",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22457",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22460",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma43884",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma43887",
+   "world": "collagen"
+  },
+  {
+   "node": "fma22355",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma58777",
+   "world": "collagen"
+  },
+  {
+   "node": "knee-left",
+   "world": "skin"
+  },
+  {
+   "node": "patella-left",
+   "world": "bone"
+  },
+  {
+   "node": "medial-meniscus-left",
+   "world": "collagen"
+  },
+  {
+   "node": "lateral-meniscus-left",
+   "world": "collagen"
+  },
+  {
+   "node": "acl-left",
+   "world": "collagen"
+  },
+  {
+   "node": "pcl-left",
+   "world": "collagen"
+  },
+  {
+   "node": "mcl-left",
+   "world": "collagen"
+  },
+  {
+   "node": "lcl-left",
+   "world": "collagen"
+  },
+  {
+   "node": "fma22592",
+   "world": "skmuscle"
+  },
+  {
+   "node": "leg-left",
+   "world": "skin"
+  },
+  {
+   "node": "tibia-left",
+   "world": "bone"
+  },
+  {
+   "node": "fibula-left",
+   "world": "bone"
+  },
+  {
+   "node": "calf-left",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22559",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22561",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45958",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45961",
+   "world": "skmuscle"
+  },
+  {
+   "node": "tibialis-anterior-left",
+   "world": "skmuscle"
+  },
+  {
+   "node": "achilles-left",
+   "world": "collagen"
+  },
+  {
+   "node": "leg-left-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22547",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22551",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22553",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22555",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma65015",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma65017",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma65019",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma35193",
+   "world": "collagen"
+  },
+  {
+   "node": "foot-left",
+   "world": "skin"
+  },
+  {
+   "node": "talus-left",
+   "world": "bone"
+  },
+  {
+   "node": "calcaneus-left",
+   "world": "bone"
+  },
+  {
+   "node": "metatarsals-left",
+   "world": "bone"
+  },
+  {
+   "node": "fma24508",
+   "world": "bone"
+  },
+  {
+   "node": "fma24510",
+   "world": "bone"
+  },
+  {
+   "node": "fma24512",
+   "world": "bone"
+  },
+  {
+   "node": "fma24514",
+   "world": "bone"
+  },
+  {
+   "node": "fma24516",
+   "world": "bone"
+  },
+  {
+   "node": "toes-left",
+   "world": "bone"
+  },
+  {
+   "node": "fma230988",
+   "world": "bone"
+  },
+  {
+   "node": "fma32635",
+   "world": "bone"
+  },
+  {
+   "node": "fma32637",
+   "world": "bone"
+  },
+  {
+   "node": "fma32639",
+   "world": "bone"
+  },
+  {
+   "node": "fma32641",
+   "world": "bone"
+  },
+  {
+   "node": "fma32643",
+   "world": "bone"
+  },
+  {
+   "node": "fma32645",
+   "world": "bone"
+  },
+  {
+   "node": "fma32647",
+   "world": "bone"
+  },
+  {
+   "node": "fma32651",
+   "world": "bone"
+  },
+  {
+   "node": "fma32653",
+   "world": "bone"
+  },
+  {
+   "node": "fma32655",
+   "world": "bone"
+  },
+  {
+   "node": "fma32657",
+   "world": "bone"
+  },
+  {
+   "node": "fma32659",
+   "world": "bone"
+  },
+  {
+   "node": "fma43254",
+   "world": "bone"
+  },
+  {
+   "node": "plantar-fascia-left",
+   "world": "collagen"
+  },
+  {
+   "node": "foot-left-bones",
+   "world": "bone"
+  },
+  {
+   "node": "fma24501",
+   "world": "bone"
+  },
+  {
+   "node": "fma24522",
+   "world": "bone"
+  },
+  {
+   "node": "fma24524",
+   "world": "bone"
+  },
+  {
+   "node": "fma24526",
+   "world": "bone"
+  },
+  {
+   "node": "fma24529",
+   "world": "bone"
+  },
+  {
+   "node": "foot-left-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37460",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37462",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37464",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37466",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37472",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37484",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37486",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37718",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37720",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37742",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37744",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37746",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45972",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45974",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46021",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma51145",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma74141",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma86035",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma44250",
+   "world": "collagen"
+  },
+  {
+   "node": "thigh-right",
+   "world": "skin"
+  },
+  {
+   "node": "femur-right",
+   "world": "bone"
+  },
+  {
+   "node": "quadriceps-right",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38928",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38930",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38932",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma38934",
+   "world": "skmuscle"
+  },
+  {
+   "node": "hamstrings-right",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22358",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22448",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45888",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45891",
+   "world": "skmuscle"
+  },
+  {
+   "node": "adductors-right",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22450",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22452",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22456",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22459",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma43883",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma43886",
+   "world": "collagen"
+  },
+  {
+   "node": "fma22354",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma58776",
+   "world": "collagen"
+  },
+  {
+   "node": "knee-right",
+   "world": "skin"
+  },
+  {
+   "node": "patella-right",
+   "world": "bone"
+  },
+  {
+   "node": "medial-meniscus-right",
+   "world": "collagen"
+  },
+  {
+   "node": "lateral-meniscus-right",
+   "world": "collagen"
+  },
+  {
+   "node": "acl-right",
+   "world": "collagen"
+  },
+  {
+   "node": "pcl-right",
+   "world": "collagen"
+  },
+  {
+   "node": "mcl-right",
+   "world": "collagen"
+  },
+  {
+   "node": "lcl-right",
+   "world": "collagen"
+  },
+  {
+   "node": "fma22591",
+   "world": "skmuscle"
+  },
+  {
+   "node": "leg-right",
+   "world": "skin"
+  },
+  {
+   "node": "tibia-right",
+   "world": "bone"
+  },
+  {
+   "node": "fibula-right",
+   "world": "bone"
+  },
+  {
+   "node": "calf-right",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22558",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22560",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45957",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45960",
+   "world": "skmuscle"
+  },
+  {
+   "node": "tibialis-anterior-right",
+   "world": "skmuscle"
+  },
+  {
+   "node": "achilles-right",
+   "world": "collagen"
+  },
+  {
+   "node": "leg-right-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22546",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22550",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22552",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma22554",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma65014",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma65016",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma65018",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma35192",
+   "world": "collagen"
+  },
+  {
+   "node": "foot-right",
+   "world": "skin"
+  },
+  {
+   "node": "talus-right",
+   "world": "bone"
+  },
+  {
+   "node": "calcaneus-right",
+   "world": "bone"
+  },
+  {
+   "node": "metatarsals-right",
+   "world": "bone"
+  },
+  {
+   "node": "fma24507",
+   "world": "bone"
+  },
+  {
+   "node": "fma24509",
+   "world": "bone"
+  },
+  {
+   "node": "fma24511",
+   "world": "bone"
+  },
+  {
+   "node": "fma24513",
+   "world": "bone"
+  },
+  {
+   "node": "fma24515",
+   "world": "bone"
+  },
+  {
+   "node": "toes-right",
+   "world": "bone"
+  },
+  {
+   "node": "fma230986",
+   "world": "bone"
+  },
+  {
+   "node": "fma32634",
+   "world": "bone"
+  },
+  {
+   "node": "fma32636",
+   "world": "bone"
+  },
+  {
+   "node": "fma32638",
+   "world": "bone"
+  },
+  {
+   "node": "fma32640",
+   "world": "bone"
+  },
+  {
+   "node": "fma32642",
+   "world": "bone"
+  },
+  {
+   "node": "fma32644",
+   "world": "bone"
+  },
+  {
+   "node": "fma32646",
+   "world": "bone"
+  },
+  {
+   "node": "fma32650",
+   "world": "bone"
+  },
+  {
+   "node": "fma32652",
+   "world": "bone"
+  },
+  {
+   "node": "fma32654",
+   "world": "bone"
+  },
+  {
+   "node": "fma32656",
+   "world": "bone"
+  },
+  {
+   "node": "fma32658",
+   "world": "bone"
+  },
+  {
+   "node": "fma43253",
+   "world": "bone"
+  },
+  {
+   "node": "plantar-fascia-right",
+   "world": "collagen"
+  },
+  {
+   "node": "foot-right-bones",
+   "world": "bone"
+  },
+  {
+   "node": "fma24500",
+   "world": "bone"
+  },
+  {
+   "node": "fma24521",
+   "world": "bone"
+  },
+  {
+   "node": "fma24523",
+   "world": "bone"
+  },
+  {
+   "node": "fma24525",
+   "world": "bone"
+  },
+  {
+   "node": "fma24528",
+   "world": "bone"
+  },
+  {
+   "node": "foot-right-muscles",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37459",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37461",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37463",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37465",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37471",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37483",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37485",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37717",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37719",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37741",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37743",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma37745",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45971",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma45973",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma46020",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma51144",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma74140",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma86034",
+   "world": "skmuscle"
+  },
+  {
+   "node": "fma44249",
+   "world": "collagen"
+  }
+ ]
+}

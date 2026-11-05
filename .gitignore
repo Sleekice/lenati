@@ -1,0 +1,13 @@
+node_modules/
+.next/
+dist/
+.turbo/
+.env
+.env.local
+*.log
+__pycache__/
+*.pyc
+.DS_Store
+raw-*.glb
+apps/web/public/atlas/
+*.tsbuildinfo

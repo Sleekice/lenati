@@ -1,0 +1,10 @@
+{
+  "name": "@lenati/ui",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "typecheck": "tsc --noEmit" },
+  "devDependencies": { "@lenati/config": "workspace:*", "typescript": "5.7.2" }
+}

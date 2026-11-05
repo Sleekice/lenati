@@ -1,0 +1,1 @@
+{ "extends": "@lenati/config/tsconfig.base.json", "include": ["src"] }

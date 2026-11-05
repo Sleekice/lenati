@@ -1,0 +1,10 @@
+/* Lenati design tokens, shared by the web app and the embed.
+   Encyclopedia: warm ivory, gold, terracotta, leaf green, sky blue. Atlas: dark canvas with the same accents. */
+:root {
+  --ivory: #faf6ec; --paper: #fffdf7; --ink: #23332d; --ink-soft: #5d6a63; --rule: #e4dac3;
+  --gold: #a8812f; --terracotta: #b65c43; --leaf: #3f7a52; --sky: #4f86b8;
+  --night: #0b0c14; --night-ink: #ece4d3; --lamp: #e7ad6c; --cyan: #74cfc6;
+  --f-display: "Marcellus", Georgia, serif;
+  --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
