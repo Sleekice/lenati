@@ -1,0 +1,427 @@
+// Lenati knowledge graph.
+// Every structure at every scale is a Node in one tree (body -> organ -> tissue -> cell -> nucleus -> histone).
+// Links add cross-connections, Sections hold the reviewed card text, Revisions and Reviews hold the editorial history.
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+enum Level {
+  BODY
+  REGION
+  ORGAN
+  STRUCTURE
+  TISSUE
+  CELL
+  ORGANELLE
+  CHROMATIN
+  NUCLEOSOME
+  MOLECULE
+  ATOM
+  CONCEPT
+}
+
+enum Tier {
+  CORE
+  CAMPUS
+  CLINICAL
+}
+
+enum Status {
+  DRAFT
+  IN_REVIEW
+  BOARD_REVIEW
+  PUBLISHED
+  NEEDS_UPDATE
+  RETIRED
+}
+
+/// How the 3D for a node was made.
+enum Fidelity {
+  SCANNED
+  RECONSTRUCTED
+  SCHEMATIC
+}
+
+/// How sure a claim or link is.
+enum Confidence {
+  ESTABLISHED
+  APPROXIMATE
+  ANALOGY
+  THEORY
+}
+
+enum LinkType {
+  SUPPLIED_BY
+  DRAINED_BY
+  INNERVATED_BY
+  ATTACHES_TO
+  ARTICULATES_WITH
+  FLOWS_TO
+  PART_OF_SYSTEM
+  ADJACENT_TO
+  RESEMBLES
+  MADE_OF
+  CONVERTS_TO
+  CONNECTED_TO
+  OPENS_INTO
+}
+
+enum Role {
+  SUPER_ADMIN
+  EDITOR
+  REVIEWER
+  BOARD
+  ORG_ADMIN
+  INSTRUCTOR
+  LEARNER
+}
+
+enum OrgType {
+  SCHOOL
+  UNIVERSITY
+  HOSPITAL
+  CLINIC
+  OTHER
+}
+
+// ---------------------------------------------------------------- encyclopedia
+
+/// Encyclopedia sections: Biology, Physics, Chemistry...
+model Hall {
+  id       String    @id
+  name     String
+  blurb    String?
+  order    Int       @default(0)
+  open     Boolean   @default(false)
+  nodes    Node[]
+  articles Article[]
+}
+
+model Node {
+  id         String        @id /// stable kebab-case: "patella-left", "w:nucleosome", "nucleosome/h3"
+  hallId     String
+  hall       Hall          @relation(fields: [hallId], references: [id])
+  parentId   String?
+  parent     Node?         @relation("Tree", fields: [parentId], references: [id], onDelete: Cascade)
+  children   Node[]        @relation("Tree")
+  order      Int           @default(0)
+  level      Level
+  system     String?
+  side       String?
+  name       String
+  commonName String?
+  latinName  String?
+  fmaId      String?
+  taId       String?
+  sizeText   String?
+  minTier    Tier          @default(CORE)
+  /// "thorax#heart-wall" for scanned meshes, "world:nucleosome" for micro worlds
+  meshRef    String?
+  fidelity   Fidelity?
+  /// micro-world settings: camera, Julia constant, metres per scene unit
+  world      Json?
+  explode    Json?
+  /// the world this node zooms into ("w:cardiac"), when it has a deeper level
+  deeperId   String?
+  sections   Section[]
+  media      Media[]
+  linksFrom  Link[]        @relation("from")
+  linksTo    Link[]        @relation("to")
+  articles   ArticleNode[]
+  pathSteps  PathStep[]
+  questions  Question[]
+  progress   Progress[]
+  status     Status        @default(DRAFT)
+  version    Int           @default(1)
+  createdAt  DateTime      @default(now())
+  updatedAt  DateTime      @updatedAt
+
+  @@index([parentId])
+  @@index([hallId, level])
+  @@index([name])
+}
+
+/// Card tabs: overview, structure, microscopic, physiology, development, clinical, care, comparison, history.
+model Section {
+  id      String  @id @default(cuid())
+  nodeId  String
+  node    Node    @relation(fields: [nodeId], references: [id], onDelete: Cascade)
+  kind    String
+  minTier Tier    @default(CORE)
+  bodyMdx String
+  claims  Claim[]
+  status  Status  @default(DRAFT)
+  version Int     @default(1)
+
+  @@unique([nodeId, kind])
+}
+
+/// A checkable statement inside a section, tied to its sources.
+model Claim {
+  id          String        @id @default(cuid())
+  sectionId   String
+  section     Section       @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  text        String
+  confidence  Confidence    @default(ESTABLISHED)
+  sources     ClaimSource[]
+  lastChecked DateTime?
+}
+
+model Source {
+  id        String        @id @default(cuid())
+  kind      String /// textbook, paper, guideline, dataset, website
+  citation  String        @unique
+  doi       String?
+  pmid      String?
+  url       String?
+  license   String?
+  retracted Boolean       @default(false)
+  claims    ClaimSource[]
+}
+
+model ClaimSource {
+  claimId  String
+  sourceId String
+  locator  String?
+  claim    Claim   @relation(fields: [claimId], references: [id], onDelete: Cascade)
+  source   Source  @relation(fields: [sourceId], references: [id])
+
+  @@id([claimId, sourceId])
+}
+
+model Link {
+  id         String     @id @default(cuid())
+  fromId     String
+  toId       String
+  from       Node       @relation("from", fields: [fromId], references: [id], onDelete: Cascade)
+  to         Node       @relation("to", fields: [toId], references: [id], onDelete: Cascade)
+  type       LinkType
+  confidence Confidence @default(ESTABLISHED)
+  note       String?
+
+  @@unique([fromId, toId, type])
+}
+
+/// Images, renders, micrographs, video loops and age variants for cards.
+model Media {
+  id      String  @id @default(cuid())
+  nodeId  String
+  node    Node    @relation(fields: [nodeId], references: [id], onDelete: Cascade)
+  kind    String
+  url     String
+  caption String
+  credit  String
+  license String
+  ageBand String?
+  order   Int     @default(0)
+}
+
+/// Walkable journeys: digestive, blood, airway, eye, neural, molecular.
+model Path {
+  id       String     @id
+  name     String
+  kind     String /// tunnel, flow, descent
+  flowType String?
+  minTier  Tier       @default(CORE)
+  steps    PathStep[]
+  status   Status     @default(DRAFT)
+}
+
+model PathStep {
+  id       String  @id @default(cuid())
+  pathId   String
+  path     Path    @relation(fields: [pathId], references: [id], onDelete: Cascade)
+  order    Int
+  name     String
+  nodeId   String?
+  node     Node?   @relation(fields: [nodeId], references: [id])
+  curve    Json
+  branches Json?
+  fact     String?
+  quizId   String?
+}
+
+model Article {
+  id        String        @id @default(cuid())
+  slug      String        @unique
+  hallId    String
+  hall      Hall          @relation(fields: [hallId], references: [id])
+  title     String
+  bodyMdx   String
+  minTier   Tier          @default(CORE)
+  status    Status        @default(DRAFT)
+  version   Int           @default(1)
+  nodes     ArticleNode[]
+  updatedAt DateTime      @updatedAt
+}
+
+model ArticleNode {
+  articleId String
+  nodeId    String
+  article   Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  node      Node    @relation(fields: [nodeId], references: [id], onDelete: Cascade)
+
+  @@id([articleId, nodeId])
+}
+
+model Question {
+  id          String   @id @default(cuid())
+  nodeId      String?
+  node        Node?    @relation(fields: [nodeId], references: [id])
+  deck        String
+  level       String /// foundation, undergraduate, professional
+  stem        String
+  options     Json
+  answer      Int
+  explanation String
+  sourceIds   String[]
+  minTier     Tier     @default(CORE)
+  status      Status   @default(DRAFT)
+}
+
+// ---------------------------------------------------------------- editorial history
+
+/// Every edit to any reviewable object (node, section, article, path, question).
+model Revision {
+  id         String   @id @default(cuid())
+  objectType String
+  objectId   String
+  version    Int
+  snapshot   Json
+  authorId   String
+  createdAt  DateTime @default(now())
+  reviews    Review[]
+
+  @@index([objectType, objectId])
+}
+
+model Review {
+  id         String   @id @default(cuid())
+  revisionId String
+  revision   Revision @relation(fields: [revisionId], references: [id], onDelete: Cascade)
+  reviewerId String
+  stage      String /// review, board
+  decision   String /// approve, return
+  comment    String?
+  createdAt  DateTime @default(now())
+}
+
+// ---------------------------------------------------------------- accounts, organisations, consent
+
+model Organization {
+  id         String       @id @default(cuid())
+  slug       String       @unique /// each school or hospital gets its own page at /o/{slug}
+  name       String
+  type       OrgType
+  tier       Tier
+  ssoKind    String? /// oidc, saml
+  ssoConfig  Json?
+  domains    String[]
+  seats      Int          @default(0)
+  homepage   Json? /// the organisation's own landing page after login: welcome text, featured paths, playlists
+  members    Membership[]
+  createdAt  DateTime     @default(now())
+}
+
+model User {
+  id          String       @id @default(cuid())
+  email       String       @unique
+  name        String?
+  avatar      String?
+  birthYear   Int?
+  memberships Membership[]
+  consents    Consent[]
+  progress    Progress[]
+  createdAt   DateTime     @default(now())
+}
+
+model Membership {
+  userId String
+  orgId  String
+  role   Role
+  user   User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  org    Organization @relation(fields: [orgId], references: [id], onDelete: Cascade)
+
+  @@id([userId, orgId])
+}
+
+model Consent {
+  id         String   @id @default(cuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  document   String /// terms, privacy, disclaimer
+  version    String
+  acceptedAt DateTime @default(now())
+}
+
+/// Current version of each legal document; a newer version forces re-acceptance.
+model LegalDocument {
+  id          String   @id /// terms, privacy, disclaimer
+  version     String
+  bodyMdx     String
+  publishedAt DateTime @default(now())
+}
+
+model Progress {
+  userId String
+  nodeId String
+  seen   Int    @default(0)
+  known  Float  @default(0)
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  node   Node   @relation(fields: [nodeId], references: [id], onDelete: Cascade)
+
+  @@id([userId, nodeId])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String
+  action     String
+  objectType String
+  objectId   String
+  detail     Json?
+  at         DateTime @default(now())
+
+  @@index([objectType, objectId])
+}
+
+// ---------------------------------------------------------------- outreach (reviewer recruitment)
+
+/// Public directory of hospitals and clinics used to invite medical reviewers.
+/// Imported from public registries (for example the CMS Hospital General Information file); never scraped personal data.
+model OutreachSite {
+  id         String    @id /// registry id, e.g. CMS facility id
+  name       String
+  kind       String /// hospital, clinic, teaching hospital
+  city       String?
+  state      String?
+  phone      String?
+  website    String?
+  source     String /// which public registry it came from
+  contacts   OutreachContact[]
+  importedAt DateTime  @default(now())
+
+  @@index([state])
+}
+
+/// A person who opted in or whose work address was given to us; status tracks the invitation.
+model OutreachContact {
+  id        String       @id @default(cuid())
+  siteId    String
+  site      OutreachSite @relation(fields: [siteId], references: [id], onDelete: Cascade)
+  name      String
+  role      String?
+  email     String
+  status    String       @default("new") /// new, invited, replied, joined, declined, unsubscribed
+  notes     String?
+  updatedAt DateTime     @updatedAt
+
+  @@unique([siteId, email])
+}

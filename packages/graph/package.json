@@ -1,0 +1,29 @@
+{
+  "name": "@lenati/graph",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": {
+    "generate": "prisma generate",
+    "db:push": "prisma db push",
+    "migrate": "prisma migrate dev",
+    "seed": "tsx seed/seed.ts",
+    "validate": "tsx seed/validate.ts",
+    "typecheck": "prisma generate && tsc -p tsconfig.json",
+    "test": "tsx --test test/*.test.ts",
+    "postinstall": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "6.2.1"
+  },
+  "devDependencies": {
+    "@lenati/config": "workspace:*",
+    "@types/node": "22.10.2",
+    "prisma": "6.2.1",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2"
+  }
+}
