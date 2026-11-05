@@ -65,6 +65,23 @@
       ],
       "representation": "planned",
       "verified": false
+    },
+    {
+      "assetId": "bodyparts3d-pilot",
+      "name": "Whole body, BodyParts3D 3.0 derived meshes (934 parts, 9 regional files)",
+      "methods": [
+        1
+      ],
+      "representation": "scientific-mesh",
+      "verified": false,
+      "license": "CC BY-SA 2.1 JP",
+      "inventory": "body/ASSET_INVENTORY.csv",
+      "viewer": "body/index.html",
+      "auditSteps": {
+        "1-5": "done (per-part inventory)",
+        "6": "pending anatomical review",
+        "7": "pending sign-off"
+      }
     }
   ]
 }
